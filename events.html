@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events | City Institute of Higher Learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/news.css"> <!-- New CSS file -->
+</head>
+<body>
+    <!-- Header (Same as About Page) -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="City Institute of Higher Learning Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programmes</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="news.html" class="active">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- News Hero Section -->
+    <section class="news-hero">
+        <div class="container">
+            <h1>Latest Updates from C-IHL</h1>
+            <div class="hero-description">
+                <p>Stay informed about our latest events, news announcements, and blog posts. Discover the achievements, partnerships, and initiatives shaping the future of education at City Institute of Higher Learning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Filter Tabs -->
+    <div class="news-filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <button class="news-filter active" data-filter="all">
+                    <i class="fas fa-th-large"></i>
+                    <span>All Updates</span>
+                </button>
+                <button class="news-filter" data-filter="event">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Events</span>
+                </button>
+                <button class="news-filter" data-filter="news">
+                    <i class="fas fa-newspaper"></i>
+                    <span>News</span>
+                </button>
+                <button class="news-filter" data-filter="blog">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Grid Section -->
+    <div class="container">
+        <!-- Featured/Highlighted Story -->
+        <section class="featured-story-section">
+            <div class="section-header">
+                <h2>Featured Story</h2>
+            </div>
+            
+            <div class="featured-story">
+                <div class="featured-image">
+                    <img src="Conference-Banner.jpg"2nd Conference on Economic Growth in Atlantic Canada">
+                    <span class="featured-label">Featured Event</span>
+                </div>
+                <div class="featured-content">
+                    <span class="content-category event">Event</span>
+                    <h3>A Successful 2nd Conference on Economic Growth in Atlantic Canada</h3>
+                    <div class="post-meta">
+                        <span class="post-date"><i class="far fa-calendar"></i> May 17, 2025</span>
+                        <span class="post-location"><i class="fas fa-map-marker-alt"></i> Dieppe, New Brunswick</span>
+                    </div>
+                    <div class="featured-excerpt">
+                        <p>From May 15 to 17, 2025, City Institute of Higher Learning had the pleasure of hosting the 2nd Conference on Economic Growth in Atlantic Canada. Under the theme "Innovation Hubs: Fostering Entrepreneurship and Global Cooperation," the event brought together business leaders, researchers, policymakers, and community members to share ideas, experiences, and visions for the economic future of the region.</p>
+                        <p>Over the course of three days, participants attended inspiring keynote sessions, engaged in hands-on workshops, and took part in dynamic networking events. Together, they explored new opportunities for collaboration and innovation to support inclusive and sustainable growth across Atlantic provinces.</p>
+                    </div>
+                    <a href="#" class="btn-primary">Read Full Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- All News Grid -->
+        <section class="news-grid-section">
+            <div class="section-header">
+                <h2>Recent Updates</h2>
+                <p class="section-subtitle">Browse through our latest events, news announcements, and blog posts.</p>
+            </div>
+
+            <div class="news-grid" id="newsGrid">
+                <!-- Event Items -->
+                <article class="news-card event" data-category="event">
+                    <div class="news-image">
+                        <img src="Conference-Banner.jpg"Executive Certificate in Arbitration Practicum">
+                        <span class="content-label event">Event</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> July 31, 2025</span>
+                        </div>
+                        <h3>Successful Day One EXECUTIVE CERTIFICATE in Arbitration Practicum</h3>
+                        <p class="news-excerpt">Executive Certificate in Arbitration practicum held in Ghana by ADR-SRI quality assurance by City Institute of Higher Learning.</p>
+                        <a href="#" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card event" data-category="event">
+                    <div class="news-image">
+                        <img src="images/3rd graduation image.jpeg" alt="3rd Graduation & Awards Ceremony">
+                        <span class="content-label event">Event</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> Coming Soon</span>
+                        </div>
+                        <h3>3rd Graduation & Awards Ceremony & 1st Annual Conference 2025</h3>
+                        <p class="news-excerpt">Join us for our upcoming graduation ceremony and annual conference celebrating student achievements.</p>
+                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- News Items -->
+                <article class="news-card news" data-category="news">
+                    <div class="news-image">
+                        <img src="images/discover canadian.jpg College Partnership">
+                        <span class="content-label news">News</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> June 26, 2025</span>
+                        </div>
+                        <h3>New Partnership with Riverview College of Higher Education</h3>
+                        <p class="news-excerpt">We are proud to announce our new partnership with Riverview College of Higher Education, expanding educational opportunities.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card news" data-category="news">
+                    <div class="news-image">
+                        <img src="images/brunswick registeration img.jpg" alt="New Brunswick Association Certification">
+                        <span class="content-label news">News</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> June 3, 2025</span>
+                        </div>
+                        <h3>New Brunswick Association of Private Colleges & Universities Certifies Membership</h3>
+                        <p class="news-excerpt">Certification that City Institute of Higher Learning is a member in good standing with NBAPCU.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Items -->
+                <article class="news-card blog" data-category="blog">
+                    <div class="news-image">
+                        <img src="images/discover canadian.jpg"Free Virtual Info Session">
+                        <span class="content-label blog">Blog</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> July 31, 2025</span>
+                        </div>
+                        <h3>Upgrade Your Career with Canadian Certification</h3>
+                        <p class="news-excerpt">Join our FREE virtual info session and explore flexible, globally recognized programs in business, technology, and more.</p>
+                        <div class="event-details">
+                            <p><i class="far fa-clock"></i> 6:00 PM (ADT)</p>
+                            <p><i class="fas fa-globe"></i> Online - Join from anywhere!</p>
+                        </div>
+                        <a href="https://www.eventbrite.com/e/discover-canadian-certifications-career-pathways-with-c-ihl-tickets-1447822378709" target="_blank" class="btn-secondary">Register Now</a>
+                    </div>
+                </article>
+
+                <article class="news-card blog" data-category="blog">
+                    <div class="news-image">
+                        <img src="images/couple image.jpg" alt="Couple Project Ghana">
+                        <span class="content-label blog">Blog</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> Recent</span>
+                            <span class="post-author"><i class="far fa-user"></i> Staff Writer</span>
+                        </div>
+                        <h3>Couple Project Ghana At Atlantic Canada Conference</h3>
+                        <p class="news-excerpt">Highlighting international collaborations and projects presented at our recent conference.</p>
+                        <a href="https://dailyguidenetwork.com/couple-project-ghana-at-atlantic-canada-conference" target="_blank" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Add more news items following the same pattern -->
+                <article class="news-card news" data-category="news">
+                    <div class="news-image">
+                        <img src="images/abijan images.jpg" alt="City-IHL Expands to Abidjan">
+                        <span class="content-label news">News</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> March 18, 2025</span>
+                        </div>
+                        <h3>City-IHL Expands to Abidjan in Partnership with Université Emmaüs</h3>
+                        <p class="news-excerpt">Opening of a new university center in Abidjan, Côte d'Ivoire, making higher education more accessible globally.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card event" data-category="event">
+                    <div class="news-image">
+                        <img src="images/open day.png" alt="Open Day at City Institute">
+                        <span class="content-label event">Event</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> August 8, 2024</span>
+                        </div>
+                        <h3>Open Day at City Institute of Higher Learning!</h3>
+                        <p class="news-excerpt">We are thrilled to share that we had another successful Open Day at the City Institute of Higher Learning.</p>
+                        <a href="#" class="read-more">View Photos <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card news" data-category="news">
+                    <div class="news-image">
+                        <img src="images/sus 2.jpg"Sustainability Certification">
+                        <span class="content-label news">News</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> Recent</span>
+                        </div>
+                        <h3>City-IHL Receives Sustainability Certification at IMPACT 2025</h3>
+                        <p class="news-excerpt">Received sustainability certification during the IMPACT 2025 Recognition Evening in Shippagan.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button id="loadMoreBtn" class="btn-primary">
+                    <i class="fas fa-plus"></i> Load More Stories
+                </button>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter to receive the latest news, events, and blog posts directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn-primary">Subscribe</button>
+                        </div>
+                        <div class="form-note">
+                            <p>By subscribing, you agree to our Privacy Policy and consent to receive updates from C-IHL.</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="newsletter-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer (Same as About Page) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About C-IHL</h3>
+                    <p class="footer-description">City Institute of Higher Learning (C-IHL) is an advanced research-focused education institute in New Brunswick, Canada, that serves the needs of the research community and businesses.</p>
+                    
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About C-IHL</a></li>
+                        <li><a href="programs.html">Programmes</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+15063882833"><i class="fas fa-phone"></i> +1 506 388 2833</a></li>
+                        <li><a href="mailto:admin@city-ihl.ca"><i class="fas fa-envelope"></i> admin@city-ihl.ca</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Moncton, New Brunswick, Canada</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 City Institute of Higher Learning (C-IHL). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/news.js"></script> <!-- New JS file for news page -->
+</body>
+</html>

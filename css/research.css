@@ -1,0 +1,758 @@
+/* ===== RESEARCH PAGE STYLES - COMPLETELY MATCHES MAIN SITE ===== */
+
+/* First, ensure we have the same CSS variables */
+:root {
+    /* Primary Colors - PEACH AND GREEN THEME */
+    --bg-start: #f8ba8d; /* Very light peach */
+    --bg-mid: #f5bd8c; /* Light peach */
+    --bg-end: #FFB366; /* Peach accent */
+    --accent: #FF8C42; /* Darker peach for highlights */
+    --green-dark: #124615; /* Forest green for text */
+    --text-dark: #333333; /* Dark text */
+    
+    /* Secondary Colors */
+    --white: #ffffff;
+    --light-gray: #FFF5EB; /* Very light peach tint */
+    --medium-gray: #FFE8D6; /* Medium peach */
+    --dark-gray: #757575;
+    
+    /* UI Variables */
+    --nav-height: 100px;
+    --card-radius: 14px;
+    --glass: rgba(255, 255, 255, 0.2);
+    --max-width: 1400px;
+    --section-spacing: 80px;
+    --shadow: 0 10px 30px rgba(255, 140, 66, 0.1);
+    --shadow-hover: 0 20px 40px rgba(255, 140, 66, 0.15);
+    --transition: all 0.3s ease;
+    --header-shadow: 0 4px 20px rgba(255, 140, 66, 0.08);
+}
+
+/* ===== RESEARCH HERO SECTION - MATCHES HOMEPAGE BANNER ===== */
+.research-hero {
+    width: 100%;
+    height: 600px; /* Matches homepage hero height */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-end), #f1bb97); /* Same as homepage */
+    color: var(--white);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+.research-hero .container {
+    position: relative;
+    z-index: 2;
+    width: 92%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.research-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    color: var(--white);
+    line-height: 1.1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.research-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    opacity: 0.95;
+    line-height: 1.6;
+    color: var(--white);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== RESEARCH TABS - STICKY NAVIGATION ===== */
+.research-tabs {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: var(--nav-height);
+    z-index: 99;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.tabs-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 10px;
+    justify-content: center;
+    width: 92%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.research-tab {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 25px 35px;
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid transparent;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: var(--transition);
+    white-space: nowrap;
+    font-family: inherit;
+    font-size: 1.1rem;
+}
+
+.research-tab:hover {
+    color: var(--accent);
+    background: linear-gradient(to right, rgba(255, 140, 66, 0.05), rgba(255, 179, 102, 0.05));
+}
+
+.research-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    background: linear-gradient(to right, rgba(255, 140, 66, 0.1), rgba(255, 179, 102, 0.1));
+}
+
+.research-tab i {
+    font-size: 1.3rem;
+    color: var(--accent);
+}
+
+.research-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+    padding: var(--section-spacing) 0;
+}
+
+.research-section.active {
+    display: block;
+}
+
+/* ===== SECTION HEADER - MATCHES MAIN SITE ===== */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.section-header h2 {
+    color: var(--green-dark);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--accent), var(--bg-end));
+    border-radius: 2px;
+}
+
+.section-header p {
+    max-width: 800px;
+    margin: 30px auto 0;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* ===== RESEARCH AREAS GRID - MATCHES HIGHLIGHT CARDS ===== */
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.area-card {
+    background: var(--white);
+    border-radius: var(--card-radius);
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 450px;
+    border-top: 4px solid var(--accent);
+}
+
+.area-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.area-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(255, 179, 102, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: var(--accent);
+    font-size: 2rem;
+}
+
+.area-content h3 {
+    color: var(--green-dark);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    min-height: 2.5em;
+}
+
+.area-content p {
+    color: var(--text-dark);
+    opacity: 0.8;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    flex: 1;
+    font-size: 1rem;
+}
+
+/* ===== BUTTONS - MUST MATCH HOMEPAGE EXACTLY ===== */
+.area-card .btn-primary {
+    background: linear-gradient(to right, var(--white), #f5e3d3);
+    color: var(--green-dark);
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 6px 20px rgba(255, 140, 66, 0.3);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin-top: 20px;
+    align-self: center;
+}
+
+.area-card .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 140, 66, 0.4);
+    background: linear-gradient(to right, #FFFFFF, #FFD9B3);
+    color: var(--green-dark);
+}
+
+.collaboration-section .btn-secondary {
+    background: transparent;
+    color: var(--green-dark);
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: 2px solid var(--green-dark);
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.collaboration-section .btn-secondary:hover {
+    background: rgba(18, 70, 21, 0.1);
+    transform: translateY(-3px);
+}
+
+/* ===== COLLABORATION SECTION - MATCHES STATS SECTION ===== */
+.collaboration-section {
+    background: var(--white);
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    position: relative;
+    margin: 60px auto;
+    padding: 60px 50px;
+    max-width: var(--max-width);
+    text-align: center;
+    border-top: 4px solid var(--accent);
+}
+
+.collaboration-content h2 {
+    color: var(--green-dark);
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+}
+
+.collaboration-content p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: var(--text-dark);
+    opacity: 0.8;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* ===== RESEARCH CONTACT - MATCHES PROGRAM CARD ===== */
+.research-contact {
+    background: var(--white);
+    border-radius: var(--card-radius);
+    padding: 50px;
+    box-shadow: var(--shadow);
+    margin-bottom: 80px;
+    border-left: 4px solid var(--accent);
+}
+
+.research-contact h3 {
+    color: var(--green-dark);
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.research-contact p {
+    color: var(--text-dark);
+    opacity: 0.8;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 25px;
+    background: var(--light-gray);
+    border-radius: var(--card-radius);
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 140, 66, 0.15);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(255, 179, 102, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.contact-item strong {
+    display: block;
+    color: var(--green-dark);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    margin: 0;
+    color: var(--text-dark);
+    opacity: 0.8;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-item a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: var(--bg-end);
+    text-decoration: underline;
+}
+
+/* ===== FACULTY TABLE ===== */
+.faculty-table-container {
+    background: var(--white);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 60px;
+    border-top: 4px solid var(--accent);
+}
+
+.table-header {
+    background: linear-gradient(to right, var(--green-dark), var(--text-dark));
+    color: var(--white);
+    padding: 30px;
+}
+
+.table-header h3 {
+    color: var(--white);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.faculty-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.faculty-table thead {
+    background: var(--light-gray);
+}
+
+.faculty-table th {
+    padding: 20px;
+    text-align: left;
+    color: var(--green-dark);
+    font-weight: 600;
+    border-bottom: 2px solid var(--medium-gray);
+    font-size: 1.1rem;
+}
+
+.faculty-table td {
+    padding: 20px;
+    border-bottom: 1px solid var(--medium-gray);
+    vertical-align: middle;
+    color: var(--text-dark);
+}
+
+.faculty-table tbody tr {
+    transition: var(--transition);
+}
+
+.faculty-table tbody tr:hover {
+    background: linear-gradient(to right, rgba(255, 140, 66, 0.05), rgba(255, 179, 102, 0.05));
+}
+
+.faculty-table td:first-child {
+    font-weight: 600;
+    color: var(--green-dark);
+    width: 60px;
+}
+
+.faculty-table td:nth-child(2) {
+    font-weight: 600;
+    color: var(--green-dark);
+}
+
+.badge {
+    display: inline-block;
+    background: linear-gradient(to right, var(--accent), var(--bg-end));
+    color: var(--white);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-left: 10px;
+    box-shadow: 0 3px 10px rgba(255, 140, 66, 0.2);
+}
+
+.faculty-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    padding: 8px 16px;
+    border-radius: 25px;
+    background: linear-gradient(to right, rgba(255, 140, 66, 0.1), rgba(255, 179, 102, 0.1));
+}
+
+.faculty-link:hover {
+    color: var(--green-dark);
+    background: linear-gradient(to right, rgba(255, 140, 66, 0.2), rgba(255, 179, 102, 0.2));
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.2);
+}
+
+/* ===== RECENT PUBLICATIONS ===== */
+.recent-pubs {
+    background: var(--white);
+    border-radius: var(--card-radius);
+    padding: 50px;
+    box-shadow: var(--shadow);
+    margin-bottom: 60px;
+    border-left: 4px solid var(--accent);
+}
+
+.recent-pubs .section-header {
+    margin-bottom: 40px;
+}
+
+.recent-pubs .section-header h2 {
+    font-size: 2rem;
+}
+
+.pub-item {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    border-bottom: 1px solid var(--medium-gray);
+    transition: var(--transition);
+    align-items: flex-start;
+}
+
+.pub-item:hover {
+    background: linear-gradient(to right, rgba(255, 140, 66, 0.05), rgba(255, 179, 102, 0.05));
+    transform: translateX(10px);
+}
+
+.pub-item:last-child {
+    border-bottom: none;
+}
+
+.pub-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(255, 179, 102, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.pub-content {
+    flex: 1;
+}
+
+.pub-content h4 {
+    color: var(--green-dark);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.pub-author {
+    color: var(--text-dark);
+    opacity: 0.8;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE DESIGN - MATCHES HOMEPAGE BREAKPOINTS ===== */
+@media (max-width: 1200px) {
+    .research-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .areas-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .research-hero {
+        height: 500px;
+    }
+    
+    .research-hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .research-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .collaboration-section {
+        margin: 40px auto;
+        padding: 50px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .research-hero {
+        height: auto;
+        min-height: 450px;
+        padding: 80px 0 60px;
+    }
+    
+    .research-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .research-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .research-tab {
+        padding: 20px 25px;
+        font-size: 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 1.1rem;
+    }
+    
+    /* MOBILE CARD GRID FIXES - 2 CARDS PER ROW (MATCHES HOMEPAGE) */
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+    
+    .area-card {
+        min-height: 400px;
+        padding: 25px 20px;
+    }
+    
+    .area-card h3 {
+        font-size: 1.3rem;
+        min-height: 3em;
+    }
+    
+    .collaboration-section,
+    .research-contact,
+    .recent-pubs {
+        padding: 40px 30px;
+    }
+    
+    .faculty-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .faculty-table th,
+    .faculty-table td {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .pub-item {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .research-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .research-tab {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .research-tab i {
+        font-size: 1rem;
+    }
+    
+    .tabs-container {
+        justify-content: flex-start;
+    }
+    
+    /* MOBILE CARD GRID FIXES - 1 CARD PER ROW ON SMALL MOBILE (MATCHES HOMEPAGE) */
+    .areas-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .area-card h3,
+    .research-contact h3,
+    .collaboration-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .pub-content h4 {
+        font-size: 1.2rem;
+    }
+    
+    .faculty-table th,
+    .faculty-table td {
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+    
+    .badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+}
+
+/* ===== FIX FOR CONTAINER CONSISTENCY ===== */
+.container {
+    width: 92%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-center {
+    text-align: center;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}

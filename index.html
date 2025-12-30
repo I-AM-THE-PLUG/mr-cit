@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Institute of Higher Learning | Institut Supérieur de la Ville | 城市高等学习学院 | Instituto Superior de la Ciudad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="City Institute of Higher Learning Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <!-- FIXED NAVIGATION - Added Research tab -->
+                    <li><a href="index.html" class="active" data-en="Home" data-fr="Accueil" data-zh="首页" data-es="Inicio">Home</a></li>
+                    <li><a href="about.html" data-en="About" data-fr="À propos" data-zh="关于我们" data-es="Acerca de">About</a></li>
+                    <li><a href="programs.html" data-en="Programmes" data-fr="Programmes" data-zh="课程项目" data-es="Programas">Programmes</a></li>
+                    <!-- ADDED RESEARCH TAB -->
+                    <li><a href="research.html" data-en="Research" data-fr="Recherche" data-zh="研究" data-es="Investigación">Research</a></li>
+                    <li><a href="events.html" data-en="News" data-fr="Nouvelles" data-zh="新闻" data-es="Noticias">News</a></li>
+                    <li><a href="contact.html" data-en="Contact" data-fr="Contact" data-zh="联系我们" data-es="Contacto">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section with ALL 5 Slides -->
+    <section class="hero-banner">
+        <div class="banner-container">
+            <div class="banner-slides">
+                <!-- Slide 1 -->
+                <div class="banner-slide active">
+                    <div class="slide-content">
+                        <div class="slide-badge" data-en="Atlantic Canada's Bilingual Research Institute" data-fr="Institut de Recherche Bilingue du Canada Atlantique" data-zh="大西洋加拿大双语研究学院" data-es="Instituto de Investigación Bilingüe del Atlántico Canadiense">Atlantic Canada's Bilingual Research Institute</div>
+                        <h2 data-en="Welcome to City Institute of Higher Learning" data-fr="Bienvenue à l'Institut Supérieur de la Ville" data-zh="欢迎来到城市高等学习学院" data-es="Bienvenido al Instituto Superior de la Ciudad">Welcome to City Institute of Higher Learning</h2>
+                        <p data-en="Discover our unique educational approach at CIHL, offering both local and international programs to advance your career. Located in the heart of Moncton, C-IHL offers a variety of programmes tailored to foster global leaders." data-fr="Découvrez notre approche éducative unique au CIHL, offrant des programmes locaux et internationaux pour faire progresser votre carrière. Situé au cœur de Moncton, C-IHL offre une variété de programmes conçus pour former des leaders mondiaux." data-zh="在CIHL发现我们独特的教育方法，提供本地和国际项目以促进您的职业发展。位于蒙克顿市中心，C-IHL提供各种量身定制的课程，旨在培养全球领导者。" data-es="Descubra nuestro enfoque educativo único en CIHL, que ofrece programas locales e internacionales para avanzar en su carrera. Ubicado en el corazón de Moncton, C-IHL ofrece una variedad de programas diseñados para fomentar líderes globales.">Discover our unique educational approach at CIHL, offering both local and international programs to advance your career.</p>
+                        <div class="slide-btns">
+                            <a href="programs.html" class="btn-primary" data-en="Explore Our Programmes" data-fr="Explorer nos Programmes" data-zh="探索我们的课程" data-es="Explorar Nuestros Programas">Explore Our Programmes</a>
+                            <a href="contact.html" class="btn-secondary" data-en="Visit Campus" data-fr="Visiter le Campus" data-zh="参观校园" data-es="Visitar Campus">Visit Campus</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <!-- FIXED IMAGE PATH -->
+                        <div class="banner-image-container" data-alt="Welcome to CIHL">
+                            <img src="images/welcome img.jpg" alt="Welcome to CIHL" class="banner-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="banner-slide">
+                    <div class="slide-content">
+                        <div class="slide-badge" data-en="Research Excellence" data-fr="Excellence en Recherche" data-zh="研究卓越" data-es="Excelencia en Investigación">Research Excellence</div>
+                        <h2 data-en="Explore Our Programmes" data-fr="Explorez Nos Programmes" data-zh="探索我们的课程" data-es="Explore Nuestros Programas">Explore Our Programmes</h2>
+                        <p data-en="Higher learning diplomas and certificates for diverse career challenges. With a dedicated and highly qualified team of instructors, your learning is our priority." data-fr="Diplômes et certificats d'études supérieures pour des défis de carrière diversifiés. Avec une équipe d'instructeurs dévoués et hautement qualifiés, votre apprentissage est notre priorité." data-zh="针对多样化职业挑战的高等学习文凭和证书。凭借敬业且高素质的教师团队，您的学习是我们的首要任务。" data-es="Diplomas y certificados de aprendizaje superior para desafíos profesionales diversos. Con un equipo dedicado e altamente calificado de instructores, su aprendizaje es nuestra prioridad.">Higher learning diplomas and certificates for diverse career challenges.</p>
+                        <div class="slide-btns">
+                            <a href="programs.html" class="btn-primary" data-en="View Programmes" data-fr="Voir les Programmes" data-zh="查看课程" data-es="Ver Programas">View Programmes</a>
+                            <a href="programs.html#research-assistantship" class="btn-secondary" data-en="Research Assistantship" data-fr="Assistance à la Recherche" data-zh="研究助理" data-es="Asistencia de Investigación">Research Assistantship</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <!-- FIXED IMAGE PATH -->
+                        <div class="banner-image-container" data-alt="Explore Our Programmes">
+                            <img src="images/img for beauty 2.jpg" alt="Explore Our Programmes" class="banner-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="banner-slide">
+                    <div class="slide-content">
+                        <div class="slide-badge" data-en="Global Opportunities" data-fr="Opportunités Mondiales" data-zh="全球机会" data-es="Oportunidades Globales">Global Opportunities</div>
+                        <h2 data-en="Research & Innovation" data-fr="Recherche et Innovation" data-zh="研究与创新" data-es="Investigación e Innovación">Research & Innovation</h2>
+                        <p data-en="Advancing knowledge through innovative research and discovery. We are a research-based learning institution committed to advancing knowledge through innovative research." data-fr="Faire avancer les connaissances grâce à la recherche et à la découverte innovantes. Nous sommes une institution d'apprentissage basée sur la recherche engagée dans l'avancement des connaissances par la recherche innovante." data-zh="通过创新研究和发现推进知识。我们是一所致力于通过创新研究推进知识的研究型学习机构。" data-es="Avanzando en el conocimiento a través de la investigación y el descubrimiento innovadores. Somos una institución de aprendizaje basada en investigación comprometida con el avance del conocimiento a través de la investigación innovadora.">Advancing knowledge through innovative research and discovery.</p>
+                        <div class="slide-btns">
+                            <a href="research.html" class="btn-primary" data-en="Our Research" data-fr="Notre Recherche" data-zh="我们的研究" data-es="Nuestra Investigación">Our Research</a>
+                            <a href="events.html#research-series" class="btn-secondary" data-en="Research Series" data-fr="Série de Recherche" data-zh="研究系列" data-es="Serie de Investigación">Research Series</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <!-- FIXED IMAGE PATH -->
+                        <div class="banner-image-container" data-alt="Research & Innovation">
+                            <img src="images/reasearch img.jpg" alt="Research & Innovation" class="banner-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="banner-slide">
+                    <div class="slide-content">
+                        <div class="slide-badge" data-en="Community Engagement" data-fr="Engagement Communautaire" data-zh="社区参与" data-es="Compromiso Comunitario">Community Engagement</div>
+                        <h2 data-en="Upcoming Events" data-fr="Événements à Venir" data-zh="即将举行的活动" data-es="Próximos Eventos">Upcoming Events</h2>
+                        <p data-en="Join our conferences, seminars, and community engagement activities. Participate in enriching community programmes that foster local engagement and cultural exchange." data-fr="Rejoignez nos conférences, séminaires et activités d'engagement communautaire. Participez à des programmes communautaires enrichissants qui favorisent l'engagement local et les échanges culturels." data-zh="参加我们的会议、研讨会和社区参与活动。参与促进当地参与和文化交流的丰富社区项目。" data-es="Únase a nuestras conferencias, seminarios y actividades de participación comunitaria. Participe en programas comunitarios enriquecedores que fomentan la participación local y el intercambio cultural.">Join our conferences, seminars, and community engagement activities.</p>
+                        <div class="slide-btns">
+                            <a href="events.html" class="btn-primary" data-en="View Events" data-fr="Voir les Événements" data-zh="查看活动" data-es="Ver Eventos">View Events</a>
+                            <a href="events.html#featured" class="btn-secondary" data-en="Featured Event" data-fr="Événement en Vedette" data-zh="特色活动" data-es="Evento Destacado">Featured Event</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <!-- FIXED IMAGE PATH -->
+                        <div class="banner-image-container" data-alt="Community Engagement">
+                            <img src="images/join community.jpg" alt="Community Engagement" class="banner-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 5 -->
+                <div class="banner-slide">
+                    <div class="slide-content">
+                        <div class="slide-badge" data-en="Quality Education" data-fr="Éducation de Qualité" data-zh="优质教育" data-es="Educación de Calidad">Quality Education</div>
+                        <h2 data-en="Join Our Community" data-fr="Rejoignez Notre Communauté" data-zh="加入我们的社区" data-es="Únase a Nuestra Comunidad">Join Our Community</h2>
+                        <p data-en="Become part of a global network of scholars and professionals. Enjoy flexible learning options and personalized support designed to help you meet your educational and career goals." data-fr="Faites partie d'un réseau mondial de chercheurs et de professionnels. Profitez d'options d'apprentissage flexibles et d'un soutien personnalisé conçus pour vous aider à atteindre vos objectifs éducatifs et professionnels." data-zh="成为全球学者和专业人士网络的一部分。享受灵活的学习选择和个性化支持，旨在帮助您实现教育和职业目标。" data-es="Conviértase en parte de una red global de académicos y profesionales. Disfrute de opciones de aprendizaje flexibles y apoyo personalizado diseñado para ayudarlo a alcanzar sus objetivos educativos y profesionales.">Become part of a global network of scholars and professionals.</p>
+                        <div class="slide-btns">
+                            <a href="contact.html" class="btn-primary" data-en="Contact Us" data-fr="Contactez-nous" data-zh="联系我们" data-es="Contáctenos">Contact Us</a>
+                            <a href="contact.html#apply" class="btn-secondary" data-en="Apply Now" data-fr="Postuler" data-zh="立即申请" data-es="Aplicar Ahora">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <!-- FIXED IMAGE PATH -->
+                        <div class="banner-image-container" data-alt="Join Our Community">
+                            <img src="images/join community.jpg" alt="Join Our Community" class="banner-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Banner Navigation Dots -->
+            <div class="banner-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
+            </div>
+            
+            <!-- Banner Navigation Arrows -->
+            <button class="banner-arrow banner-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="banner-arrow banner-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="highlights-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Who We Are" data-fr="Qui Nous Sommes" data-zh="我们是谁" data-es="Quiénes Sommos">Who We Are</h2>
+                <div class="section-subtitle">
+                    <p data-en="Our commitment to excellence in education and research" 
+                       data-fr="Notre engagement envers l'excellence en éducation et recherche" 
+                       data-zh="我们对教育和研究卓越的承诺" 
+                       data-es="Nuestro compromiso con la excelencia en educación e investigación">
+                       Our commitment to excellence in education and research
+                    </p>
+                </div>
+            </div>
+            
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-university"></i></div>
+                    <h3 data-en="Atlantic Canada's Bilingual Private Institute of Higher Learning" data-fr="Institut Privé Bilingue d'Enseignement Supérieur du Canada Atlantique" data-zh="大西洋加拿大双语私立高等教育学院" data-es="Instituto Privado Bilingüe de Educación Superior del Atlántico Canadiense">Atlantic Canada's Bilingual Institute</h3>
+                    <div class="highlight-description">
+                        <p data-en="We are Atlantic Canada's premier bilingual private institute of higher learning committed to innovation and excellence."
+                           data-fr="Nous sommes le premier institut privé bilingue d'enseignement supérieur du Canada atlantique engagé dans l'innovation et l'excellence."
+                           data-zh="我们是致力于创新与卓越的大西洋加拿大领先双语私立高等教育学院。"
+                           data-es="Somos el principal instituto privado bilingüe de educación superior del Atlántico canadiense comprometido con la innovación y la excelencia.">
+                           We are Atlantic Canada's premier bilingual private institute of higher learning.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 data-en="Research-Based Learning Institution" data-fr="Institution d'Apprentissage Basée sur la Recherche" data-zh="研究型学习机构" data-es="Institución de Aprendizaje Basada en Investigación">Research-Based Learning</h3>
+                    <div class="highlight-description">
+                        <p data-en="We are a research-based learning institution committed to advancing knowledge through innovative research."
+                           data-fr="Nous sommes une institution d'apprentissage basée sur la recherche engagée dans l'avancement des connaissances par la recherche innovante."
+                           data-zh="我们是一所致力于通过创新研究推进知识的研究型学习机构。"
+                           data-es="Somos una institución de aprendizaje basada en investigación comprometida con el avance del conocimiento a través de la investigación innovadora.">
+                           We are a research-based learning institution committed to advancing knowledge.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3 data-en="Global Team" data-fr="Équipe Mondiale" data-zh="全球团队" data-es="Equipo Global">Global Team</h3>
+                    <div class="highlight-description">
+                        <p data-en="We are powered by a diverse global team of experts, educators, and researchers from around the world."
+                           data-fr="Nous sommes soutenus par une équipe mondiale diversifiée d'experts, d'éducateurs et de chercheurs du monde entier."
+                           data-zh="我们由来自世界各地的多元化全球专家、教育工作者和研究人员团队提供支持。"
+                           data-es="Somos impulsados por un equipo global diverso de expertos, educadores e investigadores de todo el mundo.">
+                           We are powered by a diverse global team of experts and educators.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 data-en="Service Excellence" data-fr="Excellence du Service" data-zh="卓越服务" data-es="Excelencia en Servicio">Service Excellence</h3>
+                    <div class="highlight-description">
+                        <p data-en="We are here to serve you with dedication, personalized attention, and commitment to your success."
+                           data-fr="Nous sommes ici pour vous servir avec dévouement, attention personnalisée et engagement envers votre réussite."
+                           data-zh="我们致力于以专注、个性化关注和对您成功的承诺为您服务。"
+                           data-es="Estamos aquí para servirle con dedicación, atención personalizada y compromiso con su éxito.">
+                           We are here to serve you with dedication and personalized attention.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-award"></i></div>
+                    <h3 data-en="Quality First" data-fr="Qualité d'Abord" data-zh="质量第一" data-es="Calidad Primero">Quality First</h3>
+                    <div class="highlight-description">
+                        <p data-en="We are committed to the highest standards of educational quality, innovation, and academic integrity."
+                           data-fr="Nous nous engageons à respecter les normes de qualité éducative, d'innovation et d'intégrité académique les plus élevées."
+                           data-zh="我们致力于最高标准的教育质量、创新和学术诚信。"
+                           data-es="Nos comprometemos con los más altos estándares de calidad educativa, innovación e integridad académica.">
+                           Quality is us - we are committed to the highest standards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Our Power is Numbers" data-fr="Notre Force en Chiffres" data-zh="我们的力量在数字中" data-es="Nuestro Poder en Números">Our Power is Numbers</h2>
+                <div class="section-subtitle">
+                    <p data-en="These key metrics underscore C-IHL's dedication to academic excellence, student success, and continuous growth." 
+                       data-fr="Ces indicateurs clés soulignent l'engagement de C-IHL envers l'excellence académique, la réussite des étudiants et la croissance continue."
+                       data-zh="这些关键指标彰显了C-IHL对学术卓越、学生成功和持续发展的承诺。"
+                       data-es="Estas métricas clave subrayan la dedicación de C-IHL a la excelencia académica, el éxito estudiantil y el crecimiento continuo.">
+                       These key metrics underscore our dedication to academic excellence and student success.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">20:1</div>
+                    <div class="stat-label" data-en="Student–Teacher Ratio" data-fr="Ratio Étudiant-Enseignant" data-zh="师生比例" data-es="Ratio Estudiante-Docente">Student–Teacher Ratio</div>
+                    <p class="stat-description" data-en="Ensuring personalized attention and tailored instruction for each student."
+                       data-fr="Garantir une attention personnalisée et un enseignement adapté à chaque étudiant."
+                       data-zh="确保为每位学生提供个性化关注和量身定制的指导。"
+                       data-es="Garantizando atención personalizada e instrucción adaptada para cada estudiante.">
+                       Personalized attention for each student
+                    </p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label" data-en="Job Placement Aspiration" data-fr="Taux de Placement Visé" data-zh="就业安置目标" data-es="Aspiración de Colocación Laboral">Job Placement Aspiration</div>
+                    <p class="stat-description" data-en="Focus on career-oriented education and strong industry connections."
+                       data-fr="Concentration sur l'éducation orientée vers la carrière et des liens solides avec l'industrie."
+                       data-zh="专注于职业导向的教育和强大的行业联系。"
+                       data-es="Enfoque en educación orientada a la carrera y conexiones sólidas con la industria.">
+                       Career-oriented education focus
+                    </p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2K</div>
+                    <div class="stat-label" data-en="Target Students in 5 Years" data-fr="Objectif Étudiants en 5 Ans" data-zh="5年内目标学生数" data-es="Objetivo Estudiantes en 5 Años">Target Students in 5 Years</div>
+                    <p class="stat-description" data-en="Expanding to serve more students while maintaining high standards."
+                       data-fr="Élargir pour servir plus d'étudiants tout en maintenant des normes élevées."
+                       data-zh="扩展以服务更多学生，同时保持高标准。"
+                       data-es="Expandirse para servir a más estudiantes manteniendo altos estándares.">
+                       Growth while maintaining quality
+                    </p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label" data-en="Programmes Offered" data-fr="Programmes Offerts" data-zh="提供课程" data-es="Programas Ofrecidos">Programmes Offered</div>
+                    <p class="stat-description" data-en="Diverse programs across various fields to meet global job market demands."
+                       data-fr="Programmes diversifiés dans divers domaines pour répondre aux exigences du marché du travail mondial."
+                       data-zh="跨多个领域的多样化课程，满足全球就业市场需求。"
+                       data-es="Programas diversos en varios campos para satisfacer las demandas del mercado laboral global.">
+                       Meeting global job market demands
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discover C-IHL Section -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Discover C-IHL" data-fr="Découvrir C-IHL" data-zh="探索C-IHL" data-es="Descubrir C-IHL">Discover C-IHL</h2>
+                <div class="section-subtitle">
+                    <p data-en="Excellence in Education & Research"
+                       data-fr="Excellence en Éducation et Recherche"
+                       data-zh="教育与研究卓越"
+                       data-es="Excelencia en Educación e Investigación">
+                       Excellence in Education & Research
+                    </p>
+                </div>
+            </div>
+            
+            <div class="discover-content">
+                <div class="discover-text">
+                    <p data-en="Welcome to City Institute of Higher Learning, where education meets innovation and diversity. Located in the heart of Moncton, C-IHL offers a variety of programmes tailored to foster global leaders equipped with the knowledge and skills necessary for success in today's dynamic world. Our commitment to excellence in teaching, research, and community engagement makes C-IHL the perfect place to start or enhance your educational journey. Join us and become part of a community that values academic integrity and inclusivity."
+                       data-fr="Bienvenue à l'Institut Supérieur de la Ville, où l'éducation rencontre l'innovation et la diversité. Situé au cœur de Moncton, C-IHL offre une variété de programmes conçus pour former des leaders mondiaux dotés des connaissances et des compétences nécessaires à la réussite dans le monde dynamique d'aujourd'hui. Notre engagement envers l'excellence dans l'enseignement, la recherche et l'engagement communautaire fait de C-IHL l'endroit idéal pour commencer ou améliorer votre parcours éducatif. Rejoignez-nous et faites partie d'une communauté qui valorise l'intégrité académique et l'inclusivité."
+                       data-zh="欢迎来到城市高等学习学院，教育与创新和多样性相遇的地方。位于蒙克顿市中心，C-IHL提供各种量身定制的课程，旨在培养具备在当今动态世界中成功所需知识和技能的全球领导者。我们在教学、研究和社区参与方面的卓越承诺使C-IHL成为开始或提升您的教育之旅的理想场所。加入我们，成为重视学术诚信和包容性的社区的一部分。"
+                       data-es="Bienvenido al Instituto Superior de la Ciudad, donde la educación se encuentra con la innovación y la diversidad. Ubicado en el corazón de Moncton, C-IHL ofrece una variedad de programas diseñados para fomentar líderes globales equipados con el conocimiento y las habilidades necesarias para el éxito en el mundo dinámico de hoy. Nuestro compromiso con la excelencia en la enseñanza, la investigación y el compromiso comunitario hace de C-IHL el lugar perfecto para comenzar o mejorar su viaje educativo. Únase a nosotros y forme parte de una comunidad que valora la integridad académica y la inclusión.">
+                       Welcome to City Institute of Higher Learning, where education meets innovation and diversity.
+                    </p>
+                    
+                    <div class="discover-features">
+                        <div class="feature-item">
+                            <i class="fas fa-globe"></i>
+                            <span data-en="Global Opportunities" data-fr="Opportunités Mondiales" data-zh="全球机会" data-es="Oportunidades Globales">Global Opportunities</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span data-en="Expert Faculty" data-fr="Faculté d'Experts" data-zh="专家教师" data-es="Facultad de Expertos">Expert Faculty</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span data-en="Career Readiness" data-fr="Préparation à la Carrière" data-zh="职业准备" data-es="Preparación Profesional">Career Readiness</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span data-en="Tailored Education" data-fr="Éducation Sur Mesure" data-zh="定制教育" data-es="Educación Personalizada">Tailored Education</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="discover-image">
+                    <!-- FIXED IMAGE PATH -->
+                    <img src="images/welcome img.jpg" alt="C-IHL Campus" data-en="C-IHL Campus" data-fr="Campus C-IHL" data-zh="C-IHL校园" data-es="Campus C-IHL">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programmes Overview Section -->
+    <section class="highlights-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Explore Our Programmes" data-fr="Explorer Nos Programmes" data-zh="探索我们的课程" data-es="Explorar Nuestros Programas">Explore Our Programmes</h2>
+                <div class="section-subtitle">
+                    <p data-en="We offer several higher learning diplomas and certificates geared at developing students' research and management skills. With a dedicated and highly qualified team of instructors, your learning is our priority. All our programs are offered in English and/or French."
+                       data-fr="Nous offrons plusieurs diplômes et certificats d'études supérieures axés sur le développement des compétences en recherche et en gestion des étudiants. Avec une équipe d'instructeurs dévoués et hautement qualifiés, votre apprentissage est notre priorité. Tous nos programmes sont offerts en anglais et/ou en français."
+                       data-zh="我们提供多个旨在培养学生研究和管理技能的高等学习文凭和证书。凭借敬业且高素质的教师团队，您的学习是我们的首要任务。我们所有的课程均以英语和/或法语提供。"
+                       data-es="Ofrecemos varios diplomas y certificados de aprendizaje superior orientados a desarrollar las habilidades de investigación y gestión de los estudiantes. Con un equipo dedicado e altamente calificado de instructores, su aprendizaje es nuestra prioridad. Todos nuestros programas se ofrecen en inglés y/o francés.">
+                       Developing research and management skills with qualified instructors
+                    </p>
+                </div>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 data-en="Academic Options" data-fr="Options Académiques" data-zh="学术选择" data-es="Opciones Académicas">Academic Options</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-description">
+                            <p data-en="Explore a variety of higher learning diplomas and certificates designed to enhance your research and management capabilities. Our programs, taught in English and French, are tailored to prepare you for dynamic career challenges in diverse fields."
+                               data-fr="Explorez une variété de diplômes et certificats d'études supérieures conçus pour améliorer vos capacités de recherche et de gestion. Nos programmes, enseignés en anglais et en français, sont conçus pour vous préparer aux défis de carrière dynamiques dans divers domaines."
+                               data-zh="探索各种旨在增强您研究和管理能力的高等学习文凭和证书。我们的课程以英语和法语授课，旨在为您在不同领域的动态职业挑战做好准备。"
+                               data-es="Explore una variedad de diplomas y certificados de aprendizaje superior diseñados para mejorar sus capacidades de investigación y gestión. Nuestros programas, impartidos en inglés y francés, están diseñados para prepararlo para los desafíos profesionales dinámicos en diversos campos.">
+                               Higher learning diplomas and certificates for diverse career challenges
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <a href="programs.html#academic" class="btn-secondary" data-en="View Programmes" data-fr="Voir les Programmes" data-zh="查看课程" data-es="Ver Programas">View Programmes</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 data-en="Executive Education" data-fr="Éducation Exécutive" data-zh="高管教育" data-es="Educación Ejecutiva">Executive Education</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-description">
+                            <p data-en="Our Executive Education programmes are crafted for professionals aiming to elevate their leadership and managerial skills in a global business environment. These include immersive workshops, seminars, and courses that focus on real-world applications and strategic thinking."
+                               data-fr="Nos programmes d'éducation exécutive sont conçus pour les professionnels visant à améliorer leurs compétences en leadership et en gestion dans un environnement commercial mondial. Ceux-ci comprennent des ateliers immersifs, des séminaires et des cours qui mettent l'accent sur les applications pratiques et la pensée stratégique."
+                               data-zh="我们的高管教育课程专为旨在提升全球商业环境中领导力和管理技能的专业人士设计。这些包括沉浸式研讨会、研讨会和专注于实际应用和战略思维的课程。"
+                               data-es="Nuestros programas de educación ejecutiva están diseñados para profesionales que buscan elevar sus habilidades de liderazgo y gestión en un entorno empresarial global. Estos incluyen talleres inmersivos, seminarios y cursos que se centran en aplicaciones del mundo real y pensamiento estratégico.">
+                               Leadership and managerial skills for global business environment
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <a href="programs.html#executive" class="btn-secondary" data-en="View Programmes" data-fr="Voir les Programmes" data-zh="查看课程" data-es="Ver Programas">View Programmes</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 data-en="Community Programmes" data-fr="Programmes Communautaires" data-zh="社区项目" data-es="Programas Comunitarios">Community Programmes</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-description">
+                            <p data-en="Participate in enriching community programmes that include language courses and cultural storytelling sessions, fostering local engagement and cultural exchange. These programs are designed to build bridges within the community and enhance mutual understanding and respect."
+                               data-fr="Participez à des programmes communautaires enrichissants qui comprennent des cours de langue et des sessions de narration culturelle, favorisant l'engagement local et les échanges culturels. Ces programmes sont conçus pour créer des ponts au sein de la communauté et améliorer la compréhension et le respect mutuels."
+                               data-zh="参与丰富的社区项目，包括语言课程和文化叙事会议，促进当地参与和文化交流。这些项目旨在在社区内建立桥梁，增进相互理解和尊重。"
+                               data-es="Participe en programas comunitarios enriquecedores que incluyen cursos de idiomas y sesiones de narración cultural, fomentando la participación local y el intercambio cultural. Estos programas están diseñados para construir puentes dentro de la comunidad y mejorar la comprensión y el respeto mutuos.">
+                               Language courses and cultural storytelling for community engagement
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <a href="programs.html#community" class="btn-secondary" data-en="View Programmes" data-fr="Voir les Programmes" data-zh="查看课程" data-es="Ver Programas">View Programmes</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 data-en="Consulting Service" data-fr="Service de Conseil" data-zh="咨询服务" data-es="Servicio de Consultoría">Consulting Service</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-description">
+                            <p data-en="We offer specialized consulting services that support businesses and community organizations in achieving their goals through expert guidance in HR planning, teambuilding, and strategic development. Our services also extend to providing training for trainers and workshops on equality and diversity."
+                               data-fr="Nous offrons des services de conseil spécialisés qui soutiennent les entreprises et les organisations communautaires dans la réalisation de leurs objectifs grâce à des conseils d'experts en planification des RH, en renforcement d'équipe et en développement stratégique. Nos services s'étendent également à la formation des formateurs et à des ateliers sur l'égalité et la diversité."
+                               data-zh="我们提供专业咨询服务，通过人力资源规划、团队建设和战略发展方面的专家指导，支持企业和社区组织实现目标。我们的服务还扩展到为培训师提供培训以及平等和多元化研讨会。"
+                               data-es="Ofrecemos servicios de consultoría especializados que apoyan a empresas y organizaciones comunitarias en el logro de sus objetivos a través de orientación experta en planificación de recursos humanos, formación de equipos y desarrollo estratégico. Nuestros servicios también se extienden a proporcionar capacitación para capacitadores y talleres sobre igualdad y diversidad.">
+                               Expert guidance for businesses and community organizations
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <a href="consulting.html" class="btn-secondary" data-en="Learn More" data-fr="En Savoir Plus" data-zh="了解更多" data-es="Saber Más">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Benefits of Studying at C-IHL" data-fr="Avantages d'Étudier à C-IHL" data-zh="在C-IHL学习的优势" data-es="Beneficios de Estudiar en C-IHL">Benefits of Studying at C-IHL</h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-globe"></i></div>
+                    <h3 data-en="Global Opportunities" data-fr="Opportunités Mondiales" data-zh="全球机会" data-es="Oportunidades Globales">Global Opportunities</h3>
+                    <div class="benefit-description">
+                        <p data-en="Experience diverse cultures and ideas in a global classroom through international programmes."
+                           data-fr="Vivez des cultures et des idées diversifiées dans une salle de classe mondiale grâce à des programmes internationaux."
+                           data-zh="通过国际课程在全球课堂中体验多元文化和思想。"
+                           data-es="Experimente culturas e ideas diversas en un aula global a través de programas internacionales.">
+                           Experience diverse cultures in a global classroom
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 data-en="Expert Faculty" data-fr="Faculté d'Experts" data-zh="专家教师" data-es="Facultad de Expertos">Expert Faculty</h3>
+                    <div class="benefit-description">
+                        <p data-en="Learn from highly qualified and experienced instructors who are leaders in their fields and committed to student success."
+                           data-fr="Apprenez auprès d'instructeurs hautement qualifiés et expérimentés qui sont des leaders dans leurs domaines et engagés envers la réussite des étudiants."
+                           data-zh="向在其领域处于领先地位并致力于学生成功的高素质和经验丰富的教师学习。"
+                           data-es="Aprende de instructores altamente calificados y experimentados que son líderes en sus campos y comprometidos con el éxito estudiantil.">
+                           Learn from qualified instructors committed to student success
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3 data-en="Career Readiness" data-fr="Préparation à la Carrière" data-zh="职业准备" data-es="Preparación Profesional">Career Readiness</h3>
+                    <div class="benefit-description">
+                        <p data-en="Graduate with a degree that prepares you for the workforce through practical skills, professional training, and career services."
+                           data-fr="Diplômé avec un diplôme qui vous prépare à la main-d'œuvre grâce à des compétences pratiques, une formation professionnelle et des services de carrière."
+                           data-zh="通过实践技能、专业培训和职业服务获得为您进入劳动力市场做好准备的学位。"
+                           data-es="Graduarse con un título que lo prepare para la fuerza laboral a través de habilidades prácticas, capacitación profesional y servicios profesionales.">
+                           Practical skills and professional training for workforce readiness
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3 data-en="Tailored Education" data-fr="Éducation Sur Mesure" data-zh="定制教育" data-es="Educación Personalizada">Tailored Education</h3>
+                    <div class="benefit-description">
+                        <p data-en="Enjoy flexible learning options and personalized support designed to help you meet your educational and career goals."
+                           data-fr="Profitez d'options d'apprentissage flexibles et d'un soutien personnalisé conçus pour vous aider à atteindre vos objectifs éducatifs et professionnels."
+                           data-zh="享受灵活的学习选择和个性化支持，旨在帮助您实现教育和职业目标。"
+                           data-es="Disfrute de opciones de aprendizaje flexibles y apoyo personalizado diseñado para ayudarlo a alcanzar sus objetivos educativos y profesionales.">
+                           Flexible learning options and personalized support
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News and Events Section - FULL CONTENT WITH PROF MARIA -->
+    <section class="events-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="News and Events" data-fr="Nouvelles et Événements" data-zh="新闻与活动" data-es="Noticias y Eventos">News and Events</h2>
+                <div class="section-subtitle">
+                    <p data-en="Stay updated with the latest happenings at C-IHL"
+                       data-fr="Restez informé des dernières actualités de C-IHL"
+                       data-zh="了解C-IHL最新动态"
+                       data-es="Manténgase actualizado con los últimos acontecimientos en C-IHL">
+                       Stay updated with the latest happenings at C-IHL
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Featured Event: CITY Research Series WITH PROF MARIA KORDOWICZ -->
+            <div class="featured-event">
+                <div class="featured-event-content">
+                    <div class="featured-event-badge">
+                        <span data-en="Featured Event" data-fr="Événement en Vedette" data-zh="特色活动" data-es="Evento Destacado">Featured Event</span>
+                    </div>
+                    
+                    <h2 class="featured-event-title" data-en="CITY RESEARCH SERIES" data-fr="SÉRIE DE RECHERCHE CITY" data-zh="城市研究系列" data-es="SERIE DE INVESTIGACIÓN CITY">CITY RESEARCH SERIES</h2>
+                    
+                    <div class="featured-event-subtitle">
+                        <div data-en="With Prof Maria Kordowicz" data-fr="Avec la Prof Maria Kordowicz" data-zh="与Maria Kordowicz教授" data-es="Con la Prof. Maria Kordowicz">With Prof Maria Kordowicz</div>
+                        <div data-en="Professor of Organisational Psychology, Regent's University London" data-fr="Professeure de Psychologie Organisationnelle, Université Regent's de Londres" data-zh="组织心理学教授，伦敦摄政大学" data-es="Profesora de Psicología Organizacional, Universidad Regent's de Londres">Professor of Organisational Psychology, Regent's University London</div>
+                    </div>
+                    
+                    <div class="featured-event-details">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <strong data-en="Date & Time" data-fr="Date & Heure" data-zh="日期与时间" data-es="Fecha y Hora">Date & Time</strong>
+                                <p data-en="Tuesday, 2nd December 2025<br>3pm UK Time / 11am Moncton, Canada" data-fr="Mardi 2 décembre 2025<br>15h Heure UK / 11h Moncton, Canada" data-zh="2025年12月2日 星期二<br>英国时间下午3点 / 加拿大蒙克顿上午11点" data-es="Martes 2 de diciembre de 2025<br>15h hora del Reino Unido / 11h Moncton, Canadá">Tuesday, 2nd December 2025<br>3pm UK Time / 11am Moncton, Canada</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-video"></i>
+                            <div>
+                                <strong data-en="Format" data-fr="Format" data-zh="形式" data-es="Formato">Format</strong>
+                                <p data-en="Online Session via LinkedIn" data-fr="Session en ligne via LinkedIn" data-zh="通过LinkedIn在线会议" data-es="Sesión en línea vía LinkedIn">Online Session via LinkedIn</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-link"></i>
+                            <div>
+                                <strong data-en="Join Link" data-fr="Lien de participation" data-zh="加入链接" data-es="Enlace de participación">Join Link</strong>
+                                <p><a href="https://lnkd.in/eT8BuxrG" target="_blank" class="event-link">https://lnkd.in/eT8BuxrG</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-event-description">
+                        <h3 data-en="Main Topic: 'Redundant? The Case of English Universities'" data-fr="Sujet principal : 'Redundant? Le cas des universités anglaises'" data-zh="主题：'冗余？英国大学案例'" data-es="Tema principal: '¿Redundante? El caso de las universidades inglesas'">Main Topic: "Redundant? The Case of English Universities"</h3>
+                        
+                        <div class="event-description-text">
+                            <p data-en="We are thrilled to present another powerful session in the CITY Research Series, featuring one of the UK's leading voices in organisational psychology, Prof Maria Kordowicz, Professor of Organisational Psychology and Director of Psychology & Research at Regent's University London."
+                               data-fr="Nous sommes ravis de présenter une autre session importante de la Série de Recherche CITY, avec l'une des voix les plus influentes du Royaume-Uni en psychologie organisationnelle, la Prof Maria Kordowicz, Professeure de Psychologie Organisationnelle et Directrice de la Psychologie et de la Recherche à l'Université Regent's de Londres."
+                               data-zh="我们很高兴在CITY研究系列中推出另一个重要会议，特邀英国组织心理学领域的领军人物之一，伦敦摄政大学组织心理学教授、心理学与研究主任Maria Kordowicz教授。"
+                               data-es="Nos complace presentar otra sesión importante en la Serie de Investigación CITY, con una de las voces líderes del Reino Unido en psicología organizacional, la Prof. Maria Kordowicz, Profesora de Psicología Organizacional y Directora de Psicología e Investigación en la Universidad Regent's de Londres.">
+                               We are thrilled to present another powerful session in the CITY Research Series.
+                            </p>
+                        </div>
+                        
+                        <div class="theme-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong data-en="Theme" data-fr="Thème" data-zh="主题" data-es="Tema">Theme</strong>
+                                <p data-en="Exploring the Impact on Academic Identities and Wellbeing" data-fr="Explorer l'impact sur les identités académiques et le bien-être" data-zh="探索对学术身份和福祉的影响" data-es="Explorando el Impacto en las Identidades Académicas y el Bienestar">Exploring the Impact on Academic Identities and Wellbeing</p>
+                            </div>
+                        </div>
+                        
+                        <div class="event-description-text">
+                            <p data-en="Professor Kordowicz will examine the challenges facing universities today, using English institutions as a compelling case study, from shifting organisational demands to their effects on academic identity, purpose, and wellbeing. This session offers vital insight and reflection for academics, students, policymakers, and anyone invested in higher education's future."
+                               data-fr="La Professeure Kordowicz examinera les défis auxquels sont confrontées les universités aujourd'hui, en utilisant les institutions anglaises comme étude de cas convaincante, des demandes organisationnelles changeantes à leurs effets sur l'identité académique, le but et le bien-être. Cette session offre des perspectives et réflexions vitales pour les universitaires, étudiants, décideurs politiques et toute personne investie dans l'avenir de l'enseignement supérieur."
+                               data-zh="Kordowicz教授将以英国机构为引人注目的案例研究，审视当今大学面临的挑战，从不断变化的组织需求到其对学术身份、目标和福祉的影响。本次会议为学术界、学生、政策制定者以及任何关心高等教育未来的人士提供了重要的见解和反思。"
+                               data-es="La Prof. Kordowicz examinará los desafíos que enfrentan las universidades hoy en día, utilizando las instituciones inglesas como un estudio de caso convincente, desde las cambiantes demandas organizacionales hasta sus efectos en la identidad académica, el propósito y el bienestar. Esta sesión ofrece una visión vital y reflexión para académicos, estudiantes, formuladores de políticas y cualquier persona interesada en el futuro de la educación superior.">
+                               Examining challenges facing universities today
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-event-actions">
+                        <a href="https://lnkd.in/eT8BuxrG" target="_blank" class="btn-primary" data-en="Join Online Session" data-fr="Rejoindre la session en ligne" data-zh="加入在线会议" data-es="Unirse a Sesión en Línea">Join Online Session</a>
+                        <a href="events.html" class="btn-secondary" data-en="View All Events" data-fr="Voir tous les événements" data-zh="查看所有活动" data-es="Ver Todos los Eventos">View All Events</a>
+                    </div>
+                </div>
+                
+                <div class="featured-event-image">
+                    <!-- FIXED IMAGE PATH -->
+                    <img src="c-img1.jpg" alt="CITY Research Series with Prof Maria Kordowicz" class="event-main-image">
+                    <div class="image-caption">
+                        <span data-en="Prof Maria Kordowicz" data-fr="Prof Maria Kordowicz" data-zh="Maria Kordowicz教授" data-es="Prof. Maria Kordowicz">Prof Maria Kordowicz</span>
+                        <small data-en="Professor of Organisational Psychology" data-fr="Professeure de Psychologie Organisationnelle" data-zh="组织心理学教授" data-es="Profesora de Psicología Organizacional">Professor of Organisational Psychology</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upcoming Events -->
+            <div class="section-title mt-40">
+                <h3 data-en="Upcoming Events" data-fr="Événements à Venir" data-zh="即将举行的活动" data-es="Próximos Eventos">Upcoming Events</h3>
+            </div>
+            
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <!-- FIXED IMAGE PATH -->
+                        <img src="images/2nd confrence.jpg" alt="Conference on Economic Growth" class="event-img">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar"></i>
+                            <span data-en="May 15-17, 2024" data-fr="15-17 Mai 2024" data-zh="2024年5月15-17日" data-es="15-17 de Mayo 2024">May 15-17, 2024</span>
+                        </div>
+                        <h3 data-en="2nd Conference on Economic Growth in Atlantic Canada" data-fr="2ème Conférence sur la Croissance Économique dans le Canada Atlantique" data-zh="第二届大西洋加拿大经济增长会议" data-es="2ª Conferencia sobre Crecimiento Económico en el Atlántico Canadiense">Economic Growth Conference</h3>
+                        <div class="event-description">
+                            <p data-en="Join industry leaders and academics for discussions on economic development in Atlantic Canada."
+                               data-fr="Rejoignez les leaders de l'industrie et les universitaires pour des discussions sur le développement économique dans le Canada atlantique."
+                               data-zh="与行业领袖和学者一起讨论大西洋加拿大的经济发展。"
+                               data-es="Únase a líderes de la industria y académicos para debates sobre el desarrollo económico en el Atlántico canadiense.">
+                               Discussions on economic development in Atlantic Canada
+                            </p>
+                        </div>
+                        <a href="conferences.html#economic-growth" class="btn-secondary" data-en="Learn More" data-fr="En Savoir Plus" data-zh="了解更多" data-es="Saber Más">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-image">
+                        <!-- FIXED IMAGE PATH -->
+                        <img src="images/3rd graduation image.jpeg" alt="Information Session" class="event-img">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar"></i>
+                            <span data-en="December 12, 2024" data-fr="12 Décembre 2024" data-zh="2024年12月12日" data-es="12 de Diciembre 2024">December 12, 2024</span>
+                        </div>
+                        <h3 data-en="Information Session with AIAC-NB" data-fr="Session d'Information avec AIAC-NB" data-zh="与AIAC-NB的信息会议" data-es="Sesión de Información con AIAC-NB">Information Session</h3>
+                        <div class="event-description">
+                            <p data-en="Collaborative information session with AIAC-NB from 6-7pm."
+                               data-fr="Session d'information collaborative avec AIAC-NB de 18h à 19h."
+                               data-zh="与AIAC-NB合作的下午6-7点信息会议。"
+                               data-es="Sesión informativa colaborativa con AIAC-NB de 6 a 7 pm.">
+                               Collaborative session with AIAC-NB from 6-7pm
+                            </p>
+                        </div>
+                        <a href="events.html#info-session" class="btn-secondary" data-en="Register Now" data-fr="S'Inscrire" data-zh="立即注册" data-es="Registrarse Ahora">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-image">
+                        <!-- FIXED IMAGE PATH -->
+                        <img src="photo_2025-12-30_13-29-47.jpg" alt="Open House Event" class="event-img">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar"></i>
+                            <span data-en="March 15, 2024" data-fr="15 Mars 2024" data-zh="2024年3月15日" data-es="15 de Marzo 2024">March 15, 2024</span>
+                        </div>
+                        <h3 data-en="Open House 2024" data-fr="Portes Ouvertes 2024" data-zh="2024开放日" data-es="Casa Abierta 2024">Open House 2024</h3>
+                        <div class="event-description">
+                            <p data-en="Explore our campus, meet faculty, and discover your future at C-IHL."
+                               data-fr="Explorez notre campus, rencontrez les professeurs et découvrez votre avenir à C-IHL."
+                               data-zh="探索我们的校园，与教师会面，在C-IHL发现您的未来。"
+                               data-es="Explore nuestro campus, conozca a la facultad y descubra su futuro en C-IHL.">
+                               Explore campus, meet faculty, discover your future
+                            </p>
+                        </div>
+                        <a href="events.html#open-house" class="btn-secondary" data-en="Learn More" data-fr="En Savoir Plus" data-zh="了解更多" data-es="Saber Más">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent News -->
+            <div class="section-title mt-40">
+                <h3 data-en="Recent News" data-fr="Nouvelles Récentes" data-zh="近期新闻" data-es="Noticias Recientes">Recent News</h3>
+            </div>
+            
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-date">July 31, 2025</div>
+                    <h4 data-en="Executive Certificate in Arbitration Practicum in Ghana" data-fr="Certificat Exécutif en Pratique d'Arbitrage au Ghana" data-zh="加纳仲裁实践行政证书" data-es="Certificado Ejecutivo en Práctica de Arbitraje en Ghana">Arbitration Practicum in Ghana</h4>
+                    <p data-en="Successful day one EXECUTIVE CERTIFICATE in Arbitration practicum held in Ghana by ADR-SRI quality assurance by City Institute of Higher Learning."
+                       data-fr="Première journée réussie du CERTIFICAT EXÉCUTIF en pratique d'arbitrage tenue au Ghana avec l'assurance qualité ADR-SRI par l'Institut Supérieur de la Ville."
+                       data-zh="由城市高等学习学院ADR-SRI质量保证在加纳举行的仲裁实践行政证书第一天圆满成功。"
+                       data-es="Primer día exitoso del CERTIFICADO EJECUTIVO en práctica de arbitraje celebrado en Ghana con garantía de calidad ADR-SRI por el Instituto Superior de la Ciudad.">
+                       Successful arbitration practicum in Ghana
+                    </p>
+                    <a href="blog.html#arbitration-ghana" class="btn-secondary" data-en="Read More" data-fr="Lire Plus" data-zh="阅读更多" data-es="Leer Más">Read More</a>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-date">July 25, 2025</div>
+                    <h4 data-en="French For Beginners – Intensive Program" data-fr="Français Pour Débutants – Programme Intensif" data-zh="法语初学者强化课程" data-es="Francés Para Principiantes – Programa Intensivo">French For Beginners</h4>
+                    <p data-en="Intensive French language program for beginners now accepting applications."
+                       data-fr="Programme intensif de langue française pour débutants acceptant maintenant les candidatures."
+                       data-zh="面向初学者的法语强化课程现正接受申请。"
+                       data-es="Programa intensivo de francés para principiantes que ahora acepta solicitudes.">
+                       Intensive French program for beginners
+                    </p>
+                    <a href="programs.html#french-beginners" class="btn-secondary" data-en="Learn More" data-fr="En Savoir Plus" data-zh="了解更多" data-es="Saber Más">Learn More</a>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-date">July 18, 2025</div>
+                    <h4 data-en="3rd Graduation & Awards Ceremony & 1st Annual Conference 2025" data-fr="3ème Cérémonie de Remise des Diplômes & Prix & 1ère Conférence Annuelle 2025" data-zh="第三届毕业颁奖典礼暨第一届年度会议2025" data-es="3ª Ceremonia de Graduación y Premios y 1ª Conferencia Anual 2025">Graduation & Conference 2025</h4>
+                    <p data-en="Celebrating our 3rd graduation and awards ceremony alongside our 1st annual conference."
+                       data-fr="Célébration de notre 3ème cérémonie de remise des diplômes et des prix ainsi que de notre 1ère conférence annuelle."
+                       data-zh="庆祝我们的第三届毕业颁奖典礼暨第一届年度会议。"
+                       data-es="Celebrando nuestra 3ª ceremonia de graduación y premios junto con nuestra 1ª conferencia anual.">
+                       3rd graduation and 1st annual conference celebration
+                    </p>
+                    <a href="events.html#graduation-2025" class="btn-secondary" data-en="View Photos" data-fr="Voir les Photos" data-zh="查看照片" data-es="Ver Fotos">View Photos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider Content Section -->
+    <section class="highlights-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Featured Programmes" data-fr="Programmes en Vedette" data-zh="特色课程" data-es="Programas Destacados">Featured Programmes</h2>
+                <div class="section-subtitle">
+                    <p data-en="Discover our specialized programs designed for your success"
+                       data-fr="Découvrez nos programmes spécialisés conçus pour votre réussite"
+                       data-zh="发现我们为您成功设计的专业课程"
+                       data-es="Descubra nuestros programas especializados diseñados para su éxito">
+                       Discover our specialized programs designed for your success
+                    </p>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <div class="slider-track">
+                    <!-- Slide 1 -->
+                    <div class="slide">
+                        <div class="slide-content">
+                            <h3 data-en="Master New Languages Now!" data-fr="Maîtrisez de Nouvelles Langues dès Maintenant!" data-zh="立即掌握新语言！" data-es="¡Domina Nuevos Idiomas Ahora!">Master New Languages Now!</h3>
+                            <p data-en="Join our language courses at City Institute of Higher Learning and become fluent in Spanish, Arabic, Hindi, Chinese, Ukrainian, Korean, or French. Boost your career prospects and connect with people globally. Our expert instructors and immersive learning environment will help you master a new language and open doors to exciting international opportunities."
+                               data-fr="Rejoignez nos cours de langues à l'Institut Supérieur de la Ville et devenez fluent en espagnol, arabe, hindi, chinois, ukrainien, coréen ou français. Améliorez vos perspectives de carrière et connectez-vous avec des personnes du monde entier. Nos instructeurs experts et notre environnement d'apprentissage immersif vous aideront à maîtriser une nouvelle langue et à ouvrir des portes vers des opportunités internationales passionnantes."
+                               data-zh="加入城市高等学习学院的语言课程，流利掌握西班牙语、阿拉伯语、印地语、中文、乌克兰语、韩语或法语。提升您的职业前景，与全球人士建立联系。我们的专家教师和沉浸式学习环境将帮助您掌握一门新语言，并打开激动人心的国际机会之门。"
+                               data-es="Únase a nuestros cursos de idiomas en el Instituto Superior de la Ciudad y domine español, árabe, hindi, chino, ucraniano, coreano o francés. Mejore sus perspectivas profesionales y conéctese con personas a nivel mundial. Nuestros instructores expertos y entorno de aprendizaje inmersivo lo ayudarán a dominar un nuevo idioma y abrir puertas a emocionantes oportunidades internacionales.">
+                               Language courses in Spanish, Arabic, Hindi, Chinese, Ukrainian, Korean, or French
+                            </p>
+                            <a href="programs.html#language-courses" class="btn-primary" data-en="Learn Languages" data-fr="Apprendre les Langues" data-zh="学习语言" data-es="Aprender Idiomas">Learn Languages</a>
+                        </div>
+                        <div class="slide-image">
+                            <!-- FIXED IMAGE PATH -->
+                            <img src="images/language-courses.jpg" alt="Language Learning" data-en="Language Learning" data-fr="Apprentissage des Langues" data-zh="语言学习" data-es="Aprendizaje de Idiomas">
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <div class="slide-content">
+                            <h3 data-en="Certificate in Research Assistantship" data-fr="Certificat en Assistance à la Recherche" data-zh="研究助理证书" data-es="Certificado en Asistencia de Investigación">Research Assistantship Certificate</h3>
+                            <p data-en="Want to develop your skills as a research assistant and support exciting research projects? This innovative program is designed for you! Whether you're a graduate or looking to enhance your practical skills, our Certificate in Research Assistantship offers comprehensive training to excel in this field."
+                               data-fr="Vous voulez développer vos compétences en tant qu'assistant de recherche et soutenir des projets de recherche passionnants? Ce programme innovant est conçu pour vous! Que vous soyez diplômé ou que vous cherchiez à améliorer vos compétences pratiques, notre Certificat en Assistance à la Recherche offre une formation complète pour exceller dans ce domaine."
+                               data-zh="想发展您作为研究助理的技能并支持激动人心的研究项目吗？这个创新课程就是为您设计的！无论您是毕业生还是希望提升实践技能，我们的研究助理证书都提供全面培训，助您在这一领域脱颖而出。"
+                               data-es="¿Quiere desarrollar sus habilidades como asistente de investigación y apoyar proyectos de investigación emocionantes? ¡Este programa innovador está diseñado para usted! Ya sea que sea graduado o busque mejorar sus habilidades prácticas, nuestro Certificado en Asistencia de Investigación ofrece capacitación integral para sobresalir en este campo.">
+                               Comprehensive training for research assistants
+                            </p>
+                            <a href="programs.html#research-assistantship" class="btn-primary" data-en="Apply Now" data-fr="Postuler Maintenant" data-zh="立即申请" data-es="Aplicar Ahora">Apply Now</a>
+                        </div>
+                        <div class="slide-image">
+                            <!-- FIXED IMAGE PATH -->
+                            <img src="images/research-assistant.jpg" alt="Research Assistantship" data-en="Research Assistantship" data-fr="Assistance à la Recherche" data-zh="研究助理" data-es="Asistencia de Investigación">
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <div class="slide-content">
+                            <h3 data-en="Become a Leader Today!" data-fr="Devenez un Leader dès Aujourd'hui!" data-zh="立即成为领导者！" data-es="¡Conviértase en Líder Hoy!">Become a Leader Today!</h3>
+                            <p data-en="Develop your leadership potential with our specialized programs at City Institute of Higher Learning. Learn effective strategies to lead teams and projects to success in any industry. Our courses are designed to equip you with the skills and knowledge needed to inspire and manage effectively, ensuring your growth as a dynamic leader."
+                               data-fr="Développez votre potentiel de leadership avec nos programmes spécialisés à l'Institut Supérieur de la Ville. Apprenez des stratégies efficaces pour mener des équipes et des projets au succès dans n'importe quelle industrie. Nos cours sont conçus pour vous doter des compétences et des connaissances nécessaires pour inspirer et gérer efficacement, garantissant votre croissance en tant que leader dynamique."
+                               data-zh="通过城市高等学习学院的专业课程发展您的领导潜力。学习在任何行业带领团队和项目取得成功的有效策略。我们的课程旨在为您提供有效激励和管理所需的技能和知识，确保您成长为动态领导者。"
+                               data-es="Desarrolle su potencial de liderazgo con nuestros programas especializados en el Instituto Superior de la Ciudad. Aprenda estrategias efectivas para liderar equipos y proyectos hacia el éxito en cualquier industria. Nuestros cursos están diseñados para equiparlo con las habilidades y conocimientos necesarios para inspirar y gestionar efectivamente, asegurando su crecimiento como líder dinámico.">
+                               Leadership development programs for any industry
+                            </p>
+                            <a href="programs.html#leadership" class="btn-primary" data-en="Develop Leadership" data-fr="Développer le Leadership" data-zh="发展领导力" data-es="Desarrollar Liderazgo">Develop Leadership</a>
+                        </div>
+                        <div class="slide-image">
+                            <!-- FIXED IMAGE PATH -->
+                            <img src="images/leadership.jpg" alt="Leadership Development" data-en="Leadership Development" data-fr="Développement du Leadership" data-zh="领导力发展" data-es="Desarrollo de Liderazgo">
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Language Toggle in Bottom Right Corner - TRANSPARENT VERSION -->
+    <div class="floating-language-toggle" id="floatingLangToggle">
+        <div class="lang-toggle-float">
+            <button class="lang-btn-float active" data-lang="en">EN</button>
+            <button class="lang-btn-float" data-lang="fr">FR</button>
+            <button class="lang-btn-float" data-lang="zh">中文</button>
+            <button class="lang-btn-float" data-lang="es">ES</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-en="About C-IHL" data-fr="À propos de C-IHL" data-zh="关于C-IHL" data-es="Acerca de C-IHL">About C-IHL</h3>
+                    <p class="footer-description" data-en="City Institute of Higher Learning (C-IHL) is an advanced research-focused education institute in New Brunswick, Canada, that serves the needs of the research community and businesses."
+                       data-fr="L'Institut Supérieur de la Ville (C-IHL) est un institut d'éducation avancé axé sur la recherche au Nouveau-Brunswick, Canada, qui répond aux besoins de la communauté de recherche et des entreprises."
+                       data-zh="城市高等学习学院(C-IHL)是位于加拿大新不伦瑞克省的高级研究型教育机构，为研究界和企业提供服务。"
+                       data-es="El Instituto Superior de la Ciudad (C-IHL) es un instituto de educación avanzado centrado en la investigación en New Brunswick, Canadá, que satisface las necesidades de la comunidad de investigación y las empresas.">
+                       Advanced research-focused education institute in New Brunswick, Canada.
+                    </p>
+                    
+                    <!-- Newsletter -->
+                    <div class="newsletter">
+                        <h4 data-en="Subscribe For More!" data-fr="Abonnez-vous Pour Plus!" data-zh="订阅更多信息！" data-es="¡Suscríbase para Más!">Subscribe For More!</h4>
+                        <p data-en="Don't miss out, stay tuned" data-fr="Ne manquez pas, restez à l'écoute" data-zh="不要错过，敬请关注" data-es="No se lo pierda, manténgase atento">Don't miss out, stay tuned</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email" data-en="Your email" data-fr="Votre email" data-zh="您的邮箱" data-es="Su correo electrónico" required>
+                            <button type="submit" data-en="Subscribe" data-fr="S'abonner" data-zh="订阅" data-es="Suscribirse">Subscribe</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Programmes" data-fr="Programmes" data-zh="课程项目" data-es="Programas">Programmes</h3>
+                    <ul class="footer-links">
+                        <li><a href="programs.html#academic" data-en="Academic Options" data-fr="Options Académiques" data-zh="学术选择" data-es="Opciones Académicas">Academic Options</a></li>
+                        <li><a href="programs.html#executive" data-en="Executive Education" data-fr="Éducation Exécutive" data-zh="高管教育" data-es="Educación Ejecutiva">Executive Education</a></li>
+                        <li><a href="programs.html#language-courses" data-en="Language Courses" data-fr="Cours de Langues" data-zh="语言课程" data-es="Cursos de Idiomas">Language Courses</a></li>
+                        <li><a href="consulting.html" data-en="Consulting Services" data-fr="Services de Conseil" data-zh="咨询服务" data-es="Servicios de Consultoría">Consulting Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Quick Links" data-fr="Liens Rapides" data-zh="快速链接" data-es="Enlaces Rápidos">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-en="About C-IHL" data-fr="À propos de C-IHL" data-zh="关于C-IHL" data-es="Acerca de C-IHL">About C-IHL</a></li>
+                        <li><a href="student-services.html" data-en="Student Services" data-fr="Services aux Étudiants" data-zh="学生服务" data-es="Servicios Estudiantiles">Student Services</a></li>
+                        <li><a href="contact.html" data-en="Contact Us" data-fr="Contactez-nous" data-zh="联系我们" data-es="Contáctenos">Contact Us</a></li>
+                        <li><a href="terms.html" data-en="Terms and Conditions" data-fr="Termes et Conditions" data-zh="条款与条件" data-es="Términos y Condiciones">Terms and Conditions</a></li>
+                        <li><a href="blog.html" data-en="Blog" data-fr="Blog" data-zh="博客" data-es="Blog">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Contact" data-fr="Contact" data-zh="联系我们" data-es="Contacto">Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+15063882833"><i class="fas fa-phone"></i> +1 506 388 2833</a></li>
+                        <li><a href="mailto:admin@city-ihl.ca"><i class="fas fa-envelope"></i> admin@city-ihl.ca</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-en="Moncton, New Brunswick, Canada" data-fr="Moncton, Nouveau-Brunswick, Canada" data-zh="蒙克顿，新不伦瑞克省，加拿大" data-es="Moncton, New Brunswick, Canadá">Moncton, New Brunswick, Canada</span></li>
+                    </ul>
+                    
+                    <div class="office-hours">
+                        <h4 data-en="Office Hours" data-fr="Heures de Bureau" data-zh="办公时间" data-es="Horario de Oficina">Office Hours</h4>
+                        <p data-en="Monday - Friday: 9:00 AM - 5:00 PM" data-fr="Lundi - Vendredi: 9h00 - 17h00" data-zh="周一至周五：上午9:00 - 下午5:00" data-es="Lunes - Viernes: 9:00 AM - 5:00 PM">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                        <p data-en="Saturday: By appointment only" data-fr="Samedi: Sur rendez-vous seulement" data-zh="周六：仅限预约" data-es="Sábado: Solo con cita previa">Saturday: By appointment only</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 City Institute of Higher Learning (C-IHL). <span data-en="All rights reserved." data-fr="Tous droits réservés." data-zh="版权所有。" data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

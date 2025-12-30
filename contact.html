@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | City Institute of Higher Learning | Institut Supérieur de la Ville | 联系我们 | Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .contact-card {
+            background: var(--white);
+            border-radius: var(--card-radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--accent);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(255, 179, 102, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+        
+        .contact-card h3 {
+            color: var(--green-dark);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-details {
+            color: var(--text-dark);
+        }
+        
+        .contact-link {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .contact-link:hover {
+            color: var(--green-dark);
+        }
+        
+        .small-text {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+            margin-top: 5px;
+        }
+        
+        .contact-instructions {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .instructions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .instruction-step {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--card-radius);
+            border-left: 4px solid var(--green-dark);
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--green-dark);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .instruction-step h4 {
+            color: var(--green-dark);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        /* Contact Form Styles */
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--green-dark);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.1);
+        }
+        
+        /* Privacy Agreement Styling - FIXED */
+        .privacy-agreement {
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(255, 140, 66, 0.05);
+            border-radius: 10px;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .privacy-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .privacy-checkbox input[type="checkbox"] {
+            display: none;
+        }
+        
+        .privacy-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            cursor: pointer;
+            font-weight: normal;
+            color: var(--text-dark);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+        
+        .privacy-label:hover {
+            color: var(--green-dark);
+        }
+        
+        .checkbox-custom {
+            position: relative;
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--accent);
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 3px;
+            transition: var(--transition);
+        }
+        
+        .checkbox-custom::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: transform 0.2s ease;
+        }
+        
+        .privacy-checkbox input[type="checkbox"]:checked + .privacy-label .checkbox-custom::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .privacy-checkbox input[type="checkbox"]:checked + .privacy-label .checkbox-custom {
+            background: rgba(255, 140, 66, 0.1);
+            border-color: var(--accent);
+        }
+        
+        .privacy-text {
+            flex: 1;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Error state for privacy checkbox */
+        .privacy-agreement.error {
+            background: rgba(255, 68, 68, 0.05);
+            border-left-color: #ff4444;
+        }
+        
+        .privacy-agreement.error .checkbox-custom {
+            border-color: #ff4444;
+        }
+        
+        .privacy-agreement.error .privacy-label {
+            color: #ff4444;
+        }
+        
+        .form-submit {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .form-submit button {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+        }
+        
+        .form-submit button i {
+            margin-right: 10px;
+        }
+        
+        .form-note {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 140, 66, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+        
+        /* Success Message - FIXED STYLING */
+        .form-success {
+            background: var(--white);
+            padding: 50px 40px;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.1), rgba(67, 160, 71, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: #4CAF50;
+            font-size: 2.5rem;
+        }
+        
+        .form-success h3 {
+            color: var(--green-dark);
+            margin-bottom: 15px;
+        }
+        
+        .form-success p {
+            margin-bottom: 25px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        /* Error Message */
+        .form-error {
+            background: var(--white);
+            padding: 50px 40px;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.5s ease;
+            border: 2px solid #ff4444;
+        }
+        
+        .error-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(255, 68, 68, 0.1), rgba(255, 102, 102, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: #ff4444;
+            font-size: 2.5rem;
+        }
+        
+        .form-error h3 {
+            color: #ff4444;
+            margin-bottom: 15px;
+        }
+        
+        .form-error p {
+            margin-bottom: 25px;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        /* Form validation errors */
+        .error-message {
+            color: #ff4444;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: #ff4444;
+        }
+        
+        /* Application Steps */
+        .application-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .application-step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: var(--green-dark);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .step-content p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .application-note {
+            background: rgba(255, 140, 66, 0.05);
+            padding: 20px;
+            border-radius: var(--card-radius);
+            border-left: 4px solid var(--accent);
+            margin-top: 40px;
+        }
+        
+        .note-content {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        
+        .note-content i {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-top: 3px;
+        }
+        
+        .note-content p {
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        .note-content strong {
+            color: var(--green-dark);
+        }
+        
+        /* FAQ Styles */
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: var(--white);
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background: rgba(0, 0, 0, 0.02);
+        }
+        
+        .faq-question h4 {
+            color: var(--green-dark);
+            margin: 0;
+            font-size: 1.1rem;
+            flex: 1;
+        }
+        
+        .faq-question i {
+            color: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer p {
+            padding: 20px 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 25px;
+            }
+            
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .instructions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .application-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .application-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-icon {
+                margin: 0 auto 15px;
+            }
+            
+            .note-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            /* Privacy section mobile adjustments */
+            .privacy-agreement {
+                padding: 15px;
+            }
+            
+            .privacy-checkbox {
+                gap: 12px;
+            }
+            
+            .privacy-label {
+                gap: 12px;
+            }
+            
+            .privacy-text {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating Language Toggle -->
+    <div class="floating-language-toggle" id="floatingLangToggle">
+        <div class="lang-toggle-float">
+            <button class="lang-btn-float active" data-lang="en">EN</button>
+            <button class="lang-btn-float" data-lang="fr">FR</button>
+            <button class="lang-btn-float" data-lang="zh">中文</button>
+            <button class="lang-btn-float" data-lang="es">ES</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="City Institute of Higher Learning Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" data-en="Home" data-fr="Accueil" data-zh="首页" data-es="Inicio">Home</a></li>
+                    <li><a href="about.html" data-en="About" data-fr="À propos" data-zh="关于我们" data-es="Acerca de">About</a></li>
+                    <li><a href="programs.html" data-en="Programmes" data-fr="Programmes" data-zh="课程项目" data-es="Programas">Programmes</a></li>
+                    <li><a href="research.html" data-en="Research" data-fr="Recherche" data-zh="研究" data-es="Investigación">Research</a></li>
+                    <li><a href="contact.html" class="active" data-en="Contact" data-fr="Contact" data-zh="联系我们" data-es="Contacto">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="hero-banner">
+        <div class="banner-container">
+            <div class="banner-slides">
+                <div class="banner-slide active">
+                    <div class="slide-content">
+                        <span class="slide-badge" data-en="Get in Touch" data-fr="Entrer en Contact" data-zh="取得联系" data-es="Ponerse en Contacto">Get in Touch</span>
+                        <h2 data-en="Contact Admin Office" data-fr="Contacter le Bureau d'Administration" data-zh="联系行政办公室" data-es="Contactar Oficina de Administración">Contact Admin Office</h2>
+                        <p data-en="For all inquiries, applications, and general information, please contact our administration office. We're here to assist you with programme information, application procedures, and any questions you may have about City Institute of Higher Learning."
+                           data-fr="Pour toutes demandes de renseignements, candidatures et informations générales, veuillez contacter notre bureau d'administration. Nous sommes là pour vous aider avec les informations sur les programmes, les procédures de candidature et toutes les questions que vous pourriez avoir concernant l'Institut Supérieur de la Ville."
+                           data-zh="有关所有咨询、申请和一般信息，请联系我们的行政办公室。我们在此为您提供课程信息、申请程序以及您可能对城市高等学习学院提出的任何问题。"
+                           data-es="Para todas las consultas, solicitudes e información general, comuníquese con nuestra oficina de administración. Estamos aquí para ayudarlo con información sobre programas, procedimientos de solicitud y cualquier pregunta que pueda tener sobre el Instituto Superior de la Ciudad.">
+                           For all inquiries, applications, and general information, please contact our administration office.
+                        </p>
+                        <div class="slide-btns">
+                            <a href="#contact-info" class="btn-primary" data-en="Contact Information" data-fr="Informations de Contact" data-zh="联系信息" data-es="Información de Contacto">Contact Information</a>
+                            <a href="#contact-form" class="btn-secondary" data-en="Send Message" data-fr="Envoyer un Message" data-zh="发送消息" data-es="Enviar Mensaje">Send Message</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <img src="images/join community.jpg" alt="Contact City Institute Admin Office" class="banner-image">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="banner-dots">
+                <span class="dot active"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="programs-section" id="contact-info">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Administration Office Contact" data-fr="Contact du Bureau d'Administration" data-zh="行政办公室联系" data-es="Contacto de Oficina de Administración">Administration Office Contact</h2>
+                <p class="section-subtitle" data-en="Primary contact for all inquiries and applications"
+                   data-fr="Contact principal pour toutes demandes de renseignements et candidatures"
+                   data-zh="所有咨询和申请的主要联系方式"
+                   data-es="Contacto principal para todas las consultas y solicitudes">
+                   Primary contact for all inquiries and applications
+                </p>
+            </div>
+            
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 data-en="Email Admin" data-fr="Email Admin" data-zh="电子邮件行政" data-es="Correo Admin">Email Admin</h3>
+                    <div class="contact-details">
+                        <a href="mailto:admin@city-ihl.ca" class="contact-link">
+                            <strong>admin@city-ihl.ca</strong>
+                        </a>
+                        <p data-en="Primary email for all communications"
+                           data-fr="Email principal pour toutes les communications"
+                           data-zh="所有通信的主要电子邮件"
+                           data-es="Correo principal para todas las comunicaciones">
+                           Primary email for all communications
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 data-en="Phone Contact" data-fr="Contact Téléphonique" data-zh="电话联系" data-es="Contacto Telefónico">Phone Contact</h3>
+                    <div class="contact-details">
+                        <a href="tel:+15063882833" class="contact-link">
+                            <strong>+1 (506) 388-2833</strong>
+                        </a>
+                        <p data-en="Available Monday to Friday, 9AM-5PM"
+                           data-fr="Disponible du lundi au vendredi, 9h-17h"
+                           data-zh="周一至周五，上午9点至下午5点可用"
+                           data-es="Disponible de lunes a viernes, 9AM-5PM">
+                           Available Monday to Friday, 9AM-5PM
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 data-en="Office Location" data-fr="Emplacement du Bureau" data-zh="办公室位置" data-es="Ubicación de la Oficina">Office Location</h3>
+                    <div class="contact-details">
+                        <p><strong data-en="Moncton, New Brunswick" data-fr="Moncton, Nouveau-Brunswick" data-zh="蒙克顿，新不伦瑞克省" data-es="Moncton, New Brunswick">Moncton, New Brunswick</strong></p>
+                        <p data-en="City Institute of Higher Learning"
+                           data-fr="Institut Supérieur de la Ville"
+                           data-zh="城市高等学习学院"
+                           data-es="Instituto Superior de la Ciudad">
+                           City Institute of Higher Learning
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 data-en="Office Hours" data-fr="Heures de Bureau" data-zh="办公时间" data-es="Horario de Oficina">Office Hours</h3>
+                    <div class="contact-details">
+                        <p><strong data-en="Monday - Friday" data-fr="Lundi - Vendredi" data-zh="周一至周五" data-es="Lunes - Viernes">Monday - Friday</strong></p>
+                        <p data-en="9:00 AM - 5:00 PM"
+                           data-fr="9h00 - 17h00"
+                           data-zh="上午9:00 - 下午5:00"
+                           data-es="9:00 AM - 5:00 PM">
+                           9:00 AM - 5:00 PM
+                        </p>
+                        <p class="small-text" data-en="Saturday by appointment only"
+                           data-fr="Samedi sur rendez-vous seulement"
+                           data-zh="周六仅限预约"
+                           data-es="Sábado solo con cita previa">
+                           Saturday by appointment only
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-instructions">
+                <h3 data-en="How to Contact Admin" data-fr="Comment Contacter l'Administration" data-zh="如何联系行政" data-es="Cómo Contactar a la Administración">How to Contact Admin</h3>
+                <div class="instructions-grid">
+                    <div class="instruction-step">
+                        <div class="step-number">1</div>
+                        <h4 data-en="For General Inquiries" data-fr="Pour les Demandes Générales" data-zh="一般咨询" data-es="Para Consultas Generales">For General Inquiries</h4>
+                        <p data-en="Use the contact form below or email admin@city-ihl.ca for quick responses to general questions about programmes, admissions, and institute information."
+                           data-fr="Utilisez le formulaire de contact ci-dessous ou envoyez un email à admin@city-ihl.ca pour des réponses rapides aux questions générales sur les programmes, les admissions et les informations sur l'institut."
+                           data-zh="使用下面的联系表格或发送电子邮件至admin@city-ihl.ca，快速回复有关课程、招生和学院信息的一般问题。"
+                           data-es="Utilice el formulario de contacto a continuación o envíe un correo electrónico a admin@city-ihl.ca para respuestas rápidas a preguntas generales sobre programas, admisiones e información del instituto.">
+                           Email or use the contact form for general questions
+                        </p>
+                    </div>
+                    
+                    <div class="instruction-step">
+                        <div class="step-number">2</div>
+                        <h4 data-en="For Applications" data-fr="Pour les Candidatures" data-zh="申请" data-es="Para Solicitudes">For Applications</h4>
+                        <p data-en="Contact admin for application procedures, required documents, deadlines, and application status inquiries."
+                           data-fr="Contactez l'administration pour les procédures de candidature, les documents requis, les délais et les demandes de statut de candidature."
+                           data-zh="联系行政了解申请程序、所需文件、截止日期和申请状态查询。"
+                           data-es="Contacte a la administración para procedimientos de solicitud, documentos requeridos, plazos y consultas sobre el estado de la solicitud.">
+                           Contact for application procedures and requirements
+                        </p>
+                    </div>
+                    
+                    <div class="instruction-step">
+                        <div class="step-number">3</div>
+                        <h4 data-en="For Urgent Matters" data-fr="Pour les Questions Urgentes" data-zh="紧急事项" data-es="Para Asuntos Urgentes">For Urgent Matters</h4>
+                        <p data-en="Call +1 (506) 388-2833 during office hours for immediate assistance with time-sensitive issues."
+                           data-fr="Appelez le +1 (506) 388-2833 pendant les heures de bureau pour une assistance immédiate avec des problèmes urgents."
+                           data-zh="办公时间内致电+1 (506) 388-2833，立即处理时间敏感问题。"
+                           data-es="Llame al +1 (506) 388-2833 durante el horario de oficina para asistencia inmediata con asuntos urgentes.">
+                           Call during office hours for immediate assistance
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="programs-section" style="background: var(--light-gray);" id="contact-form">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Send Message to Admin" data-fr="Envoyer un Message à l'Administration" data-zh="向行政发送消息" data-es="Enviar Mensaje a la Administración">Send Message to Admin</h2>
+                <p class="section-subtitle" data-en="Complete the form below and our administration team will respond promptly"
+                   data-fr="Complétez le formulaire ci-dessous et notre équipe d'administration répondra rapidement"
+                   data-zh="填写下面的表格，我们的行政团队将及时回复"
+                   data-es="Complete el formulario a continuación y nuestro equipo de administración responderá rápidamente">
+                   Complete the form below and our administration team will respond promptly
+                </p>
+            </div>
+            
+            <div class="contact-form-container">
+                <!-- Success Message (Hidden by default) -->
+                <div class="form-success" id="successMessage">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 data-en="Message Sent Successfully!" data-fr="Message Envoyé avec Succès!" data-zh="消息发送成功！" data-es="¡Mensaje Enviado con Éxito!">Message Sent Successfully!</h3>
+                    <p data-en="Thank you for contacting City Institute of Higher Learning. Our administration team will respond to your inquiry within 1-2 business days."
+                       data-fr="Merci d'avoir contacté l'Institut Supérieur de la Ville. Notre équipe d'administration répondra à votre demande dans les 1-2 jours ouvrables."
+                       data-zh="感谢您联系城市高等学习学院。我们的行政团队将在1-2个工作日内回复您的咨询。"
+                       data-es="Gracias por contactar al Instituto Superior de la Ciudad. Nuestro equipo de administración responderá a su consulta en 1-2 días hábiles.">
+                       Thank you for contacting City Institute of Higher Learning. Our administration team will respond to your inquiry within 1-2 business days.
+                    </p>
+                    <button class="btn-secondary" id="sendAnother" data-en="Send Another Message" data-fr="Envoyer un Autre Message" data-zh="发送另一条消息" data-es="Enviar Otro Mensaje">
+                        <i class="fas fa-redo"></i> Send Another Message
+                    </button>
+                </div>
+                
+                <!-- Error Message (Hidden by default) -->
+                <div class="form-error" id="errorMessage">
+                    <div class="error-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <h3 data-en="Error Sending Message" data-fr="Erreur d'Envoi du Message" data-zh="发送消息时出错" data-es="Error al Enviar Mensaje">Error Sending Message</h3>
+                    <p id="errorDetails" data-en="There was an error sending your message. Please try again or contact us directly at admin@city-ihl.ca."
+                       data-fr="Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer ou nous contacter directement à admin@city-ihl.ca."
+                       data-zh="发送消息时出错。请重试或直接通过admin@city-ihl.ca联系我们。"
+                       data-es="Hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo o contáctenos directamente a admin@city-ihl.ca.">
+                       There was an error sending your message. Please try again or contact us directly at admin@city-ihl.ca.
+                    </p>
+                    <button class="btn-secondary" id="tryAgain" data-en="Try Again" data-fr="Réessayer" data-zh="再试一次" data-es="Intentar de Nuevo">
+                        <i class="fas fa-redo"></i> Try Again
+                    </button>
+                </div>
+                
+                <!-- Contact Form -->
+                <form class="contact-form" id="adminContactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName" data-en="Full Name *" data-fr="Nom Complet *" data-zh="全名 *" data-es="Nombre Completo *">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required 
+                                   placeholder="Your full name"
+                                   data-en="Your full name"
+                                   data-fr="Votre nom complet"
+                                   data-zh="您的全名"
+                                   data-es="Su nombre completo">
+                            <div class="error-message" id="fullNameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-en="Email Address *" data-fr="Adresse Email *" data-zh="电子邮件地址 *" data-es="Dirección de Correo *">Email Address *</label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="Your email address"
+                                   data-en="Your email address"
+                                   data-fr="Votre adresse email"
+                                   data-zh="您的电子邮件地址"
+                                   data-es="Su dirección de correo">
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" data-en="Phone Number" data-fr="Numéro de Téléphone" data-zh="电话号码" data-es="Número de Teléfono">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   placeholder="Your phone number"
+                                   data-en="Your phone number"
+                                   data-fr="Votre numéro de téléphone"
+                                   data-zh="您的电话号码"
+                                   data-es="Su número de teléfono">
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" data-en="Subject *" data-fr="Sujet *" data-zh="主题 *" data-es="Asunto *">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" data-en="Select a subject" data-fr="Sélectionner un sujet" data-zh="选择主题" data-es="Seleccionar un asunto">Select a subject</option>
+                                <option value="program-inquiry" data-en="Programme Inquiry" data-fr="Demande de Renseignements sur les Programmes" data-zh="课程咨询" data-es="Consulta sobre Programas">Programme Inquiry</option>
+                                <option value="application" data-en="Application Question" data-fr="Question sur la Candidature" data-zh="申请问题" data-es="Pregunta sobre Solicitud">Application Question</option>
+                                <option value="admissions" data-en="Admissions Information" data-fr="Informations sur les Admissions" data-zh="招生信息" data-es="Información de Admisiones">Admissions Information</option>
+                                <option value="research" data-en="Research Inquiry" data-fr="Demande de Renseignements sur la Recherche" data-zh="研究咨询" data-es="Consulta sobre Investigación">Research Inquiry</option>
+                                <option value="general" data-en="General Information" data-fr="Informations Générales" data-zh="一般信息" data-es="Información General">General Information</option>
+                                <option value="other" data-en="Other" data-fr="Autre" data-zh="其他" data-es="Otro">Other</option>
+                            </select>
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" data-en="Your Message *" data-fr="Votre Message *" data-zh="您的消息 *" data-es="Su Mensaje *">Your Message *</label>
+                        <textarea id="message" name="message" rows="6" required 
+                                  placeholder="Please provide details about your inquiry..."
+                                  data-en="Please provide details about your inquiry..."
+                                  data-fr="Veuillez fournir des détails sur votre demande..."
+                                  data-zh="请提供有关您咨询的详细信息..."
+                                  data-es="Por favor proporcione detalles sobre su consulta..."></textarea>
+                        <div class="error-message" id="messageError"></div>
+                    </div>
+                    
+                    <!-- FIXED Privacy Agreement Section -->
+                    <div class="form-group">
+                        <div class="privacy-agreement">
+                            <div class="privacy-checkbox">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy" class="privacy-label">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="privacy-text" data-en="I agree to the privacy policy and consent to having my information processed for the purpose of responding to my inquiry."
+                                          data-fr="J'accepte la politique de confidentialité et consens au traitement de mes informations dans le but de répondre à ma demande."
+                                          data-zh="我同意隐私政策，并同意为回应我的咨询而处理我的信息。"
+                                          data-es="Acepto la política de privacidad y doy mi consentimiento para que mi información sea procesada con el fin de responder a mi consulta.">
+                                        I agree to the privacy policy and consent to having my information processed for the purpose of responding to my inquiry.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="error-message" id="privacyError"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn-primary" id="submitBtn" data-en="Send Message to Admin" data-fr="Envoyer le Message à l'Administration" data-zh="向行政发送消息" data-es="Enviar Mensaje a la Administración">
+                            <i class="fas fa-paper-plane"></i> Send Message to Admin
+                        </button>
+                    </div>
+                    
+                    <div class="form-note">
+                        <p data-en="We aim to respond to all inquiries within 1-2 business days. For urgent matters, please call during office hours."
+                           data-fr="Nous visons à répondre à toutes les demandes dans les 1-2 jours ouvrables. Pour les questions urgentes, veuillez appeler pendant les heures de bureau."
+                           data-zh="我们力争在1-2个工作日内回复所有咨询。紧急事项请在办公时间内致电。"
+                           data-es="Nuestro objetivo es responder a todas las consultas en 1-2 días hábiles. Para asuntos urgentes, llame durante el horario de oficina.">
+                           We aim to respond to all inquiries within 1-2 business days.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Application Process" data-fr="Processus de Candidature" data-zh="申请流程" data-es="Proceso de Solicitud">Application Process</h2>
+                <p class="section-subtitle" data-en="How to apply to our programmes through the administration office"
+                   data-fr="Comment postuler à nos programmes via le bureau d'administration"
+                   data-zh="如何通过行政办公室申请我们的课程"
+                   data-es="Cómo solicitar nuestros programas a través de la oficina de administración">
+                   How to apply to our programmes through the administration office
+                </p>
+            </div>
+            
+            <div class="application-steps">
+                <div class="application-step">
+                    <div class="step-icon">1</div>
+                    <div class="step-content">
+                        <h4 data-en="Contact Admin for Requirements" data-fr="Contacter l'Administration pour les Exigences" data-zh="联系行政了解要求" data-es="Contactar Administración para Requisitos">Contact Admin for Requirements</h4>
+                        <p data-en="Email admin@city-ihl.ca to request specific programme requirements, application forms, and deadlines."
+                           data-fr="Envoyez un email à admin@city-ihl.ca pour demander les exigences spécifiques du programme, les formulaires de candidature et les délais."
+                           data-zh="发送电子邮件至admin@city-ihl.ca，索取具体课程要求、申请表和截止日期。"
+                           data-es="Envíe un correo electrónico a admin@city-ihl.ca para solicitar requisitos específicos del programa, formularios de solicitud y plazos.">
+                           Email admin for programme requirements and application forms
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="application-step">
+                    <div class="step-icon">2</div>
+                    <div class="step-content">
+                        <h4 data-en="Submit Your Application" data-fr="Soumettre Votre Candidature" data-zh="提交您的申请" data-es="Enviar su Solicitud">Submit Your Application</h4>
+                        <p data-en="Complete all required documents and submit them to admin@city-ihl.ca as per the instructions provided."
+                           data-fr="Complétez tous les documents requis et soumettez-les à admin@city-ihl.ca selon les instructions fournies."
+                           data-zh="完成所有所需文件，并根据提供的说明提交至admin@city-ihl.ca。"
+                           data-es="Complete todos los documentos requeridos y envíelos a admin@city-ihl.ca según las instrucciones proporcionadas.">
+                           Submit completed documents to admin email
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="application-step">
+                    <div class="step-icon">3</div>
+                    <div class="step-content">
+                        <h4 data-en="Application Review" data-fr="Examen de la Candidature" data-zh="申请审查" data-es="Revisión de Solicitud">Application Review</h4>
+                        <p data-en="Admin will acknowledge receipt and guide you through the review process. Contact admin for status updates."
+                           data-fr="L'administration accusera réception et vous guidera tout au long du processus d'examen. Contactez l'administration pour les mises à jour de statut."
+                           data-zh="行政将确认收到并指导您完成审查流程。联系行政获取状态更新。"
+                           data-es="La administración confirmará el recibo y lo guiará a través del proceso de revisión. Contacte a la administración para actualizaciones de estado.">
+                           Admin will acknowledge receipt and guide you through review
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="application-note">
+                <div class="note-content">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <p data-en="<strong>Note:</strong> All applications and communications should be directed to admin@city-ihl.ca. For application-related calls, please contact +1 (506) 388-2833 during office hours."
+                           data-fr="<strong>Note :</strong> Toutes les candidatures et communications doivent être adressées à admin@city-ihl.ca. Pour les appels liés aux candidatures, veuillez contacter le +1 (506) 388-2833 pendant les heures de bureau."
+                           data-zh="<strong>注意：</strong>所有申请和通信应发送至admin@city-ihl.ca。有关申请的来电，请在办公时间内联系+1 (506) 388-2833。"
+                           data-es="<strong>Nota:</strong> Todas las solicitudes y comunicaciones deben dirigirse a admin@city-ihl.ca. Para llamadas relacionadas con solicitudes, comuníquese con +1 (506) 388-2833 durante el horario de oficina.">
+                           <strong>Note:</strong> All applications and communications should be directed to admin@city-ihl.ca.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="programs-section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Frequently Asked Questions" data-fr="Foire Aux Questions" data-zh="常见问题" data-es="Preguntas Frecuentes">Frequently Asked Questions</h2>
+                <p class="section-subtitle" data-en="Common questions about contacting admin and application process"
+                   data-fr="Questions courantes sur le contact avec l'administration et le processus de candidature"
+                   data-zh="有关联系行政和申请流程的常见问题"
+                   data-es="Preguntas comunes sobre contactar a la administración y el proceso de solicitud">
+                   Common questions about contacting admin and application process
+                </p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-en="What is the best way to contact admin?" data-fr="Quelle est la meilleure façon de contacter l'administration ?" data-zh="联系行政的最佳方式是什么？" data-es="¿Cuál es la mejor manera de contactar a la administración?">What is the best way to contact admin?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Email is preferred for most inquiries as it allows us to provide detailed responses and keep records. Use admin@city-ihl.ca for all email communications. For urgent matters, call +1 (506) 388-2833 during office hours."
+                           data-fr="L'email est préféré pour la plupart des demandes car il nous permet de fournir des réponses détaillées et de conserver des dossiers. Utilisez admin@city-ihl.ca pour toutes les communications par email. Pour les questions urgentes, appelez le +1 (506) 388-2833 pendant les heures de bureau."
+                           data-zh="对于大多数咨询，电子邮件是首选，因为它允许我们提供详细答复并保留记录。所有电子邮件通信请使用admin@city-ihl.ca。紧急事项请在办公时间内致电+1 (506) 388-2833。"
+                           data-es="El correo electrónico es preferido para la mayoría de las consultas ya que nos permite proporcionar respuestas detalladas y mantener registros. Use admin@city-ihl.ca para todas las comunicaciones por correo electrónico. Para asuntos urgentes, llame al +1 (506) 388-2833 durante el horario de oficina.">
+                           Email is preferred for most inquiries at admin@city-ihl.ca. For urgent matters, call during office hours.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-en="How long does it take to get a response?" data-fr="Combien de temps faut-il pour obtenir une réponse ?" data-zh="需要多长时间才能收到回复？" data-es="¿Cuánto tiempo toma obtener una respuesta?">How long does it take to get a response?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="We aim to respond to all inquiries within 1-2 business days. During peak application periods, responses may take slightly longer. Application acknowledgements are sent within 24 hours of submission."
+                           data-fr="Nous visons à répondre à toutes les demandes dans les 1-2 jours ouvrables. Pendant les périodes de pointe des candidatures, les réponses peuvent prendre un peu plus de temps. Les accusés de réception des candidatures sont envoyés dans les 24 heures suivant la soumission."
+                           data-zh="我们力争在1-2个工作日内回复所有咨询。在申请高峰期，回复可能需要稍长时间。申请确认将在提交后24小时内发送。"
+                           data-es="Nuestro objetivo es responder a todas las consultas en 1-2 días hábiles. Durante los períodos pico de solicitudes, las respuestas pueden demorar un poco más. Los acuses de recibo de solicitudes se envían dentro de las 24 horas posteriores a la presentación.">
+                           We aim to respond within 1-2 business days. Application acknowledgements are sent within 24 hours.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-en="What information should I include in my inquiry?" data-fr="Quelles informations dois-je inclure dans ma demande ?" data-zh="我应在咨询中包含哪些信息？" data-es="¿Qué información debo incluir en mi consulta?">What information should I include in my inquiry?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Please include: your full name, contact information, specific programme of interest (if applicable), your question or request details, and any relevant background information. This helps us provide accurate and helpful responses."
+                           data-fr="Veuillez inclure : votre nom complet, vos coordonnées, le programme spécifique qui vous intéresse (le cas échéant), les détails de votre question ou demande, et toute information contextuelle pertinente. Cela nous aide à fournir des réponses précises et utiles."
+                           data-zh="请包括：您的全名、联系信息、具体感兴趣的课程（如适用）、您的问题或请求详情，以及任何相关背景信息。这有助于我们提供准确且有用的回复。"
+                           data-es="Por favor incluya: su nombre completo, información de contacto, programa específico de interés (si corresponde), detalles de su pregunta o solicitud, y cualquier información de antecedentes relevante. Esto nos ayuda a proporcionar respuestas precisas y útiles.">
+                           Include: full name, contact info, programme of interest, question details, and relevant background information.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4 data-en="Can I schedule an appointment with admin?" data-fr="Puis-je prendre rendez-vous avec l'administration ?" data-zh="我可以与行政预约吗？" data-es="¿Puedo programar una cita con la administración?">Can I schedule an appointment with admin?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Yes, appointments can be scheduled by contacting admin@city-ihl.ca. Please indicate your preferred dates/times and the purpose of the meeting. Appointments are available during office hours and can be conducted in-person, by phone, or via video conference."
+                           data-fr="Oui, les rendez-vous peuvent être programmés en contactant admin@city-ihl.ca. Veuillez indiquer vos dates/heures préférées et l'objet de la réunion. Les rendez-vous sont disponibles pendant les heures de bureau et peuvent se dérouler en personne, par téléphone ou par vidéoconférence."
+                           data-zh="可以，可通过联系admin@city-ihl.ca安排预约。请注明您偏好的日期/时间和会议目的。预约可在办公时间内进行，可以面对面、电话或视频会议形式进行。"
+                           data-es="Sí, se pueden programar citas contactando a admin@city-ihl.ca. Indique sus fechas/horas preferidas y el propósito de la reunión. Las citas están disponibles durante el horario de oficina y se pueden realizar en persona, por teléfono o por videoconferencia.">
+                           Yes, contact admin@city-ihl.ca to schedule appointments during office hours, available in-person, by phone, or video conference.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-en="City Institute of Higher Learning" data-fr="Institut Supérieur de la Ville" data-zh="城市高等学习学院" data-es="Instituto Superior de la Ciudad">City Institute of Higher Learning</h3>
+                    <p class="footer-description" data-en="Advanced research-focused education institute in New Brunswick, Canada."
+                       data-fr="Institut d'éducation axé sur la recherche avancée au Nouveau-Brunswick, Canada."
+                       data-zh="加拿大新不伦瑞克省的高级研究型教育机构。"
+                       data-es="Instituto de educación avanzado centrado en la investigación en New Brunswick, Canadá.">
+                       Advanced research-focused education institute in New Brunswick, Canada.
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Contact Admin" data-fr="Contacter l'Administration" data-zh="联系行政" data-es="Contactar Administración">Contact Admin</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:admin@city-ihl.ca"><i class="fas fa-envelope"></i> admin@city-ihl.ca</a></li>
+                        <li><a href="tel:+15063882833"><i class="fas fa-phone"></i> +1 506 388 2833</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-en="Moncton, New Brunswick" data-fr="Moncton, Nouveau-Brunswick" data-zh="蒙克顿，新不伦瑞克省" data-es="Moncton, New Brunswick">Moncton, New Brunswick</span></li>
+                        <li><i class="fas fa-clock"></i> <span data-en="Mon-Fri: 9AM-5PM" data-fr="Lun-Ven: 9h-17h" data-zh="周一至周五：上午9点-下午5点" data-es="Lun-Vie: 9AM-5PM">Mon-Fri: 9AM-5PM</span></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Quick Links" data-fr="Liens Rapides" data-zh="快速链接" data-es="Enlaces Rápidos">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-en="Home" data-fr="Accueil" data-zh="首页" data-es="Inicio">Home</a></li>
+                        <li><a href="about.html" data-en="About" data-fr="À propos" data-zh="关于我们" data-es="Acerca de">About</a></li>
+                        <li><a href="programmes.html" data-en="Programmes" data-fr="Programmes" data-zh="课程项目" data-es="Programas">Programmes</a></li>
+                        <li><a href="research.html" data-en="Research" data-fr="Recherche" data-zh="研究" data-es="Investigación">Research</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Resources" data-fr="Ressources" data-zh="资源" data-es="Recursos">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#faq" data-en="FAQ" data-fr="FAQ" data-zh="常见问题" data-es="Preguntas Frecuentes">FAQ</a></li>
+                        <li><a href="#application-process" data-en="Application Process" data-fr="Processus de Candidature" data-zh="申请流程" data-es="Proceso de Solicitud">Application Process</a></li>
+                        <li><a href="#contact-form" data-en="Contact Form" data-fr="Formulaire de Contact" data-zh="联系表格" data-es="Formulario de Contacto">Contact Form</a></li>
+                        <li><a href="#contact-info" data-en="Contact Info" data-fr="Informations de Contact" data-zh="联系信息" data-es="Información de Contacto">Contact Info</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 City Institute of Higher Learning. <span data-en="All rights reserved." data-fr="Tous droits réservés." data-zh="版权所有。" data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form elements
+            const contactForm = document.getElementById('adminContactForm');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            const sendAnotherBtn = document.getElementById('sendAnother');
+            const tryAgainBtn = document.getElementById('tryAgain');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Hide messages initially
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Form submission handler
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Reset previous errors
+                    resetErrors();
+                    
+                    // Validate form
+                    if (validateForm()) {
+                        // Disable submit button to prevent multiple submissions
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                        
+                        // Simulate form submission (in real implementation, this would be an AJAX call)
+                        setTimeout(function() {
+                            // Hide form, show success message
+                            contactForm.style.display = 'none';
+                            successMessage.style.display = 'block';
+                            errorMessage.style.display = 'none';
+                            
+                            // Reset button
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message to Admin';
+                        }, 1500); // Simulate 1.5 second delay
+                    } else {
+                        // Show error message if validation fails
+                        showError('Please fix the errors in the form.');
+                    }
+                });
+            }
+            
+            // Send Another button
+            if (sendAnotherBtn) {
+                sendAnotherBtn.addEventListener('click', function() {
+                    // Reset form
+                    contactForm.reset();
+                    resetErrors();
+                    
+                    // Show form, hide messages
+                    contactForm.style.display = 'block';
+                    successMessage.style.display = 'none';
+                    errorMessage.style.display = 'none';
+                });
+            }
+            
+            // Try Again button
+            if (tryAgainBtn) {
+                tryAgainBtn.addEventListener('click', function() {
+                    // Hide error message, show form
+                    errorMessage.style.display = 'none';
+                    contactForm.style.display = 'block';
+                });
+            }
+            
+            // Form validation function
+            function validateForm() {
+                let isValid = true;
+                
+                // Validate full name
+                const fullName = document.getElementById('fullName');
+                if (!fullName.value.trim()) {
+                    showErrorForField('fullName', 'Full name is required');
+                    isValid = false;
+                }
+                
+                // Validate email
+                const email = document.getElementById('email');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.value.trim()) {
+                    showErrorForField('email', 'Email is required');
+                    isValid = false;
+                } else if (!emailRegex.test(email.value)) {
+                    showErrorForField('email', 'Please enter a valid email address');
+                    isValid = false;
+                }
+                
+                // Validate subject
+                const subject = document.getElementById('subject');
+                if (!subject.value) {
+                    showErrorForField('subject', 'Please select a subject');
+                    isValid = false;
+                }
+                
+                // Validate message
+                const message = document.getElementById('message');
+                if (!message.value.trim()) {
+                    showErrorForField('message', 'Message is required');
+                    isValid = false;
+                } else if (message.value.trim().length < 10) {
+                    showErrorForField('message', 'Message must be at least 10 characters');
+                    isValid = false;
+                }
+                
+                // Validate privacy checkbox
+                const privacy = document.getElementById('privacy');
+                if (!privacy.checked) {
+                    showErrorForField('privacy', 'You must agree to the privacy policy');
+                    isValid = false;
+                }
+                
+                return isValid;
+            }
+            
+            // Show error for specific field
+            function showErrorForField(fieldId, message) {
+                const field = document.getElementById(fieldId);
+                const errorElement = document.getElementById(fieldId + 'Error');
+                const parentElement = field.closest('.form-group') || field.closest('.privacy-agreement');
+                
+                // Add error class to parent
+                if (parentElement) {
+                    parentElement.classList.add('error');
+                }
+                
+                // Show error message
+                if (errorElement) {
+                    errorElement.textContent = message;
+                    errorElement.style.display = 'block';
+                }
+                
+                // Focus on the field
+                field.focus();
+            }
+            
+            // Reset all errors
+            function resetErrors() {
+                // Remove error classes
+                const errorFields = document.querySelectorAll('.form-group.error, .privacy-agreement.error');
+                errorFields.forEach(field => {
+                    field.classList.remove('error');
+                });
+                
+                // Hide error messages
+                const errorMessages = document.querySelectorAll('.error-message');
+                errorMessages.forEach(message => {
+                    message.style.display = 'none';
+                });
+                
+                // Hide general error message
+                errorMessage.style.display = 'none';
+            }
+            
+            // Show general error message
+            function showError(message) {
+                const errorDetails = document.getElementById('errorDetails');
+                if (errorDetails) {
+                    errorDetails.textContent = message;
+                }
+                errorMessage.style.display = 'block';
+                contactForm.style.display = 'none';
+            }
+            
+            // FAQ Accordion functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const faqItem = question.parentElement;
+                    
+                    // Toggle active class
+                    faqItem.classList.toggle('active');
+                    
+                    // Close other FAQ items
+                    faqQuestions.forEach(otherQuestion => {
+                        const otherFaqItem = otherQuestion.parentElement;
+                        if (otherFaqItem !== faqItem && otherFaqItem.classList.contains('active')) {
+                            otherFaqItem.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Initialize all FAQ answers as closed
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
