@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmes | City Institute of Higher Learning | Institut Supérieur de la Ville | 课程项目 | Programas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/programs.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Floating Language Toggle -->
+    <div class="floating-language-toggle" id="floatingLangToggle">
+        <div class="lang-toggle-float">
+            <button class="lang-btn-float active" data-lang="en">EN</button>
+            <button class="lang-btn-float" data-lang="fr">FR</button>
+            <button class="lang-btn-float" data-lang="zh">中文</button>
+            <button class="lang-btn-float" data-lang="es">ES</button>
+        </div>
+    </div>
+
+    <!-- Header - ONLY ONE NAVIGATION -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="City Institute of Higher Learning Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" data-en="Home" data-fr="Accueil" data-zh="首页" data-es="Inicio">Home</a></li>
+                    <li><a href="about.html" data-en="About" data-fr="À propos" data-zh="关于我们" data-es="Acerca de">About</a></li>
+                    
+                    <!-- UPDATED: Programmes with ALL programs dropdown -->
+                    <li class="dropdown-parent">
+                        <a href="programmes.html" class="active" data-en="Programmes" data-fr="Programmes" data-zh="课程项目" data-es="Programas">
+                            <span>Programmes</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown">
+                            <!-- Social Sciences Programs -->
+                            <li class="dropdown-category">
+                                <a href="programmes.html#social-sciences">
+                                    <i class="fas fa-users"></i>
+                                    <span data-en="Social Sciences" data-fr="Sciences Sociales" data-zh="社会科学" data-es="Ciencias Sociales">Social Sciences</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#adr-executive">
+                                    <i class="fas fa-handshake"></i>
+                                    <span data-en="Executive Diploma in ADR" data-fr="Diplôme Exécutif en RAC" data-zh="ADR行政文凭" data-es="Diploma Ejecutivo en RAC">Executive Diploma in ADR</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#adr-hld">
+                                    <i class="fas fa-gavel"></i>
+                                    <span data-en="HLD in Alternative Dispute Resolution" data-fr="HLD en Résolution Alternative des Conflits" data-zh="替代性争议解决高等教育文凭" data-es="HLD en Resolución Alternativa de Conflictos">HLD in Alternative Dispute Resolution</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#post-doc">
+                                    <i class="fas fa-flask"></i>
+                                    <span data-en="Post Doctoral Experience" data-fr="Expérience Post-Doctorale" data-zh="博士后经验" data-es="Experiencia Postdoctoral">Post Doctoral Experience</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#research-skills">
+                                    <i class="fas fa-search"></i>
+                                    <span data-en="HLD in Research Skills" data-fr="HLD en Compétences de Recherche" data-zh="研究技能高等教育文凭" data-es="HLD en Habilidades de Investigación">HLD in Research Skills</span>
+                                </a>
+                            </li>
+                            
+                            <!-- Education Programs -->
+                            <li class="dropdown-category">
+                                <a href="programmes.html#education">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span data-en="Education" data-fr="Éducation" data-zh="教育" data-es="Educación">Education</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#languages-diploma">
+                                    <i class="fas fa-language"></i>
+                                    <span data-en="Advanced Diploma in Languages" data-fr="Diplôme Avancé en Langues" data-zh="语言高级文凭" data-es="Diploma Avanzado en Idiomas">Advanced Diploma in Languages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#pgce">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    <span data-en="Postgraduate Certificate in Education" data-fr="Certificat d'Études Supérieures en Éducation" data-zh="教育学研究生证书" data-es="Certificado de Posgrado en Educación">Postgraduate Certificate in Education</span>
+                                </a>
+                            </li>
+                            
+                            <!-- Business Programs -->
+                            <li class="dropdown-category">
+                                <a href="programmes.html#business">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span data-en="Business School" data-fr="École de Commerce" data-zh="商学院" data-es="Escuela de Negocios">Business School</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#executive-management">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span data-en="Executive Diploma in Management" data-fr="Diplôme Exécutif en Management" data-zh="管理行政文凭" data-es="Diploma Ejecutivo en Gestión">Executive Diploma in Management</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#intl-management">
+                                    <i class="fas fa-globe"></i>
+                                    <span data-en="HLD in International Management" data-fr="HLD en Management International" data-zh="国际管理高等教育文凭" data-es="HLD en Gestión Internacional">HLD in International Management</span>
+                                </a>
+                            </li>
+                            
+                            <!-- View All -->
+                            <li class="dropdown-category">
+                                <a href="programmes.html">
+                                    <i class="fas fa-list"></i>
+                                    <span data-en="View All Programmes" data-fr="Voir Tous les Programmes" data-zh="查看所有课程" data-es="Ver Todos los Programmas">View All Programmes</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="research.html" data-en="Research" data-fr="Recherche" data-zh="研究" data-es="Investigación">Research</a></li>
+                    <li><a href="contact.html" data-en="Contact" data-fr="Contact" data-zh="联系我们" data-es="Contacto">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Programs Hero Section -->
+    <section class="programs-hero">
+        <div class="container">
+            <h1 data-en="Our Academic Programmes" data-fr="Nos Programmes Académiques" data-zh="我们的学术课程" data-es="Nuestros Programas Académicos">Our Academic Programmes</h1>
+            <div class="hero-description">
+                <p data-en="Explore our diverse range of academic programmes designed to equip you with the knowledge and skills needed for success in today's dynamic world. We offer both long-form and short-form programmes across multiple disciplines."
+                   data-fr="Explorez notre gamme diversifiée de programmes académiques conçus pour vous doter des connaissances et des compétences nécessaires à la réussite dans le monde dynamique d'aujourd'hui. Nous proposons des programmes longs et courts dans plusieurs disciplines."
+                   data-zh="探索我们多样化的学术课程，旨在为您配备在当今动态世界中取得成功所需的知识和技能。我们在多个学科提供长期和短期课程。"
+                   data-es="Explore nuestra diversa gama de programas académicos diseñados para equiparlo con el conocimiento y las habilidades necesarias para el éxito en el mundo dinámico de hoy. Ofrecemos programas de formato largo y corto en múltiples disciplinas.">
+                   Explore our diverse range of academic programmes designed to equip you with the knowledge and skills needed for success in today's dynamic world.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Sciences School -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="section-title" id="social-sciences">
+                <h2 data-en="School of Social Sciences and Research" data-fr="École des Sciences Sociales et de la Recherche" data-zh="社会科学与研究学院" data-es="Escuela de Ciencias Sociales e Investigación">School of Social Sciences and Research</h2>
+                <p class="section-subtitle" data-en="Advancing knowledge through research and practical application" data-fr="Faire progresser les connaissances par la recherche et l'application pratique" data-zh="通过研究和实际应用推进知识" data-es="Avanzando en el conocimiento a través de la investigación y la aplicación práctica">Advancing knowledge through research and practical application</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Programme 1: Executive Diploma in ADR -->
+                <div class="program-card" id="adr-executive">
+                    <div class="program-header">
+                        <h3 data-en="Executive Diploma in Alternative Dispute Resolution" data-fr="Diplôme Exécutif en Résolution Alternative des Conflits" data-zh="替代性争议解决行政文凭" data-es="Diploma Ejecutivo en Resolución Alternativa de Conflictos">Executive Diploma in Alternative Dispute Resolution</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-meta">
+                            <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An" data-zh="1年" data-es="1 Año">1 Year</span></span>
+                            <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Diploma" data-fr="Diplôme" data-zh="文凭" data-es="Diploma">Diploma</span></span>
+                        </div>
+                        <div class="program-description">
+                            <p data-en="A comprehensive one-year programme designed to equip participants with in-depth knowledge, practical skills, and a strong theoretical foundation in various methods of resolving disputes outside traditional litigation."
+                               data-fr="Un programme complet d'un an conçu pour doter les participants de connaissances approfondies, de compétences pratiques et d'une solide base théorique dans diverses méthodes de résolution des conflits en dehors des procédures judiciaires traditionnelles."
+                               data-zh="为期一年的综合课程，旨在使参与者掌握传统诉讼之外的各种争议解决方法，具备深入的知识、实践技能和坚实的理论基础。"
+                               data-es="Un programa integral de un año diseñado para equipar a los participantes con conocimientos profundos, habilidades prácticas y una base teórica sólida en varios métodos de resolución de disputas fuera del litigio tradicional.">
+                               A comprehensive one-year programme designed to equip participants with in-depth knowledge, practical skills, and a strong theoretical foundation in various methods of resolving disputes outside traditional litigation.
+                            </p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format" data-zh="形式" data-es="Formato">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel" data-zh="校园/虚拟" data-es="En campus/Virtual">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Language" data-fr="Langue" data-zh="语言" data-es="Idioma">Language</span>
+                                <span class="detail-value" data-en="English, French" data-fr="Anglais, Français" data-zh="英语、法语" data-es="Inglés, Francés">English, French</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Credits" data-fr="Crédits" data-zh="学分" data-es="Créditos">Credits</span>
+                                <span class="detail-value" data-en="30 ECTS" data-fr="30 ECTS" data-zh="30 ECTS" data-es="30 ECTS">30 ECTS</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Detailed Content (Always Visible) -->
+                        <div class="program-detailed-content">
+                            <h4 data-en="Programme Overview" data-fr="Aperçu du Programme" data-zh="课程概述" data-es="Descripción del Programa">Programme Overview</h4>
+                            <p data-en="This comprehensive programme provides in-depth training in Alternative Dispute Resolution (ADR) methods including mediation, arbitration, negotiation, and conciliation. Participants will gain practical skills and theoretical knowledge to resolve conflicts effectively in various settings."
+                               data-fr="Ce programme complet fournit une formation approfondie dans les méthodes de Résolution Alternative des Conflits (RAC) incluant la médiation, l'arbitrage, la négociation et la conciliation. Les participants acquerront des compétences pratiques et des connaissances théoriques pour résoudre les conflits efficacement dans divers contextes."
+                               data-zh="该综合课程提供替代性争议解决（ADR）方法的深入培训，包括调解、仲裁、谈判和调解。参与者将获得在各种环境中有效解决冲突的实践技能和理论知识。"
+                               data-es="Este programa integral proporciona capacitación en profundidad en métodos de Resolución Alternativa de Conflictos (RAC) que incluyen mediación, arbitraje, negociación y conciliación. Los participantes adquirirán habilidades prácticas y conocimiento teórico para resolver conflictos efectivamente en diversos entornos.">
+                               This comprehensive programme provides in-depth training in Alternative Dispute Resolution (ADR) methods.
+                            </p>
+                            
+                            <h5 data-en="Curriculum" data-fr="Curriculum" data-zh="课程设置" data-es="Plan de Estudios">Curriculum</h5>
+                            <ul>
+                                <li data-en="Introduction to Alternative Dispute Resolution" data-fr="Introduction à la Résolution Alternative des Conflits" data-zh="替代性争议解决导论" data-es="Introducción a la Resolución Alternativa de Conflictos">Introduction to Alternative Dispute Resolution</li>
+                                <li data-en="Mediation Principles and Practices" data-fr="Principes et Pratiques de la Médiation" data-zh="调解原则与实践" data-es="Principios y Prácticas de la Mediación">Mediation Principles and Practices</li>
+                                <li data-en="Arbitration Procedures and Techniques" data-fr="Procédures et Techniques d'Arbitrage" data-zh="仲裁程序与技巧" data-es="Procedimientos y Técnicas de Arbitraje">Arbitration Procedures and Techniques</li>
+                                <li data-en="Negotiation Strategies" data-fr="Stratégies de Négociation" data-zh="谈判策略" data-es="Estrategias de Negociación">Negotiation Strategies</li>
+                                <li data-en="Conciliation and Facilitation" data-fr="Conciliation et Facilitation" data-zh="调解与促进" data-es="Conciliación y Facilitación">Conciliation and Facilitation</li>
+                                <li data-en="Legal Frameworks for ADR" data-fr="Cadres Juridiques pour la RAC" data-zh="ADR法律框架" data-es="Marcos Legales para RAC">Legal Frameworks for ADR</li>
+                                <li data-en="Ethics in Dispute Resolution" data-fr="Éthique dans la Résolution des Conflits" data-zh="争议解决伦理" data-es="Ética en la Resolución de Conflictos">Ethics in Dispute Resolution</li>
+                                <li data-en="Case Studies and Practical Applications" data-fr="Études de Cas et Applications Pratiques" data-zh="案例研究与实际应用" data-es="Estudios de Caso y Aplicaciones Prácticas">Case Studies and Practical Applications</li>
+                            </ul>
+                            
+                            <h5 data-en="Learning Outcomes" data-fr="Résultats d'Apprentissage" data-zh="学习成果" data-es="Resultados de Aprendizaje">Learning Outcomes</h5>
+                            <ul>
+                                <li data-en="Master various ADR techniques and methodologies" data-fr="Maîtriser diverses techniques et méthodologies de RAC" data-zh="掌握各种ADR技巧和方法论" data-es="Dominar diversas técnicas y metodologías de RAC">Master various ADR techniques and methodologies</li>
+                                <li data-en="Develop practical conflict resolution skills" data-fr="Développer des compétences pratiques de résolution de conflits" data-zh="培养实际冲突解决技能" data-es="Desarrollar habilidades prácticas de resolución de conflictos">Develop practical conflict resolution skills</li>
+                                <li data-en="Understand legal and ethical considerations in ADR" data-fr="Comprendre les considérations juridiques et éthiques dans la RAC" data-zh="理解ADR中的法律和伦理考量" data-es="Comprender consideraciones legales y éticas en RAC">Understand legal and ethical considerations in ADR</li>
+                                <li data-en="Apply ADR principles in real-world scenarios" data-fr="Appliquer les principes de RAC dans des scénarios réels" data-zh="在实际场景中应用ADR原则" data-es="Aplicar principios de RAC en escenarios del mundo real">Apply ADR principles in real-world scenarios</li>
+                                <li data-en="Facilitate negotiations and mediations effectively" data-fr="Faciliter les négociations et médiations efficacement" data-zh="有效促进谈判和调解" data-es="Facilitar negociaciones y mediaciones efectivamente">Facilitate negotiations and mediations effectively</li>
+                            </ul>
+                            
+                            <h5 data-en="Career Opportunities" data-fr="Opportunités de Carrière" data-zh="职业机会" data-es="Oportunidades Profesionales">Career Opportunities</h5>
+                            <p data-en="Graduates can pursue careers as mediators, arbitrators, conflict resolution consultants, legal advisors specializing in ADR, human resources professionals, organizational development consultants, community mediators, and ombudspersons in various organizations."
+                               data-fr="Les diplômés peuvent poursuivre des carrières en tant que médiateurs, arbitres, consultants en résolution de conflits, conseillers juridiques spécialisés en RAC, professionnels des ressources humaines, consultants en développement organisationnel, médiateurs communautaires et médiateurs dans diverses organisations."
+                               data-zh="毕业生可以从事调解员、仲裁员、冲突解决顾问、ADR专业法律顾问、人力资源专业人士、组织发展顾问、社区调解员以及各种组织的申诉专员等职业。"
+                               data-es="Los graduados pueden seguir carreras como mediadores, árbitros, consultores de resolución de conflictos, asesores legales especializados en RAC, profesionales de recursos humanos, consultores de desarrollo organizacional, mediadores comunitarios y defensores del pueblo en diversas organizaciones.">
+                               Graduates can pursue careers as mediators, arbitrators, conflict resolution consultants, legal advisors specializing in ADR, and human resources professionals.
+                            </p>
+                            
+                            <h5 data-en="Admission Requirements" data-fr="Conditions d'Admission" data-zh="入学要求" data-es="Requisitos de Admisión">Admission Requirements</h5>
+                            <ul>
+                                <li data-en="Bachelor's degree or equivalent" data-fr="Licence ou équivalent" data-zh="学士学位或同等学历" data-es="Licenciatura o equivalente">Bachelor's degree or equivalent</li>
+                                <li data-en="Minimum 2 years of professional experience" data-fr="Minimum 2 ans d'expérience professionnelle" data-zh="至少2年专业经验" data-es="Mínimo 2 años de experiencia profesional">Minimum 2 years of professional experience</li>
+                                <li data-en="Proficiency in English or French" data-fr="Maîtrise de l'anglais ou du français" data-zh="英语或法语熟练" data-es="Dominio del inglés o francés">Proficiency in English or French</li>
+                                <li data-en="Statement of purpose" data-fr="Lettre de motivation" data-zh="目的陈述" data-es="Declaración de propósito">Statement of purpose</li>
+                                <li data-en="Two letters of recommendation" data-fr="Deux lettres de recommandation" data-zh="两封推荐信" data-es="Dos cartas de recomendación">Two letters of recommendation</li>
+                            </ul>
+                            
+                            <h5 data-en="Tuition Fees" data-fr="Frais de Scolarité" data-zh="学费" data-es="Matrícula">Tuition Fees</h5>
+                            <p data-en="Full programme: $4,500 CAD (Canadian Dollars). Payment plans and scholarships available for eligible candidates."
+                               data-fr="Programme complet : 4 500 $ CAD (dollars canadiens). Plans de paiement et bourses disponibles pour les candidats éligibles."
+                               data-zh="完整课程：4,500加元。符合资格的候选人可提供付款计划和奖学金。"
+                               data-es="Programa completo: $4,500 CAD (dólares canadienses). Planes de pago y becas disponibles para candidatos elegibles.">
+                               Full programme: $4,500 CAD (Canadian Dollars). Payment plans and scholarships available.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-actions">
+                            <a href="contact.html#apply-form" class="btn-secondary" data-en="Apply Now" data-fr="Postuler" data-zh="立即申请" data-es="Aplicar Ahora">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme 2: HLD in Alternative Dispute Resolution -->
+                <div class="program-card" id="adr-hld">
+                    <div class="program-header">
+                        <h3 data-en="Higher Learning Diploma in Alternative Dispute Resolution" data-fr="Diplôme d'Études Supérieures en Résolution Alternative des Conflits" data-zh="替代性争议解决高等教育文凭" data-es="Diploma de Educación Superior en Resolución Alternativa de Conflictos">Higher Learning Diploma in Alternative Dispute Resolution</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-meta">
+                            <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An" data-zh="1年" data-es="1 Año">1 Year</span></span>
+                            <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Advanced Diploma" data-fr="Diplôme Avancé" data-zh="高级文凭" data-es="Diploma Avanzado">Advanced Diploma</span></span>
+                        </div>
+                        <div class="program-description">
+                            <p data-en="An advanced programme with research component for those seeking comprehensive knowledge in dispute resolution methods with a focus on mediation, arbitration, negotiation, and conciliation."
+                               data-fr="Un programme avancé avec composante de recherche pour ceux qui cherchent une connaissance complète des méthodes de résolution des conflits avec un accent sur la médiation, l'arbitrage, la négociation et la conciliation."
+                               data-zh="面向寻求全面了解争议解决方法，专注于调解、仲裁、谈判和调解的研究组成部分的高级课程。"
+                               data-es="Un programa avanzado con componente de investigación para aquellos que buscan un conocimiento integral en métodos de resolución de disputas con un enfoque en mediación, arbitraje, negociación y conciliación.">
+                               An advanced programme with research component for those seeking comprehensive knowledge in dispute resolution methods with a focus on mediation, arbitration, negotiation, and conciliation.
+                            </p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format" data-zh="形式" data-es="Formato">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel" data-zh="校园/虚拟" data-es="En campus/Virtual">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Language" data-fr="Langue" data-zh="语言" data-es="Idioma">Language</span>
+                                <span class="detail-value" data-en="English, French" data-fr="Anglais, Français" data-zh="英语、法语" data-es="Inglés, Francés">English, French</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Credits" data-fr="Crédits" data-zh="学分" data-es="Créditos">Credits</span>
+                                <span class="detail-value" data-en="60 ECTS" data-fr="60 ECTS" data-zh="60 ECTS" data-es="60 ECTS">60 ECTS</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Detailed Content (Always Visible) -->
+                        <div class="program-detailed-content">
+                            <h4 data-en="Programme Overview" data-fr="Aperçu du Programme" data-zh="课程概述" data-es="Descripción del Programa">Programme Overview</h4>
+                            <p data-en="This advanced diploma programme combines rigorous academic study with practical training in alternative dispute resolution. It includes a significant research component and prepares graduates for advanced practice and academic careers in ADR."
+                               data-fr="Ce programme de diplôme avancé combine des études académiques rigoureuses avec une formation pratique en résolution alternative des conflits. Il comprend une composante de recherche significative et prépare les diplômés à des carrières avancées et académiques en RAC."
+                               data-zh="该高级文凭课程将严格的学术研究与替代性争议解决的实际培训相结合。它包括重要的研究组成部分，为毕业生在ADR领域的高级实践和学术生涯做好准备。"
+                               data-es="Este programa de diploma avanzado combina estudio académico riguroso con capacitación práctica en resolución alternativa de conflictos. Incluye un componente de investigación significativo y prepara a los graduados para carreras avanzadas y académicas en RAC.">
+                               This advanced diploma programme combines rigorous academic study with practical training in alternative dispute resolution.
+                            </p>
+                            
+                            <h5 data-en="Curriculum" data-fr="Curriculum" data-zh="课程设置" data-es="Plan de Estudios">Curriculum</h5>
+                            <ul>
+                                <li data-en="Advanced Theories of Conflict Resolution" data-fr="Théories Avancées de la Résolution des Conflits" data-zh="冲突解决高级理论" data-es="Teorías Avanzadas de Resolución de Conflictos">Advanced Theories of Conflict Resolution</li>
+                                <li data-en="Research Methods in Social Sciences" data-fr="Méthodes de Recherche en Sciences Sociales" data-zh="社会科学研究方法" data-es="Métodos de Investigación en Ciencias Sociales">Research Methods in Social Sciences</li>
+                                <li data-en="Advanced Mediation and Arbitration" data-fr="Médiation et Arbitrage Avancés" data-zh="高级调解与仲裁" data-es="Mediación y Arbitraje Avanzados">Advanced Mediation and Arbitration</li>
+                                <li data-en="International Dispute Resolution" data-fr="Résolution des Conflits Internationaux" data-zh="国际争议解决" data-es="Resolución de Conflictos Internacionales">International Dispute Resolution</li>
+                                <li data-en="Comparative ADR Systems" data-fr="Systèmes de RAC Comparatifs" data-zh="比较ADR系统" data-es="Sistemas de RAC Comparativos">Comparative ADR Systems</li>
+                                <li data-en="Dispute Resolution in Specialized Contexts" data-fr="Résolution des Conflits dans des Contextes Spécialisés" data-zh="专业背景下的争议解决" data-es="Resolución de Conflictos en Contextos Especializados">Dispute Resolution in Specialized Contexts</li>
+                                <li data-en="Thesis Research and Writing" data-fr="Recherche et Rédaction de Thèse" data-zh="论文研究与写作" data-es="Investigación y Redacción de Tesis">Thesis Research and Writing</li>
+                                <li data-en="Professional Practice and Ethics" data-fr="Pratique Professionnelle et Éthique" data-zh="专业实践与伦理" data-es="Práctica Profesional y Ética">Professional Practice and Ethics</li>
+                            </ul>
+                            
+                            <h5 data-en="Learning Outcomes" data-fr="Résultats d'Apprentissage" data-zh="学习成果" data-es="Resultados de Aprendizaje">Learning Outcomes</h5>
+                            <ul>
+                                <li data-en="Develop advanced research skills in ADR" data-fr="Développer des compétences de recherche avancées en RAC" data-zh="培养ADR高级研究技能" data-es="Desarrollar habilidades avanzadas de investigación en RAC">Develop advanced research skills in ADR</li>
+                                <li data-en="Analyze and evaluate ADR systems and practices" data-fr="Analyser et évaluer les systèmes et pratiques de RAC" data-zh="分析和评估ADR系统与实践" data-es="Analizar y evaluar sistemas y prácticas de RAC">Analyze and evaluate ADR systems and practices</li>
+                                <li data-en="Design and implement ADR programs" data-fr="Concevoir et mettre en œuvre des programmes de RAC" data-zh="设计和实施ADR项目" data-es="Diseñar e implementar programas de RAC">Design and implement ADR programs</li>
+                                <li data-en="Conduct independent research in dispute resolution" data-fr="Mener des recherches indépendantes en résolution de conflits" data-zh="在争议解决领域进行独立研究" data-es="Realizar investigación independiente en resolución de conflictos">Conduct independent research in dispute resolution</li>
+                                <li data-en="Apply advanced ADR techniques in complex situations" data-fr="Appliquer des techniques de RAC avancées dans des situations complexes" data-zh="在复杂情况下应用高级ADR技巧" data-es="Aplicar técnicas avanzadas de RAC en situaciones complejas">Apply advanced ADR techniques in complex situations</li>
+                            </ul>
+                            
+                            <h5 data-en="Career Opportunities" data-fr="Opportunités de Carrière" data-zh="职业机会" data-es="Oportunidades Profesionales">Career Opportunities</h5>
+                            <p data-en="Graduates are prepared for leadership roles as senior mediators, arbitrators, ADR program directors, dispute resolution consultants, policy advisors, researchers, academics, and trainers in government, private sector, international organizations, and academic institutions."
+                               data-fr="Les diplômés sont préparés à des rôles de leadership en tant que médiateurs seniors, arbitres, directeurs de programmes RAC, consultants en résolution de conflits, conseillers politiques, chercheurs, universitaires et formateurs dans le gouvernement, le secteur privé, les organisations internationales et les institutions académiques."
+                               data-zh="毕业生为担任高级调解员、仲裁员、ADR项目主任、争议解决顾问、政策顾问、研究人员、学者以及政府、私营部门、国际组织和学术机构的培训师等领导角色做好准备。"
+                               data-es="Los graduados están preparados para roles de liderazgo como mediadores senior, árbitros, directores de programas RAC, consultores de resolución de conflictos, asesores políticos, investigadores, académicos y capacitadores en gobierno, sector privado, organizaciones internacionales e instituciones académicas.">
+                               Graduates are prepared for leadership roles as senior mediators, arbitrators, ADR program directors, and dispute resolution consultants.
+                            </p>
+                            
+                            <h5 data-en="Admission Requirements" data-fr="Conditions d'Admission" data-zh="入学要求" data-es="Requisitos de Admisión">Admission Requirements</h5>
+                            <ul>
+                                <li data-en="Bachelor's degree in related field" data-fr="Licence dans un domaine connexe" data-zh="相关领域学士学位" data-es="Licenciatura en campo relacionado">Bachelor's degree in related field</li>
+                                <li data-en="Minimum 3 years of professional experience" data-fr="Minimum 3 ans d'expérience professionnelle" data-zh="至少3年专业经验" data-es="Mínimo 3 años de experiencia profesional">Minimum 3 years of professional experience</li>
+                                <li data-en="Strong academic record" data-fr="Dossier académique solide" data-zh="良好的学术记录" data-es="Expediente académico sólido">Strong academic record</li>
+                                <li data-en="Research proposal" data-fr="Proposition de recherche" data-zh="研究计划" data-es="Propuesta de investigación">Research proposal</li>
+                                <li data-en="Writing sample" data-fr="Échantillon d'écriture" data-zh="写作样本" data-es="Muestra de escritura">Writing sample</li>
+                                <li data-en="Three letters of recommendation" data-fr="Trois lettres de recommandation" data-zh="三封推荐信" data-es="Tres cartas de recomendación">Three letters of recommendation</li>
+                            </ul>
+                            
+                            <h5 data-en="Tuition Fees" data-fr="Frais de Scolarité" data-zh="学费" data-es="Matrícula">Tuition Fees</h5>
+                            <p data-en="Full programme: $6,800 CAD (Canadian Dollars). Research grants and assistantships available for qualified candidates."
+                               data-fr="Programme complet : 6 800 $ CAD (dollars canadiens). Subventions de recherche et assistants disponibles pour les candidats qualifiés."
+                               data-zh="完整课程：6,800加元。合格候选人可获得研究补助金和助教职位。"
+                               data-es="Programa completo: $6,800 CAD (dólares canadienses). Subvenciones de investigación y ayudantías disponibles para candidatos calificados.">
+                               Full programme: $6,800 CAD (Canadian Dollars). Research grants and assistantships available.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-actions">
+                            <a href="contact.html#apply-form" class="btn-secondary" data-en="Apply Now" data-fr="Postuler" data-zh="立即申请" data-es="Aplicar Ahora">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme 3: Post Doctoral Experience -->
+                <div class="program-card" id="post-doc">
+                    <div class="program-header">
+                        <h3 data-en="Post Doctoral Experience" data-fr="Expérience Post-Doctorale" data-zh="博士后经验" data-es="Experiencia Postdoctoral">Post Doctoral Experience</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-meta">
+                            <span class="program-duration"><i class="far fa-clock"></i> <span data-en="3-12 Months" data-fr="3-12 Mois" data-zh="3-12个月" data-es="3-12 Meses">3-12 Months</span></span>
+                            <span class="program-type"><i class="fas fa-flask"></i> <span data-en="Research" data-fr="Recherche" data-zh="研究" data-es="Investigación">Research</span></span>
+                        </div>
+                        <div class="program-description">
+                            <p data-en="Put your research into practice as a visiting scholar. Work with our research team to develop your thesis into publishable papers or pursue new research topics."
+                               data-fr="Mettez votre recherche en pratique en tant que chercheur invité. Travaillez avec notre équipe de recherche pour développer votre thèse en articles publiables ou poursuivez de nouveaux sujets de recherche."
+                               data-zh="作为访问学者将您的研究付诸实践。与我们的研究团队合作，将您的论文发展成为可发表的论文，或追求新的研究课题。"
+                               data-es="Ponga su investigación en práctica como investigador visitante. Trabaje con nuestro equipo de investigación para desarrollar su tesis en artículos publicables o persiga nuevos temas de investigación.">
+                               Put your research into practice as a visiting scholar. Work with our research team to develop your thesis into publishable papers or pursue new research topics.
+                            </p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format" data-zh="形式" data-es="Formato">Format</span>
+                                <span class="detail-value" data-en="On-campus" data-fr="Sur campus" data-zh="校园" data-es="En campus">On-campus</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Research Focus" data-fr="Focus Recherche" data-zh="研究重点" data-es="Enfoque de Investigación">Research Focus</span>
+                                <span class="detail-value" data-en="Social Sciences" data-fr="Sciences Sociales" data-zh="社会科学" data-es="Ciencias Sociales">Social Sciences</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Duration" data-fr="Durée" data-zh="持续时间" data-es="Duración">Duration</span>
+                                <span class="detail-value" data-en="Flexible" data-fr="Flexible" data-zh="灵活" data-es="Flexible">Flexible</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Detailed Content (Always Visible) -->
+                        <div class="program-detailed-content">
+                            <h4 data-en="Programme Overview" data-fr="Aperçu du Programme" data-zh="课程概述" data-es="Descripción del Programa">Programme Overview</h4>
+                            <p data-en="The Post Doctoral Experience programme offers recent PhD graduates the opportunity to continue their research in a supportive academic environment. Participants work closely with our faculty members to refine their research, prepare publications, and develop their academic profiles."
+                               data-fr="Le programme d'Expérience Post-Doctorale offre aux récents diplômés de doctorat l'opportunité de poursuivre leurs recherches dans un environnement académique favorable. Les participants travaillent en étroite collaboration avec nos membres du corps professoral pour affiner leurs recherches, préparer des publications et développer leurs profils académiques."
+                               data-zh="博士后经验项目为最近的博士毕业生提供在支持性学术环境中继续研究的机会。参与者与我们的教职员工密切合作，完善他们的研究，准备出版物，并发展他们的学术形象。"
+                               data-es="El programa de Experiencia Postdoctoral ofrece a los recientes graduados de doctorado la oportunidad de continuar su investigación en un entorno académico de apoyo. Los participantes trabajan estrechamente con nuestros miembros de la facultad para refinar su investigación, preparar publicaciones y desarrollar sus perfiles académicos.">
+                               The Post Doctoral Experience programme offers recent PhD graduates the opportunity to continue their research in a supportive academic environment.
+                            </p>
+                            
+                            <h5 data-en="Research Areas" data-fr="Domaines de Recherche" data-zh="研究领域" data-es="Áreas de Investigación">Research Areas</h5>
+                            <ul>
+                                <li data-en="Alternative Dispute Resolution and Conflict Studies" data-fr="Résolution Alternative des Conflits et Études des Conflits" data-zh="替代性争议解决与冲突研究" data-es="Resolución Alternativa de Conflictos y Estudios de Conflictos">Alternative Dispute Resolution and Conflict Studies</li>
+                                <li data-en="Social Justice and Equity Research" data-fr="Recherche sur la Justice Sociale et l'Équité" data-zh="社会正义与公平研究" data-es="Investigación sobre Justicia Social y Equidad">Social Justice and Equity Research</li>
+                                <li data-en="Educational Policy and Reform" data-fr="Politique Éducative et Réforme" data-zh="教育政策与改革" data-es="Política Educativa y Reforma">Educational Policy and Reform</li>
+                                <li data-en="International Development Studies" data-fr="Études du Développement International" data-zh="国际发展研究" data-es="Estudios de Desarrollo Internacional">International Development Studies</li>
+                                <li data-en="Organizational Behavior and Management" data-fr="Comportement Organisationnel et Management" data-zh="组织行为与管理" data-es="Comportamiento Organizacional y Gestión">Organizational Behavior and Management</li>
+                                <li data-en="Cross-cultural Communication Studies" data-fr="Études de la Communication Interculturelle" data-zh="跨文化传播研究" data-es="Estudios de Comunicación Intercultural">Cross-cultural Communication Studies</li>
+                            </ul>
+                            
+                            <h5 data-en="Programme Features" data-fr="Caractéristiques du Programme" data-zh="项目特点" data-es="Características del Programa">Programme Features</h5>
+                            <ul>
+                                <li data-en="Access to research facilities and resources" data-fr="Accès aux installations et ressources de recherche" data-zh="访问研究设施和资源" data-es="Acceso a instalaciones y recursos de investigación">Access to research facilities and resources</li>
+                                <li data-en="Mentorship from experienced faculty members" data-fr="Mentorat par des membres du corps professoral expérimentés" data-zh="经验丰富的教职员工指导" data-es="Tutoría de miembros de la facultad experimentados">Mentorship from experienced faculty members</li>
+                                <li data-en="Opportunities for collaborative research" data-fr="Opportunités de recherche collaborative" data-zh="合作研究机会" data-es="Oportunidades de investigación colaborativa">Opportunities for collaborative research</li>
+                                <li data-en="Workshops on academic publishing and grant writing" data-fr="Ateliers sur la publication académique et la rédaction de demandes de subvention" data-zh="学术出版和资助申请写作研讨会" data-es="Talleres sobre publicación académica y redacción de subvenciones">Workshops on academic publishing and grant writing</li>
+                                <li data-en="Networking with other researchers and scholars" data-fr="Réseautage avec d'autres chercheurs et universitaires" data-zh="与其他研究人员和学者建立联系" data-es="Networking con otros investigadores y académicos">Networking with other researchers and scholars</li>
+                                <li data-en="Participation in seminars and conferences" data-fr="Participation à des séminaires et conférences" data-zh="参与研讨会和会议" data-es="Participación en seminarios y conferencias">Participation in seminars and conferences</li>
+                            </ul>
+                            
+                            <h5 data-en="Expected Outcomes" data-fr="Résultats Attendus" data-zh="预期成果" data-es="Resultados Esperados">Expected Outcomes</h5>
+                            <ul>
+                                <li data-en="Publication of research in peer-reviewed journals" data-fr="Publication de recherche dans des revues à comité de lecture" data-zh="在同行评审期刊上发表研究" data-es="Publicación de investigación en revistas revisadas por pares">Publication of research in peer-reviewed journals</li>
+                                <li data-en="Development of research proposals for external funding" data-fr="Développement de propositions de recherche pour un financement externe" data-zh="为外部资金制定研究计划" data-es="Desarrollo de propuestas de investigación para financiamiento externo">Development of research proposals for external funding</li>
+                                <li data-en="Enhanced academic profile and CV" data-fr="Profil académique et CV améliorés" data-zh="增强的学术形象和简历" data-es="Perfil académico y CV mejorados">Enhanced academic profile and CV</li>
+                                <li data-en="Presentation of research at conferences" data-fr="Présentation de recherche lors de conférences" data-zh="在会议上展示研究成果" data-es="Presentación de investigación en conferencias">Presentation of research at conferences</li>
+                                <li data-en="Establishment of professional networks" data-fr="Établissement de réseaux professionnels" data-zh="建立专业网络" data-es="Establecimiento de redes profesionales">Establishment of professional networks</li>
+                            </ul>
+                            
+                            <h5 data-en="Admission Requirements" data-fr="Conditions d'Admission" data-zh="入学要求" data-es="Requisitos de Admisión">Admission Requirements</h5>
+                            <ul>
+                                <li data-en="PhD degree in a relevant field" data-fr="Doctorat dans un domaine pertinent" data-zh="相关领域博士学位" data-es="Doctorado en campo relevante">PhD degree in a relevant field</li>
+                                <li data-en="Strong research record and publications" data-fr="Dossier de recherche solide et publications" data-zh="良好的研究记录和出版物" data-es="Expediente de investigación sólido y publicaciones">Strong research record and publications</li>
+                                <li data-en="Detailed research proposal" data-fr="Proposition de recherche détaillée" data-zh="详细的研究计划" data-es="Propuesta de investigación detallada">Detailed research proposal</li>
+                                <li data-en="Alignment of research interests with faculty expertise" data-fr="Alignement des intérêts de recherche avec l'expertise du corps professoral" data-zh="研究兴趣与教师专业知识的一致性" data-es="Alineación de intereses de investigación con experiencia de la facultad">Alignment of research interests with faculty expertise</li>
+                                <li data-en="Letters of recommendation from academic supervisors" data-fr="Lettres de recommandation de superviseurs académiques" data-zh="学术导师的推荐信" data-es="Cartas de recomendación de supervisores académicos">Letters of recommendation from academic supervisors</li>
+                            </ul>
+                            
+                            <h5 data-en="Programme Fees" data-fr="Frais du Programme" data-zh="项目费用" data-es="Tarifas del Programa">Programme Fees</h5>
+                            <p data-en="Monthly fee: $1,200 CAD. Includes access to facilities, mentorship, and resources. Stipend opportunities available for exceptional candidates."
+                               data-fr="Frais mensuels : 1 200 $ CAD. Inclut l'accès aux installations, au mentorat et aux ressources. Opportunités de bourse disponibles pour les candidats exceptionnels."
+                               data-zh="月费：1,200加元。包括使用设施、指导和资源。优秀候选人可获得津贴机会。"
+                               data-es="Tarifa mensual: $1,200 CAD. Incluye acceso a instalaciones, tutoría y recursos. Oportunidades de estipendio disponibles para candidatos excepcionales.">
+                               Monthly fee: $1,200 CAD. Includes access to facilities, mentorship, and resources.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-actions">
+                            <a href="contact.html" class="btn-secondary" data-en="Inquire" data-fr="Renseignements" data-zh="咨询" data-es="Consultar">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme 4: HLD in Research Skills -->
+                <div class="program-card" id="research-skills">
+                    <div class="program-header">
+                        <h3 data-en="Higher Learning Diploma in Research Skills" data-fr="Diplôme d'Études Supérieures en Compétences de Recherche" data-zh="研究技能高等教育文凭" data-es="Diploma de Educación Superior en Habilidades de Investigación">Higher Learning Diploma in Research Skills</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-meta">
+                            <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An" data-zh="1年" data-es="1 Año">1 Year</span></span>
+                            <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Advanced Diploma" data-fr="Diplôme Avancé" data-zh="高级文凭" data-es="Diploma Avanzado">Advanced Diploma</span></span>
+                        </div>
+                        <div class="program-description">
+                            <p data-en="For those who wish to work as social researchers and consultants. Advanced understanding of quantitative and qualitative research methodologies."
+                               data-fr="Pour ceux qui souhaitent travailler comme chercheurs sociaux et consultants. Compréhension avancée des méthodologies de recherche quantitative et qualitative."
+                               data-zh="面向希望担任社会研究者和顾问的人员。深入了解定量和定性研究方法论。"
+                               data-es="Para aquellos que deseen trabajar como investigadores sociales y consultores. Comprensión avanzada de metodologías de investigación cuantitativa y cualitativa.">
+                               For those who wish to work as social researchers and consultants. Advanced understanding of quantitative and qualitative research methodologies.
+                            </p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format" data-zh="形式" data-es="Formato">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel" data-zh="校园/虚拟" data-es="En campus/Virtual">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Focus" data-fr="Focus" data-zh="重点" data-es="Enfoque">Focus</span>
+                                <span class="detail-value" data-en="Research Methods" data-fr="Méthodes de Recherche" data-zh="研究方法" data-es="Métodos de Investigación">Research Methods</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Credits" data-fr="Crédits" data-zh="学分" data-es="Créditos">Credits</span>
+                                <span class="detail-value" data-en="60 ECTS" data-fr="60 ECTS" data-zh="60 ECTS" data-es="60 ECTS">60 ECTS</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Detailed Content (Always Visible) -->
+                        <div class="program-detailed-content">
+                            <h4 data-en="Programme Overview" data-fr="Aperçu du Programme" data-zh="课程概述" data-es="Descripción del Programa">Programme Overview</h4>
+                            <p data-en="This diploma programme provides comprehensive training in social research methodologies, preparing graduates for careers as professional researchers, consultants, and analysts. The programme covers both quantitative and qualitative methods with practical applications."
+                               data-fr="Ce programme de diplôme fournit une formation complète en méthodologies de recherche sociale, préparant les diplômés à des carrières en tant que chercheurs professionnels, consultants et analystes. Le programme couvre à la fois les méthodes quantitatives et qualitatives avec des applications pratiques."
+                               data-zh="该文凭课程提供社会研究方法论的全面培训，为毕业生成为专业研究人员、顾问和分析师做好准备。该课程涵盖定量和定性方法及其实际应用。"
+                               data-es="Este programa de diploma proporciona capacitación integral en metodologías de investigación social, preparando a los graduados para carreras como investigadores profesionales, consultores y analistas. El programa cubre métodos cuantitativos y cualitativos con aplicaciones prácticas.">
+                               This diploma programme provides comprehensive training in social research methodologies, preparing graduates for careers as professional researchers, consultants, and analysts.
+                            </p>
+                            
+                            <h5 data-en="Curriculum" data-fr="Curriculum" data-zh="课程设置" data-es="Plan de Estudios">Curriculum</h5>
+                            <ul>
+                                <li data-en="Foundations of Social Research" data-fr="Fondements de la Recherche Sociale" data-zh="社会研究基础" data-es="Fundamentos de la Investigación Social">Foundations of Social Research</li>
+                                <li data-en="Quantitative Research Methods and Statistics" data-fr="Méthodes de Recherche Quantitative et Statistiques" data-zh="定量研究方法与统计学" data-es="Métodos de Investigación Cuantitativa y Estadística">Quantitative Research Methods and Statistics</li>
+                                <li data-en="Qualitative Research Methods" data-fr="Méthodes de Recherche Qualitative" data-zh="定性研究方法" data-es="Métodos de Investigación Cualitativa">Qualitative Research Methods</li>
+                                <li data-en="Mixed Methods Research Design" data-fr="Conception de Recherche à Méthodes Mixtes" data-zh="混合方法研究设计" data-es="Diseño de Investigación de Métodos Mixtos">Mixed Methods Research Design</li>
+                                <li data-en="Data Collection and Analysis Techniques" data-fr="Techniques de Collecte et d'Analyse de Données" data-zh="数据收集与分析技术" data-es="Técnicas de Recolección y Análisis de Datos">Data Collection and Analysis Techniques</li>
+                                <li data-en="Research Ethics and Integrity" data-fr="Éthique et Intégrité de la Recherche" data-zh="研究伦理与诚信" data-es="Ética e Integridad en la Investigación">Research Ethics and Integrity</li>
+                                <li data-en="Research Proposal Development" data-fr="Développement de Proposition de Recherche" data-zh="研究计划制定" data-es="Desarrollo de Propuesta de Investigación">Research Proposal Development</li>
+                                <li data-en="Applied Research Project" data-fr="Projet de Recherche Appliquée" data-zh="应用研究项目" data-es="Proyecto de Investigación Aplicada">Applied Research Project</li>
+                            </ul>
+                            
+                            <h5 data-en="Learning Outcomes" data-fr="Résultats d'Apprentissage" data-zh="学习成果" data-es="Resultados de Aprendizaje">Learning Outcomes</h5>
+                            <ul>
+                                <li data-en="Design and conduct social research studies" data-fr="Concevoir et mener des études de recherche sociale" data-zh="设计和开展社会研究" data-es="Diseñar y realizar estudios de investigación social">Design and conduct social research studies</li>
+                                <li data-en="Apply statistical analysis techniques" data-fr="Appliquer des techniques d'analyse statistique" data-zh="应用统计分析技术" data-es="Aplicar técnicas de análisis estadístico">Apply statistical analysis techniques</li>
+                                <li data-en="Conduct qualitative data analysis" data-fr="Effectuer une analyse de données qualitative" data-zh="进行定性数据分析" data-es="Realizar análisis de datos cualitativos">Conduct qualitative data analysis</li>
+                                <li data-en="Develop research proposals and grant applications" data-fr="Développer des propositions de recherche et des demandes de subvention" data-zh="制定研究计划和资助申请" data-es="Desarrollar propuestas de investigación y solicitudes de subvención">Develop research proposals and grant applications</li>
+                                <li data-en="Interpret and present research findings" data-fr="Interpréter et présenter les résultats de recherche" data-zh="解释和展示研究发现" data-es="Interpretar y presentar hallazgos de investigación">Interpret and present research findings</li>
+                                <li data-en="Apply ethical principles in research" data-fr="Appliquer les principes éthiques dans la recherche" data-zh="在研究中的应用伦理原则" data-es="Aplicar principios éticos en la investigación">Apply ethical principles in research</li>
+                            </ul>
+                            
+                            <h5 data-en="Career Opportunities" data-fr="Opportunités de Carrière" data-zh="职业机会" data-es="Oportunidades Profesionales">Career Opportunities</h5>
+                            <p data-en="Graduates can work as social researchers, policy analysts, market researchers, program evaluators, data analysts, research consultants, monitoring and evaluation specialists, and research coordinators in government agencies, NGOs, research institutions, consulting firms, and academic settings."
+                               data-fr="Les diplômés peuvent travailler comme chercheurs sociaux, analystes de politiques, chercheurs de marché, évaluateurs de programmes, analystes de données, consultants en recherche, spécialistes en suivi et évaluation, et coordinateurs de recherche dans des agences gouvernementales, ONG, institutions de recherche, cabinets de conseil et milieux académiques."
+                               data-zh="毕业生可以在政府机构、非政府组织、研究机构、咨询公司和学术环境中担任社会研究人员、政策分析师、市场研究员、项目评估员、数据分析师、研究顾问、监测与评估专家以及研究协调员。"
+                               data-es="Los graduados pueden trabajar como investigadores sociales, analistas de políticas, investigadores de mercado, evaluadores de programas, analistas de datos, consultores de investigación, especialistas en monitoreo y evaluación, y coordinadores de investigación en agencias gubernamentales, ONG, instituciones de investigación, firmas consultoras y entornos académicos.">
+                               Graduates can work as social researchers, policy analysts, market researchers, program evaluators, data analysts, and research consultants.
+                            </p>
+                            
+                            <h5 data-en="Admission Requirements" data-fr="Conditions d'Admission" data-zh="入学要求" data-es="Requisitos de Admisión">Admission Requirements</h5>
+                            <ul>
+                                <li data-en="Bachelor's degree in any field" data-fr="Licence dans n'importe quel domaine" data-zh="任何领域学士学位" data-es="Licenciatura en cualquier campo">Bachelor's degree in any field</li>
+                                <li data-en="Basic understanding of research concepts" data-fr="Compréhension de base des concepts de recherche" data-zh="基本了解研究概念" data-es="Comprensión básica de conceptos de investigación">Basic understanding of research concepts</li>
+                                <li data-en="Proficiency in English or French" data-fr="Maîtrise de l'anglais ou du français" data-zh="英语或法语熟练" data-es="Dominio del inglés o francés">Proficiency in English or French</li>
+                                <li data-en="Academic writing sample" data-fr="Échantillon d'écriture académique" data-zh="学术写作样本" data-es="Muestra de escritura académica">Academic writing sample</li>
+                                <li data-en="Statement of research interests" data-fr="Déclaration d'intérêts de recherche" data-zh="研究兴趣陈述" data-es="Declaración de intereses de investigación">Statement of research interests</li>
+                                <li data-en="Two letters of recommendation" data-fr="Deux lettres de recommandation" data-zh="两封推荐信" data-es="Dos cartas de recomendación">Two letters of recommendation</li>
+                            </ul>
+                            
+                            <h5 data-en="Tuition Fees" data-fr="Frais de Scolarité" data-zh="学费" data-es="Matrícula">Tuition Fees</h5>
+                            <p data-en="Full programme: $5,900 CAD (Canadian Dollars). Early bird discount available. Payment plans offered."
+                               data-fr="Programme complet : 5 900 $ CAD (dollars canadiens). Réduction early bird disponible. Plans de paiement offerts."
+                               data-zh="完整课程：5,900加元。提供早鸟折扣和付款计划。"
+                               data-es="Programa completo: $5,900 CAD (dólares canadienses). Descuento por pronto pago disponible. Planes de pago ofrecidos.">
+                               Full programme: $5,900 CAD (Canadian Dollars). Early bird discount available. Payment plans offered.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-actions">
+                            <a href="contact.html#apply-form" class="btn-secondary" data-en="Apply Now" data-fr="Postuler" data-zh="立即申请" data-es="Aplicar Ahora">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education School -->
+    <section class="programs-section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-title" id="education">
+                <h2 data-en="School of Education and International Communication" data-fr="École d'Éducation et de Communication Internationale" data-zh="教育与国际传播学院" data-es="Escuela de Educación y Comunicación Internacional">School of Education and International Communication</h2>
+                <p class="section-subtitle" data-en="Developing educators and communicators for a globalized world" data-fr="Former des éducateurs et communicateurs pour un monde globalisé" data-zh="为全球化世界培养教育者和传播者" data-es="Desarrollando educadores y comunicadores para un mundo globalizado">Developing educators and communicators for a globalized world</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Programme 5: Advanced Diploma in Languages -->
+                <div class="program-card" id="languages-diploma">
+                    <div class="program-header">
+                        <h3 data-en="Advanced Diploma in Languages for International Communication" data-fr="Diplôme Avancé en Langues pour la Communication Internationale" data-zh="国际传播语言高级文凭" data-es="Diploma Avanzado en Idiomas para la Comunicación Internacional">Advanced Diploma in Languages for International Communication</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-meta">
+                            <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An" data-zh="1年" data-es="1 Año">1 Year</span></span>
+                            <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Advanced Diploma" data-fr="Diplôme Avancé" data-zh="高级文凭" data-es="Diploma Avanzado">Advanced Diploma</span></span>
+                        </div>
+                        <div class="program-description">
+                            <p data-en="Convert your language skills into employability assets. Available in English, French, Spanish, Arabic, and Chinese Mandarin."
+                               data-fr="Transformez vos compétences linguistiques en atouts pour l'emploi. Disponible en anglais, français, espagnol, arabe et chinois mandarin."
+                               data-zh="将您的语言技能转化为就业资本。提供英语、法语、西班牙语、阿拉伯语和中文普通话课程。"
+                               data-es="Convierta sus habilidades lingüísticas en activos de empleabilidad. Disponible en inglés, francés, español, árabe y chino mandarín.">
+                               Convert your language skills into employability assets. Available in English, French, Spanish, Arabic, and Chinese Mandarin.
+                            </p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format" data-zh="形式" data-es="Formato">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel" data-zh="校园/虚拟" data-es="En campus/Virtual">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Languages" data-fr="Langues" data-zh="语言" data-es="Idiomas">Languages</span>
+                                <span class="detail-value" data-en="English, French, Spanish, Arabic, Chinese" data-fr="Anglais, Français, Espagnol, Arabe, Chinois" data-zh="英语、法语、西班牙语、阿拉伯语、中文" data-es="Inglés, Francés, Español, Árabe, Chino">English, French, Spanish, Arabic, Chinese</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Credits" data-fr="Crédits" data-zh="学分" data-es="Créditos">Credits</span>
+                                <span class="detail-value" data-en="60 ECTS" data-fr="60 ECTS" data-zh="60 ECTS" data-es="60 ECTS">60 ECTS</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Detailed Content (Always Visible) -->
+                        <div class="program-detailed-content">
+                            <h4 data-en="Programme Overview" data-fr="Aperçu du Programme" data-zh="课程概述" data-es="Descripción del Programa">Programme Overview</h4>
+                            <p data-en="This advanced diploma programme prepares students for professional communication in multiple languages. It combines language proficiency development with intercultural communication skills, preparing graduates for international careers in various sectors."
+                               data-fr="Ce programme de diplôme avancé prépare les étudiants à la communication professionnelle en plusieurs langues. Il combine le développement de la compétence linguistique avec les compétences en communication interculturelle, préparant les diplômés à des carrières internationales dans divers secteurs."
+                               data-zh="该高级文凭课程为学生使用多种语言进行专业交流做好准备。它将语言能力发展与跨文化交际技能相结合，为毕业生在各个领域的国际职业生涯做好准备。"
+                               data-es="Este programa de diploma avanzado prepara a los estudiantes para la comunicación profesional en múltiples idiomas. Combina el desarrollo de competencia lingüística con habilidades de comunicación intercultural, preparando a los graduados para carreras internacionales en diversos sectores.">
+                               This advanced diploma programme prepares students for professional communication in multiple languages.
+                            </p>
+                            
+                            <h5 data-en="Curriculum" data-fr="Curriculum" data-zh="课程设置" data-es="Plan de Estudios">Curriculum</h5>
+                            <ul>
+                                <li data-en="Advanced Language Proficiency Development" data-fr="Développement Avancé de la Compétence Linguistique" data-zh="高级语言能力发展" data-es="Desarrollo Avanzado de Competencia Lingüística">Advanced Language Proficiency Development</li>
+                                <li data-en="Professional Writing and Communication" data-fr="Rédaction et Communication Professionnelles" data-zh="专业写作与交流" data-es="Redacción y Comunicación Profesional">Professional Writing and Communication</li>
+                                <li data-en="Intercultural Communication and Competence" data-fr="Communication et Compétence Interculturelles" data-zh="跨文化传播与能力" data-es="Comunicación y Competencia Intercultural">Intercultural Communication and Competence</li>
+                                <li data-en="Translation and Interpretation Principles" data-fr="Principes de Traduction et d'Interprétation" data-zh="笔译与口译原理" data-es="Principios de Traducción e Interpretación">Translation and Interpretation Principles</li>
+                                <li data-en="Language for Specific Purposes (Business, Legal, Medical)" data-fr="Langue à des Fins Spécifiques (Affaires, Juridique, Médical)" data-zh="特定用途语言（商务、法律、医疗）" data-es="Idioma para Fines Específicos (Negocios, Legal, Médico)">Language for Specific Purposes (Business, Legal, Medical)</li>
+                                <li data-en="Cross-cultural Negotiation and Mediation" data-fr="Négociation et Médiation Interculturelles" data-zh="跨文化谈判与调解" data-es="Negociación y Mediación Intercultural">Cross-cultural Negotiation and Mediation</li>
+                                <li data-en="Digital Communication in Multiple Languages" data-fr="Communication Numérique en Plusieurs Langues" data-zh="多语言数字传播" data-es="Comunicación Digital en Múltiples Idiomas">Digital Communication in Multiple Languages</li>
+                                <li data-en="Capstone Project: Real-world Language Application" data-fr="Projet de Synthèse: Application Linguistique dans le Monde Réel" data-zh="顶点项目：实际语言应用" data-es="Proyecto Final: Aplicación Lingüística en el Mundo Real">Capstone Project: Real-world Language Application</li>
+                            </ul>
+                            
+                            <h5 data-en="Language Tracks Available" data-fr="Parcours Linguistiques Disponibles" data-zh="可用语言方向" data-es="Pistas Lingüísticas Disponibles">Language Tracks Available</h5>
+                            <ul>
+                                <li data-en="English for International Communication (C1/C2 Level)" data-fr="Anglais pour la Communication Internationale (Niveau C1/C2)" data-zh="国际交流英语（C1/C2级）" data-es="Inglés para Comunicación Internacional (Nivel C1/C2)">English for International Communication (C1/C2 Level)</li>
+                                <li data-en="French for Professional Contexts" data-fr="Français pour Contextes Professionnels" data-zh="专业背景法语" data-es="Francés para Contextos Profesionales">French for Professional Contexts</li>
+                                <li data-en="Spanish for Global Business" data-fr="Espagnol pour les Affaires Internationales" data-zh="全球商务西班牙语" data-es="Español para Negocios Globales">Spanish for Global Business</li>
+                                <li data-en="Arabic for Diplomatic and Business Use" data-fr="Arabe pour Usage Diplomatique et Commercial" data-zh="外交和商务用途阿拉伯语" data-es="Árabe para Uso Diplomático y Comercial">Arabic for Diplomatic and Business Use</li>
+                                <li data-en="Chinese Mandarin for International Relations" data-fr="Chinois Mandarin pour les Relations Internationales" data-zh="国际关系中文普通话" data-es="Chino Mandarín para Relaciones Internacionales">Chinese Mandarin for International Relations</li>
+                            </ul>
+                            
+                            <h5 data-en="Learning Outcomes" data-fr="Résultats d'Apprentissage" data-zh="学习成果" data-es="Resultados de Aprendizaje">Learning Outcomes</h5>
+                            <ul>
+                                <li data-en="Achieve advanced proficiency in target language(s)" data-fr="Atteindre une compétence avancée dans la/les langue(s) cible(s)" data-zh="达到目标语言的高级熟练程度" data-es="Lograr competencia avanzada en el/los idioma(s) objetivo(s)">Achieve advanced proficiency in target language(s)</li>
+                                <li data-en="Communicate effectively in professional contexts" data-fr="Communiquer efficacement dans des contextes professionnels" data-zh="在专业环境中有效交流" data-es="Comunicar efectivamente en contextos profesionales">Communicate effectively in professional contexts</li>
+                                <li data-en="Navigate intercultural communication challenges" data-fr="Naviguer les défis de la communication interculturelle" data-zh="应对跨文化传播挑战" data-es="Navegar desafíos de comunicación intercultural">Navigate intercultural communication challenges</li>
+                                <li data-en="Apply language skills in specific professional domains" data-fr="Appliquer les compétences linguistiques dans des domaines professionnels spécifiques" data-zh="在特定专业领域应用语言技能" data-es="Aplicar habilidades lingüísticas en dominios profesionales específicos">Apply language skills in specific professional domains</li>
+                                <li data-en="Develop translation and interpretation competencies" data-fr="Développer des compétences en traduction et interprétation" data-zh="培养笔译和口译能力" data-es="Desarrollar competencias en traducción e interpretación">Develop translation and interpretation competencies</li>
+                                <li data-en="Create professional documents in multiple languages" data-fr="Créer des documents professionnels en plusieurs langues" data-zh="用多种语言创建专业文档" data-es="Crear documentos profesionales en múltiples idiomas">Create professional documents in multiple languages</li>
+                            </ul>
+                            
+                            <h5 data-en="Career Opportunities" data-fr="Opportunités de Carrière" data-zh="职业机会" data-es="Oportunidades Profesionales">Career Opportunities</h5>
+                            <p data-en="Graduates can pursue careers as international communication specialists, language consultants, cross-cultural trainers, diplomatic service officers, international business consultants, translation and interpretation professionals, multilingual content creators, and language program coordinators in multinational corporations, government agencies, international organizations, educational institutions, and media companies."
+                               data-fr="Les diplômés peuvent poursuivre des carrières en tant que spécialistes de la communication internationale, consultants linguistiques, formateurs interculturels, agents du service diplomatique, consultants en affaires internationales, professionnels de la traduction et de l'interprétation, créateurs de contenu multilingues et coordinateurs de programmes linguistiques dans des sociétés multinationales, agences gouvernementales, organisations internationales, institutions éducatives et entreprises médiatiques."
+                               data-zh="毕业生可以在跨国公司、政府机构、国际组织、教育机构和媒体公司担任国际传播专家、语言顾问、跨文化培训师、外交服务官员、国际商务顾问、笔译和口译专业人员、多语言内容创作者以及语言项目协调员。"
+                               data-es="Los graduados pueden seguir carreras como especialistas en comunicación internacional, consultores lingüísticos, capacitadores interculturales, oficiales de servicio diplomático, consultores de negocios internacionales, profesionales de traducción e interpretación, creadores de contenido multilingüe y coordinadores de programas de idiomas en corporaciones multinacionales, agencias gubernamentales, organizaciones internacionales, instituciones educativas y empresas de medios.">
+                               Graduates can pursue careers as international communication specialists, language consultants, cross-cultural trainers, diplomatic service officers, and international business consultants.
+                            </p>
+                            
+                            <h5 data-en="Admission Requirements" data-fr="Conditions d'Admission" data-zh="入学要求" data-es="Requisitos de Admisión">Admission Requirements</h5>
+                            <ul>
+                                <li data-en="Bachelor's degree or equivalent" data-fr="Licence ou équivalent" data-zh="学士学位或同等学历" data-es="Licenciatura o equivalente">Bachelor's degree or equivalent</li>
+                                <li data-en="Intermediate proficiency in target language (B2 level minimum)" data-fr="Compétence intermédiaire dans la langue cible (niveau B2 minimum)" data-zh="目标语言中级熟练程度（最低B2级）" data-es="Competencia intermedia en idioma objetivo (nivel B2 mínimo)">Intermediate proficiency in target language (B2 level minimum)</li>
+                                <li data-en="Language proficiency test or interview" data-fr="Test de compétence linguistique ou entretien" data-zh="语言能力测试或面试" data-es="Prueba de competencia lingüística o entrevista">Language proficiency test or interview</li>
+                                <li data-en="Statement of purpose explaining language goals" data-fr="Lettre de motivation expliquant les objectifs linguistiques" data-zh="解释语言目标的目的陈述" data-es="Declaración de propósito explicando objetivos lingüísticos">Statement of purpose explaining language goals</li>
+                                <li data-en="Two letters of recommendation" data-fr="Deux lettres de recommandation" data-zh="两封推荐信" data-es="Dos cartas de recomendación">Two letters of recommendation</li>
+                                <li data-en="International experience or interest (preferred)" data-fr="Expérience ou intérêt international (préféré)" data-zh="国际经验或兴趣（优先）" data-es="Experiencia o interés internacional (preferido)">International experience or interest (preferred)</li>
+                            </ul>
+                            
+                            <h5 data-en="Tuition Fees" data-fr="Frais de Scolarité" data-zh="学费" data-es="Matrícula">Tuition Fees</h5>
+                            <p data-en="Full programme: $5,500 CAD (Canadian Dollars). Language-specific materials included. Discounts for multiple language tracks."
+                               data-fr="Programme complet : 5 500 $ CAD (dollars canadiens). Matériels spécifiques à la langue inclus. Remises pour plusieurs parcours linguistiques."
+                               data-zh="完整课程：5,500加元。包含特定语言材料。多个语言方向有折扣。"
+                               data-es="Programa completo: $5,500 CAD (dólares canadienses). Materiales específicos del idioma incluidos. Descuentos para múltiples pistas lingüísticas.">
+                               Full programme: $5,500 CAD (Canadian Dollars). Language-specific materials included.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-actions">
+                            <a href="contact.html#apply-form" class="btn-secondary" data-en="Apply Now" data-fr="Postuler" data-zh="立即申请" data-es="Aplicar Ahora">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme 6: PGCE -->
+                <div class="program-card" id="pgce">
+                    <div class="program-header">
+                        <h3 data-en="Postgraduate Certificate in Education (PGCE)" data-fr="Certificat d'Études Supérieures en Éducation (PGCE)" data-zh="教育学研究生证书（PGCE）" data-es="Certificado de Posgrado en Educación (PGCE)">Postgraduate Certificate in Education (PGCE)</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-meta">
+                            <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An" data-zh="1年" data-es="1 Año">1 Year</span></span>
+                            <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Certificate" data-fr="Certificat" data-zh="证书" data-es="Certificado">Certificate</span></span>
+                        </div>
+                        <div class="program-description">
+                            <p data-en="Prepares candidates to teach in various educational settings: secondary, postsecondary and industry with specialized pathways."
+                               data-fr="Prépare les candidats à enseigner dans divers contextes éducatifs : secondaire, postsecondaire et industrie avec des parcours spécialisés."
+                               data-zh="培养候选人在各种教育环境中教学：中学、高等教育和行业，具有专业路径。"
+                               data-es="Prepara a los candidatos para enseñar en diversos entornos educativos: secundaria, postsecundaria e industria con vías especializadas.">
+                               Prepares candidates to teach in various educational settings: secondary, postsecondary and industry with specialized pathways.
+                            </p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format" data-zh="形式" data-es="Formato">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel" data-zh="校园/虚拟" data-es="En campus/Virtual">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Specializations" data-fr="Spécialisations" data-zh="专业方向" data-es="Especializaciones">Specializations</span>
+                                <span class="detail-value" data-en="Multiple Pathways" data-fr="Multiples Parcours" data-zh="多种路径" data-es="Múltiples Vías">Multiple Pathways</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Credits" data-fr="Crédits" data-zh="学分" data-es="Créditos">Credits</span>
+                                <span class="detail-value" data-en="30 ECTS" data-fr="30 ECTS" data-zh="30 ECTS" data-es="30 ECTS">30 ECTS</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Detailed Content (Always Visible) -->
+                        <div class="program-detailed-content">
+                            <h4 data-en="Programme Overview" data-fr="Aperçu du Programme" data-zh="课程概述" data-es="Descripción del Programa">Programme Overview</h4>
+                            <p data-en="The Postgraduate Certificate in Education (PGCE) is a professional teaching qualification that prepares graduates for careers in education. The programme combines theoretical foundations with practical teaching experience, offering specialized pathways for different educational contexts."
+                               data-fr="Le Certificat d'Études Supérieures en Éducation (PGCE) est une qualification professionnelle d'enseignement qui prépare les diplômés à des carrières dans l'éducation. Le programme combine les fondements théoriques avec l'expérience d'enseignement pratique, offrant des parcours spécialisés pour différents contextes éducatifs."
+                               data-zh="教育学研究生证书（PGCE）是一项专业教学资格，为毕业生的教育职业生涯做好准备。该课程将理论基础与实践教学经验相结合，为不同的教育环境提供专业路径。"
+                               data-es="El Certificado de Posgrado en Educación (PGCE) es una calificación profesional de enseñanza que prepara a los graduados para carreras en educación. El programa combina fundamentos teóricos con experiencia de enseñanza práctica, ofreciendo vías especializadas para diferentes contextos educativos.">
+                               The Postgraduate Certificate in Education (PGCE) is a professional teaching qualification that prepares graduates for careers in education.
+                            </p>
+                            
+                            <h5 data-en="Specialization Pathways" data-fr="Parcours de Spécialisation" data-zh="专业方向路径" data-es="Vías de Especialización">Specialization Pathways</h5>
+                            <ul>
+                                <li data-en="Secondary Education (Ages 11-18)" data-fr="Enseignement Secondaire (11-18 ans)" data-zh="中等教育（11-18岁）" data-es="Educación Secundaria (11-18 años)">Secondary Education (Ages 11-18)</li>
+                                <li data-en="Postsecondary and Adult Education" data-fr="Enseignement Postsecondaire et Éducation des Adultes" data-zh="高等教育和成人教育" data-es="Educación Postsecundaria y de Adultos">Postsecondary and Adult Education</li>
+                                <li data-en="Industry and Corporate Training" data-fr="Formation Industrielle et d'Entreprise" data-zh="行业和企业培训" data-es="Capacitación Industrial y Corporativa">Industry and Corporate Training</li>
+                                <li data-en="English Language Teaching (ELT)" data-fr="Enseignement de la Langue Anglaise (ELT)" data-zh="英语教学（ELT）" data-es="Enseñanza del Idioma Inglés (ELT)">English Language Teaching (ELT)</li>
+                                <li data-en="Special Educational Needs (SEN)" data-fr="Besoins Éducatifs Spéciaux (SEN)" data-zh="特殊教育需求（SEN）" data-es="Necesidades Educativas Especiales (SEN)">Special Educational Needs (SEN)</li>
+                                <li data-en="International Education and ESL" data-fr="Éducation Internationale et ESL" data-zh="国际教育和ESL" data-es="Educación Internacional y ESL">International Education and ESL</li>
+                            </ul>
+                            
+                            <h5 data-en="Curriculum" data-fr="Curriculum" data-zh="课程设置" data-es="Plan de Estudios">Curriculum</h5>
+                            <ul>
+                                <li data-en="Foundations of Education and Learning Theories" data-fr="Fondements de l'Éducation et Théories de l'Apprentissage" data-zh="教育基础与学习理论" data-es="Fundamentos de la Educación y Teorías del Aprendizaje">Foundations of Education and Learning Theories</li>
+                                <li data-en="Curriculum Development and Instructional Design" data-fr="Développement de Curriculum et Conception Pédagogique" data-zh="课程开发与教学设计" data-es="Desarrollo Curricular y Diseño Instruccional">Curriculum Development and Instructional Design</li>
+                                <li data-en="Assessment and Evaluation in Education" data-fr="Évaluation dans l'Éducation" data-zh="教育评估" data-es="Evaluación en Educación">Assessment and Evaluation in Education</li>
+                                <li data-en="Classroom Management and Student Engagement" data-fr="Gestion de Classe et Engagement des Élèves" data-zh="课堂管理与学生参与" data-es="Gestión del Aula y Compromiso Estudiantil">Classroom Management and Student Engagement</li>
+                                <li data-en="Educational Technology Integration" data-fr="Intégration de la Technologie Éducative" data-zh="教育技术整合" data-es="Integración de Tecnología Educativa">Educational Technology Integration</li>
+                                <li data-en="Differentiated Instruction and Inclusive Practices" data-fr="Instruction Différenciée et Pratiques Inclusives" data-zh="差异化教学与包容性实践" data-es="Instrucción Diferenciada y Prácticas Inclusivas">Differentiated Instruction and Inclusive Practices</li>
+                                <li data-en="Professional Practice and Teaching Practicum" data-fr="Pratique Professionnelle et Stage d'Enseignement" data-zh="专业实践与教学实习" data-es="Práctica Profesional y Práctica Docente">Professional Practice and Teaching Practicum</li>
+                                <li data-en="Educational Research and Reflective Practice" data-fr="Recherche Éducative et Pratique Réflexive" data-zh="教育研究与反思实践" data-es="Investigación Educativa y Práctica Reflexiva">Educational Research and Reflective Practice</li>
+                            </ul>
+                            
+                            <h5 data-en="Learning Outcomes" data-fr="Résultats d'Apprentissage" data-zh="学习成果" data-es="Resultados de Aprendizaje">Learning Outcomes</h5>
+                            <ul>
+                                <li data-en="Design and implement effective lesson plans" data-fr="Concevoir et mettre en œuvre des plans de cours efficaces" data-zh="设计和实施有效的教案" data-es="Diseñar e implementar planes de lecciones efectivos">Design and implement effective lesson plans</li>
+                                <li data-en="Apply diverse teaching strategies for different learners" data-fr="Appliquer des stratégies d'enseignement diversifiées pour différents apprenants" data-zh="为不同学习者应用多样化的教学策略" data-es="Aplicar estrategias de enseñanza diversas para diferentes aprendices">Apply diverse teaching strategies for different learners</li>
+                                <li data-en="Assess student learning using multiple methods" data-fr="Évaluer l'apprentissage des élèves en utilisant plusieurs méthodes" data-zh="使用多种方法评估学生学习" data-es="Evaluar el aprendizaje estudiantil usando múltiples métodos">Assess student learning using multiple methods</li>
+                                <li data-en="Create inclusive and supportive learning environments" data-fr="Créer des environnements d'apprentissage inclusifs et favorables" data-zh="创建包容性和支持性的学习环境" data-es="Crear entornos de aprendizaje inclusivos y de apoyo">Create inclusive and supportive learning environments</li>
+                                <li data-en="Integrate technology effectively in teaching" data-fr="Intégrer la technologie efficacement dans l'enseignement" data-zh="在教学中有效整合技术" data-es="Integrar tecnología efectivamente en la enseñanza">Integrate technology effectively in teaching</li>
+                                <li data-en="Reflect on and improve teaching practice" data-fr="Réfléchir et améliorer la pratique d'enseignement" data-zh="反思和改进教学实践" data-es="Reflexionar y mejorar la práctica docente">Reflect on and improve teaching practice</li>
+                                <li data-en="Collaborate with colleagues and stakeholders" data-fr="Collaborer avec des collègues et des parties prenantes" data-zh="与同事和利益相关者合作" data-es="Colaborar con colegas y partes interesadas">Collaborate with colleagues and stakeholders</li>
+                            </ul>
+                            
+                            <h5 data-en="Career Opportunities" data-fr="Opportunités de Carrière" data-zh="职业机会" data-es="Oportunidades Profesionales">Career Opportunities</h5>
+                            <p data-en="Graduates can work as certified teachers in secondary schools, instructors in postsecondary institutions, corporate trainers, educational consultants, curriculum developers, instructional designers, educational technology specialists, adult education instructors, ESL teachers internationally, and education program coordinators in various educational settings worldwide."
+                               data-fr="Les diplômés peuvent travailler comme enseignants certifiés dans les écoles secondaires, instructeurs dans les établissements postsecondaires, formateurs d'entreprise, consultants en éducation, développeurs de programmes d'études, concepteurs pédagogiques, spécialistes de la technologie éducative, instructeurs d'éducation des adultes, enseignants d'anglais langue seconde à l'international et coordinateurs de programmes éducatifs dans divers contextes éducatifs à travers le monde."
+                               data-zh="毕业生可以在中学担任认证教师、高等教育机构讲师、企业培训师、教育顾问、课程开发人员、教学设计人员、教育技术专家、成人教育讲师、国际ESL教师以及全球各种教育环境中的教育项目协调员。"
+                               data-es="Los graduados pueden trabajar como maestros certificados en escuelas secundarias, instructores en instituciones postsecundarias, capacitadores corporativos, consultores educativos, desarrolladores de currículo, diseñadores instruccionales, especialistas en tecnología educativa, instructores de educación de adultos, maestros de ESL internacionalmente y coordinadores de programas educativos en diversos entornos educativos en todo el mundo.">
+                               Graduates can work as certified teachers, instructors, corporate trainers, educational consultants, curriculum developers, and instructional designers.
+                            </p>
+                            
+                            <h5 data-en="Admission Requirements" data-fr="Conditions d'Admission" data-zh="入学要求" data-es="Requisitos de Admisión">Admission Requirements</h5>
+                            <ul>
+                                <li data-en="Bachelor's degree in any discipline" data-fr="Licence dans n'importe quelle discipline" data-zh="任何学科学士学位" data-es="Licenciatura en cualquier disciplina">Bachelor's degree in any discipline</li>
+                                <li data-en="Minimum GPA of 3.0 or equivalent" data-fr="GPA minimum de 3.0 ou équivalent" data-zh="最低GPA 3.0或同等水平" data-es="GPA mínimo de 3.0 o equivalente">Minimum GPA of 3.0 or equivalent</li>
+                                <li data-en="Proficiency in English (IELTS 7.0 or equivalent for non-native speakers)" data-fr="Maîtrise de l'anglais (IELTS 7.0 ou équivalent pour les non-anglophones)" data-zh="英语熟练（非母语者需雅思7.0或同等水平）" data-es="Dominio del inglés (IELTS 7.0 o equivalente para no nativos)">Proficiency in English (IELTS 7.0 or equivalent for non-native speakers)</li>
+                                <li data-en="Statement of teaching philosophy" data-fr="Déclaration de philosophie d'enseignement" data-zh="教学理念陈述" data-es="Declaración de filosofía de enseñanza">Statement of teaching philosophy</li>
+                                <li data-en="Two letters of recommendation" data-fr="Deux lettres de recommandation" data-zh="两封推荐信" data-es="Dos cartas de recomendación">Two letters of recommendation</li>
+                                <li data-en="Interview with programme faculty" data-fr="Entretien avec la faculté du programme" data-zh="与项目教师面试" data-es="Entrevista con facultad del programa">Interview with programme faculty</li>
+                                <li data-en="Clear criminal record check" data-fr="Vérification des antécédents criminels" data-zh="无犯罪记录证明" data-es="Verificación de antecedentes penales">Clear criminal record check</li>
+                            </ul>
+                            
+                            <h5 data-en="Tuition Fees" data-fr="Frais de Scolarité" data-zh="学费" data-es="Matrícula">Tuition Fees</h5>
+                            <p data-en="Full programme: $6,200 CAD (Canadian Dollars). Includes teaching practicum supervision. Scholarships available for outstanding candidates."
+                               data-fr="Programme complet : 6 200 $ CAD (dollars canadiens). Inclut la supervision du stage d'enseignement. Bourses disponibles pour les candidats exceptionnels."
+                               data-zh="完整课程：6,200加元。包括教学实习监督。优秀候选人可获得奖学金。"
+                               data-es="Programma completo: $6,200 CAD (dólares canadienses). Incluye supervisión de práctica docente. Becas disponibles para candidatos sobresalientes.">
+                               Full programme: $6,200 CAD (Canadian Dollars). Includes teaching practicum supervision.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-actions">
+                            <a href="contact.html#apply-form" class="btn-secondary" data-en="Apply Now" data-fr="Postuler" data-zh="立即申请" data-es="Aplicar Ahora">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business School -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="section-title" id="business">
+                <h2 data-en="City Business School" data-fr="École de Commerce City" data-zh="城市商学院" data-es="Escuela de Negocios City">City Business School</h2>
+                <p class="section-subtitle" data-en="Developing business leaders for tomorrow's challenges" data-fr="Former des leaders d'entreprise pour les défis de demain" data-zh="为明天的挑战培养商业领袖" data-es="Desarrollando líderes empresariales para los desafíos del mañana">Developing business leaders for tomorrow's challenges</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Programme 7: Executive Diploma in Management -->
+                <div class="program-card" id="executive-management">
+                    <div class="program-header">
+                        <h3 data-en="Executive Diploma in Management (EDM)" data-fr="Diplôme Exécutif en Management (EDM)" data-zh="管理行政文凭（EDM）" data-es="Diploma Ejecutivo en Gestión (EDM)">Executive Diploma in Management (EDM)</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-meta">
+                            <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An" data-zh="1年" data-es="1 Año">1 Year</span></span>
+                            <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Diploma" data-fr="Diplôme" data-zh="文凭" data-es="Diploma">Diploma</span></span>
+                        </div>
+                        <div class="program-description">
+                            <p data-en="Develop executive expertise in modern managerial practice with specializations in Marketing, HR, Logistics, or Supply Chain Management."
+                               data-fr="Développez une expertise exécutive dans la pratique managériale moderne avec des spécialisations en Marketing, RH, Logistique ou Gestion de la Chaîne d'Approvisionnement."
+                               data-zh="在现代管理实践中培养行政专业知识，专攻市场营销、人力资源、物流或供应链管理。"
+                               data-es="Desarrolle experiencia ejecutiva en la práctica gerencial moderna con especializaciones en Marketing, RRHH, Logística o Gestión de la Cadena de Suministro.">
+                               Develop executive expertise in modern managerial practice with specializations in Marketing, HR, Logistics, or Supply Chain Management.
+                            </p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format" data-zh="形式" data-es="Formato">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel" data-zh="校园/虚拟" data-es="En campus/Virtual">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Specializations" data-fr="Spécialisations" data-zh="专业方向" data-es="Especializaciones">Specializations</span>
+                                <span class="detail-value" data-en="Marketing, HR, Logistics, Supply Chain" data-fr="Marketing, RH, Logistique, Chaîne d'Approvisionnement" data-zh="市场营销、人力资源、物流、供应链" data-es="Marketing, RRHH, Logística, Cadena de Suministro">Marketing, HR, Logistics, Supply Chain</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Credits" data-fr="Crédits" data-zh="学分" data-es="Créditos">Credits</span>
+                                <span class="detail-value" data-en="30 ECTS" data-fr="30 ECTS" data-zh="30 ECTS" data-es="30 ECTS">30 ECTS</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Detailed Content (Always Visible) -->
+                        <div class="program-detailed-content">
+                            <h4 data-en="Programme Overview" data-fr="Aperçu du Programme" data-zh="课程概述" data-es="Descripción del Programa">Programme Overview</h4>
+                            <p data-en="The Executive Diploma in Management provides mid-career professionals with advanced management skills and specialized knowledge in key business areas. The programme combines strategic thinking with practical application, preparing graduates for leadership roles in their organizations."
+                               data-fr="Le Diplôme Exécutif en Management fournit aux professionnels en milieu de carrière des compétences de gestion avancées et des connaissances spécialisées dans des domaines commerciaux clés. Le programme combine la pensée stratégique avec l'application pratique, préparant les diplômés à des rôles de leadership dans leurs organisations."
+                               data-zh="管理行政文凭为职业中期专业人士提供高级管理技能和关键业务领域的专业知识。该课程将战略思维与实际应用相结合，为毕业生在其组织中担任领导角色做好准备。"
+                               data-es="El Diploma Ejecutivo en Gestión proporciona a profesionales a mitad de carrera habilidades avanzadas de gestión y conocimiento especializado en áreas comerciales clave. El programa combina pensamiento estratégico con aplicación práctica, preparando a los graduados para roles de liderazgo en sus organizaciones.">
+                               The Executive Diploma in Management provides mid-career professionals with advanced management skills and specialized knowledge in key business areas.
+                            </p>
+                            
+                            <h5 data-en="Specialization Options" data-fr="Options de Spécialisation" data-zh="专业方向选项" data-es="Opciones de Especialización">Specialization Options</h5>
+                            <ul>
+                                <li data-en="Marketing Management: Digital marketing, brand strategy, consumer behavior, marketing analytics" data-fr="Management Marketing: Marketing digital, stratégie de marque, comportement du consommateur, analyse marketing" data-zh="营销管理：数字营销、品牌战略、消费者行为、营销分析" data-es="Gestión de Marketing: Marketing digital, estrategia de marca, comportamiento del consumidor, análisis de marketing">Marketing Management: Digital marketing, brand strategy, consumer behavior, marketing analytics</li>
+                                <li data-en="Human Resources Management: Talent management, organizational development, compensation strategies, HR analytics" data-fr="Gestion des Ressources Humaines: Gestion des talents, développement organisationnel, stratégies de rémunération, analyse RH" data-zh="人力资源管理：人才管理、组织发展、薪酬策略、人力资源分析" data-es="Gestión de Recursos Humanos: Gestión del talento, desarrollo organizacional, estrategias de compensación, análisis de RRHH">Human Resources Management: Talent management, organizational development, compensation strategies, HR analytics</li>
+                                <li data-en="Logistics and Operations Management: Supply chain optimization, operations strategy, quality management, logistics technology" data-fr="Gestion Logistique et des Opérations: Optimisation de la chaîne d'approvisionnement, stratégie des opérations, gestion de la qualité, technologie logistique" data-zh="物流与运营管理：供应链优化、运营战略、质量管理、物流技术" data-es="Gestión Logística y de Operaciones: Optimización de cadena de suministro, estrategia de operaciones, gestión de calidad, tecnología logística">Logistics and Operations Management: Supply chain optimization, operations strategy, quality management, logistics technology</li>
+                                <li data-en="Supply Chain Management: Procurement strategies, inventory management, distribution networks, sustainable supply chains" data-fr="Gestion de la Chaîne d'Approvisionnement: Stratégies d'approvisionnement, gestion des stocks, réseaux de distribution, chaînes d'approvisionnement durables" data-zh="供应链管理：采购策略、库存管理、分销网络、可持续供应链" data-es="Gestión de la Cadena de Suministro: Estrategias de adquisición, gestión de inventario, redes de distribución, cadenas de suministro sostenibles">Supply Chain Management: Procurement strategies, inventory management, distribution networks, sustainable supply chains</li>
+                            </ul>
+                            
+                            <h5 data-en="Core Curriculum" data-fr="Curriculum de Base" data-zh="核心课程" data-es="Plan de Estudios Central">Core Curriculum</h5>
+                            <ul>
+                                <li data-en="Strategic Management and Leadership" data-fr="Management Stratégique et Leadership" data-zh="战略管理与领导力" data-es="Gestión Estratégica y Liderazgo">Strategic Management and Leadership</li>
+                                <li data-en="Financial Management for Executives" data-fr="Gestion Financière pour Cadres" data-zh="高管财务管理" data-es="Gestión Financiera para Ejecutivos">Financial Management for Executives</li>
+                                <li data-en="Organizational Behavior and Change Management" data-fr="Comportement Organisationnel et Gestion du Changement" data-zh="组织行为与变革管理" data-es="Comportamiento Organizacional y Gestión del Cambio">Organizational Behavior and Change Management</li>
+                                <li data-en="Business Analytics and Decision Making" data-fr="Analyse Commerciale et Prise de Décision" data-zh="商业分析与决策" data-es="Análisis de Negocios y Toma de Decisiones">Business Analytics and Decision Making</li>
+                                <li data-en="Ethical Leadership and Corporate Governance" data-fr="Leadership Éthique et Gouvernance d'Entreprise" data-zh="伦理领导与企业治理" data-es="Liderazgo Ético y Gobierno Corporativo">Ethical Leadership and Corporate Governance</li>
+                                <li data-en="Innovation and Entrepreneurship" data-fr="Innovation et Entrepreneuriat" data-zh="创新与创业" data-es="Innovación y Emprendimiento">Innovation and Entrepreneurship</li>
+                                <li data-en="Global Business Environment" data-fr="Environnement des Affaires Internationales" data-zh="全球商业环境" data-es="Entorno de Negocios Global">Global Business Environment</li>
+                                <li data-en="Capstone Project: Strategic Business Initiative" data-fr="Projet de Synthèse: Initiative Stratégique Commerciale" data-zh="顶点项目：战略商业计划" data-es="Proyecto Final: Iniciativa Estratégica de Negocios">Capstone Project: Strategic Business Initiative</li>
+                            </ul>
+                            
+                            <h5 data-en="Learning Outcomes" data-fr="Résultats d'Apprentissage" data-zh="学习成果" data-es="Resultados de Aprendizaje">Learning Outcomes</h5>
+                            <ul>
+                                <li data-en="Develop and implement business strategies" data-fr="Développer et mettre en œuvre des stratégies commerciales" data-zh="制定和实施商业战略" data-es="Desarrollar e implementar estrategias comerciales">Develop and implement business strategies</li>
+                                <li data-en="Lead organizational change and development" data-fr="Diriger le changement et le développement organisationnels" data-zh="领导组织变革与发展" data-es="Liderar cambio y desarrollo organizacional">Lead organizational change and development</li>
+                                <li data-en="Apply specialized knowledge in chosen business area" data-fr="Appliquer des connaissances spécialisées dans le domaine commercial choisi" data-zh="在所选业务领域应用专业知识" data-es="Aplicar conocimiento especializado en área comercial elegida">Apply specialized knowledge in chosen business area</li>
+                                <li data-en="Analyze business problems using data and analytics" data-fr="Analyser les problèmes commerciaux en utilisant des données et des analyses" data-zh="使用数据和分析分析商业问题" data-es="Analizar problemas comerciales usando datos y análisis">Analyze business problems using data and analytics</li>
+                                <li data-en="Make ethical business decisions" data-fr="Prendre des décisions commerciales éthiques" data-zh="做出伦理商业决策" data-es="Tomar decisiones comerciales éticas">Make ethical business decisions</li>
+                                <li data-en="Manage cross-functional teams effectively" data-fr="Gérer des équipes interfonctionnelles efficacement" data-zh="有效管理跨职能团队" data-es="Gestionar equipos multifuncionales efectivamente">Manage cross-functional teams effectively</li>
+                                <li data-en="Navigate global business challenges" data-fr="Naviguer les défis commerciaux mondiaux" data-zh="应对全球商业挑战" data-es="Navegar desafíos comerciales globales">Navigate global business challenges</li>
+                            </ul>
+                            
+                            <h5 data-en="Career Opportunities" data-fr="Opportunités de Carrière" data-zh="职业机会" data-es="Oportunidades Profesionales">Career Opportunities</h5>
+                            <p data-en="Graduates can advance to leadership positions such as department managers, directors, vice presidents, general managers, business unit heads, strategy consultants, management consultants, project directors, and senior analysts in corporations, consulting firms, government agencies, non-profit organizations, and entrepreneurial ventures across various industries."
+                               data-fr="Les diplômés peuvent accéder à des postes de direction tels que chefs de département, directeurs, vice-présidents, directeurs généraux, chefs d'unité commerciale, consultants en stratégie, consultants en management, directeurs de projet et analystes seniors dans des sociétés, cabinets de conseil, agences gouvernementales, organisations à but non lucratif et entreprises entrepreneuriales dans diverses industries."
+                               data-zh="毕业生可以晋升为部门经理、总监、副总裁、总经理、业务部门负责人、战略顾问、管理顾问、项目总监和高级分析师等领导职位，任职于各行业的公司、咨询公司、政府机构、非营利组织和创业企业。"
+                               data-es="Los graduados pueden avanzar a posiciones de liderazgo como gerentes de departamento, directores, vicepresidentes, gerentes generales, jefes de unidad de negocio, consultores de estrategia, consultores de gestión, directores de proyecto y analistas senior en corporaciones, firmas consultoras, agencias gubernamentales, organizaciones sin fines de lucro y emprendimientos en diversas industrias.">
+                               Graduates can advance to leadership positions such as department managers, directors, vice presidents, general managers, business unit heads, and strategy consultants.
+                            </p>
+                            
+                            <h5 data-en="Admission Requirements" data-fr="Conditions d'Admission" data-zh="入学要求" data-es="Requisitos de Admisión">Admission Requirements</h5>
+                            <ul>
+                                <li data-en="Bachelor's degree in any field" data-fr="Licence dans n'importe quel domaine" data-zh="任何领域学士学位" data-es="Licenciatura en cualquier campo">Bachelor's degree in any field</li>
+                                <li data-en="Minimum 5 years of professional work experience" data-fr="Minimum 5 ans d'expérience professionnelle" data-zh="至少5年专业工作经验" data-es="Mínimo 5 años de experiencia laboral profesional">Minimum 5 years of professional work experience</li>
+                                <li data-en="Current employment in managerial or supervisory role" data-fr="Emploi actuel dans un rôle de gestion ou de supervision" data-zh="当前担任管理或监督职务" data-es="Empleo actual en rol gerencial o de supervisión">Current employment in managerial or supervisory role</li>
+                                <li data-en="Statement of career goals and programme expectations" data-fr="Déclaration d'objectifs de carrière et d'attentes du programme" data-zh="职业目标和项目期望陈述" data-es="Declaración de metas profesionales y expectativas del programa">Statement of career goals and programme expectations</li>
+                                <li data-en="Two professional references" data-fr="Deux références professionnelles" data-zh="两封专业推荐信" data-es="Dos referencias profesionales">Two professional references</li>
+                                <li data-en="Current resume/CV" data-fr="CV actuel" data-zh="当前简历" data-es="CV actual">Current resume/CV</li>
+                                <li data-en="Interview with programme director" data-fr="Entretien avec le directeur du programme" data-zh="与项目主任面试" data-es="Entrevista con director del programa">Interview with programme director</li>
+                            </ul>
+                            
+                            <h5 data-en="Tuition Fees" data-fr="Frais de Scolarité" data-zh="学费" data-es="Matrícula">Tuition Fees</h5>
+                            <p data-en="Full programme: $7,500 CAD (Canadian Dollars). Corporate sponsorship options available. Payment plans and employer reimbursement assistance."
+                               data-fr="Programme complet : 7 500 $ CAD (dollars canadiens). Options de parrainage d'entreprise disponibles. Plans de paiement et assistance au remboursement par l'employeur."
+                               data-zh="完整课程：7,500加元。提供企业赞助选项。付款计划和雇主报销协助。"
+                               data-es="Programa completo: $7,500 CAD (dólares canadienses). Opciones de patrocinio corporativo disponibles. Planes de pago y asistencia de reembolso del empleador.">
+                               Full programme: $7,500 CAD (Canadian Dollars). Corporate sponsorship options available.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-actions">
+                            <a href="contact.html#apply-form" class="btn-secondary" data-en="Apply Now" data-fr="Postuler" data-zh="立即申请" data-es="Aplicar Ahora">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme 8: HLD in International Management -->
+                <div class="program-card" id="intl-management">
+                    <div class="program-header">
+                        <h3 data-en="Higher Learning Diploma in International Management" data-fr="Diplôme d'Études Supérieures en Management International" data-zh="国际管理高等教育文凭" data-es="Diploma de Educación Superior en Gestión Internacional">Higher Learning Diploma in International Management</h3>
+                    </div>
+                    <div class="program-body">
+                        <div class="program-meta">
+                            <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An" data-zh="1年" data-es="1 Año">1 Year</span></span>
+                            <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Advanced Diploma" data-fr="Diplôme Avancé" data-zh="高级文凭" data-es="Diploma Avanzado">Advanced Diploma</span></span>
+                        </div>
+                        <div class="program-description">
+                            <p data-en="For applicants with managerial experience, focusing on global business management with significant research component."
+                               data-fr="Pour les candidats ayant une expérience managériale, se concentrant sur la gestion des affaires internationales avec une composante de recherche significative."
+                               data-zh="面向具有管理经验的申请者，专注于全球商业管理，具有重要的研究组成部分。"
+                               data-es="Para solicitantes con experiencia gerencial, enfocándose en la gestión empresarial global con un componente de investigación significativo.">
+                               For applicants with managerial experience, focusing on global business management with significant research component.
+                            </p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format" data-zh="形式" data-es="Formato">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel" data-zh="校园/虚拟" data-es="En campus/Virtual">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Focus" data-fr="Focus" data-zh="重点" data-es="Enfoque">Focus</span>
+                                <span class="detail-value" data-en="Global Business Management" data-fr="Gestion des Affaires Internationales" data-zh="全球商业管理" data-es="Gestión Empresarial Global">Global Business Management</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Credits" data-fr="Crédits" data-zh="学分" data-es="Créditos">Credits</span>
+                                <span class="detail-value" data-en="60 ECTS" data-fr="60 ECTS" data-zh="60 ECTS" data-es="60 ECTS">60 ECTS</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Detailed Content (Always Visible) -->
+                        <div class="program-detailed-content">
+                            <h4 data-en="Programme Overview" data-fr="Aperçu du Programme" data-zh="课程概述" data-es="Descripción del Programa">Programme Overview</h4>
+                            <p data-en="This advanced diploma programme prepares experienced managers for leadership roles in the global business environment. It combines rigorous academic study with research and practical application, focusing on international business strategies, cross-cultural management, and global market dynamics."
+                               data-fr="Ce programme de diplôme avancé prépare les gestionnaires expérimentés à des rôles de leadership dans l'environnement commercial mondial. Il combine des études académiques rigoureuses avec de la recherche et une application pratique, en se concentrant sur les stratégies commerciales internationales, la gestion interculturelle et la dynamique des marchés mondiaux."
+                               data-zh="该高级文凭课程为经验丰富的管理人员在全球商业环境中担任领导角色做好准备。它将严格的学术研究与研究和实际应用相结合，专注于国际商业战略、跨文化管理和全球市场动态。"
+                               data-es="Este programa de diploma avanzado prepara a gerentes experimentados para roles de liderazgo en el entorno empresarial global. Combina estudio académico riguroso con investigación y aplicación práctica, enfocándose en estrategias comerciales internacionales, gestión intercultural y dinámicas del mercado global.">
+                               This advanced diploma programme prepares experienced managers for leadership roles in the global business environment.
+                            </p>
+                            
+                            <h5 data-en="Curriculum" data-fr="Curriculum" data-zh="课程设置" data-es="Plan de Estudios">Curriculum</h5>
+                            <ul>
+                                <li data-en="Global Strategic Management" data-fr="Management Stratégique Global" data-zh="全球战略管理" data-es="Gestión Estratégica Global">Global Strategic Management</li>
+                                <li data-en="International Business Environment and Economics" data-fr="Environnement des Affaires Internationales et Économie" data-zh="国际商业环境与经济学" data-es="Entorno de Negocios Internacionales y Economía">International Business Environment and Economics</li>
+                                <li data-en="Cross-cultural Management and Leadership" data-fr="Management et Leadership Interculturels" data-zh="跨文化管理与领导力" data-es="Gestión y Liderazgo Intercultural">Cross-cultural Management and Leadership</li>
+                                <li data-en="Global Marketing and Brand Management" data-fr="Marketing Global et Gestion de Marque" data-zh="全球营销与品牌管理" data-es="Marketing Global y Gestión de Marca">Global Marketing and Brand Management</li>
+                                <li data-en="International Finance and Risk Management" data-fr="Finance Internationale et Gestion des Risques" data-zh="国际金融与风险管理" data-es="Finanzas Internacionales y Gestión de Riesgos">International Finance and Risk Management</li>
+                                <li data-en="Global Supply Chain and Operations Management" data-fr="Chaîne d'Approvisionnement Mondiale et Gestion des Opérations" data-zh="全球供应链与运营管理" data-es="Cadena de Suministro Global y Gestión de Operaciones">Global Supply Chain and Operations Management</li>
+                                <li data-en="Research Methods in International Business" data-fr="Méthodes de Recherche en Affaires Internationales" data-zh="国际商业研究方法" data-es="Métodos de Investigación en Negocios Internacionales">Research Methods in International Business</li>
+                                <li data-en="Thesis: Global Business Research Project" data-fr="Thèse: Projet de Recherche en Affaires Internationales" data-zh="论文：全球商业研究项目" data-es="Tesis: Proyecto de Investigación de Negocios Globales">Thesis: Global Business Research Project</li>
+                            </ul>
+                            
+                            <h5 data-en="Learning Outcomes" data-fr="Résultats d'Apprentissage" data-zh="学习成果" data-es="Resultados de Aprendizaje">Learning Outcomes</h5>
+                            <ul>
+                                <li data-en="Develop and implement global business strategies" data-fr="Développer et mettre en œuvre des stratégies commerciales mondiales" data-zh="制定和实施全球商业战略" data-es="Desarrollar e implementar estrategias comerciales globales">Develop and implement global business strategies</li>
+                                <li data-en="Navigate complex international regulatory environments" data-fr="Naviguer des environnements réglementaires internationaux complexes" data-zh="应对复杂的国际监管环境" data-es="Navegar entornos regulatorios internacionales complejos">Navigate complex international regulatory environments</li>
+                                <li data-en="Manage multicultural teams and organizations" data-fr="Gérer des équipes et organisations multiculturelles" data-zh="管理多元文化团队和组织" data-es="Gestionar equipos y organizaciones multiculturales">Manage multicultural teams and organizations</li>
+                                <li data-en="Analyze global market trends and opportunities" data-fr="Analyser les tendances et opportunités du marché mondial" data-zh="分析全球市场趋势和机会" data-es="Analizar tendencias y oportunidades del mercado global">Analyze global market trends and opportunities</li>
+                                <li data-en="Conduct research on international business issues" data-fr="Mener des recherches sur des questions commerciales internationales" data-zh="研究国际商业问题" data-es="Realizar investigación sobre temas de negocios internacionales">Conduct research on international business issues</li>
+                                <li data-en="Make ethical decisions in global contexts" data-fr="Prendre des décisions éthiques dans des contextes mondiaux" data-zh="在全球背景下做出伦理决策" data-es="Tomar decisiones éticas en contextos globales">Make ethical decisions in global contexts</li>
+                                <li data-en="Lead international business initiatives and expansions" data-fr="Diriger des initiatives et expansions commerciales internationales" data-zh="领导国际商业倡议和扩张" data-es="Liderar iniciativas y expansiones comerciales internacionales">Lead international business initiatives and expansions</li>
+                            </ul>
+                            
+                            <h5 data-en="Career Opportunities" data-fr="Opportunités de Carrière" data-zh="职业机会" data-es="Oportunidades Profesionales">Career Opportunities</h5>
+                            <p data-en="Graduates are prepared for senior leadership roles such as international business director, global operations manager, international marketing director, export/import manager, foreign investment analyst, international trade specialist, global strategy consultant, multinational corporation executive, diplomatic trade advisor, and international business development manager in multinational corporations, international organizations, government trade agencies, consulting firms with global clients, and businesses engaged in international trade."
+                               data-fr="Les diplômés sont préparés à des rôles de direction senior tels que directeur des affaires internationales, gestionnaire des opérations mondiales, directeur du marketing international, gestionnaire d'exportation/importation, analyste des investissements étrangers, spécialiste du commerce international, consultant en stratégie mondiale, cadre de société multinationale, conseiller commercial diplomatique et responsable du développement commercial international dans des sociétés multinationales, organisations internationales, agences commerciales gouvernementales, cabinets de conseil avec des clients mondiaux et entreprises engagées dans le commerce international."
+                               data-zh="毕业生为担任国际业务总监、全球运营经理、国际营销总监、进出口经理、外国投资分析师、国际贸易专家、全球战略顾问、跨国公司高管、外交贸易顾问和国际业务发展经理等高级领导职位做好准备，任职于跨国公司、国际组织、政府贸易机构、拥有全球客户的咨询公司以及从事国际贸易的企业。"
+                               data-es="Los graduados están preparados para roles de liderazgo senior como director de negocios internacionales, gerente de operaciones globales, director de marketing internacional, gerente de exportación/importación, analista de inversión extranjera, especialista en comercio internacional, consultor de estrategia global, ejecutivo de corporación multinacional, asesor comercial diplomático y gerente de desarrollo de negocios internacionales en corporaciones multinacionales, organizaciones internacionales, agencias comerciales gubernamentales, firmas consultoras con clientes globales y empresas dedicadas al comercio internacional.">
+                               Graduates are prepared for senior leadership roles such as international business director, global operations manager, international marketing director, export/import manager, and foreign investment analyst.
+                            </p>
+                            
+                            <h5 data-en="Admission Requirements" data-fr="Conditions d'Admission" data-zh="入学要求" data-es="Requisitos de Admisión">Admission Requirements</h5>
+                            <ul>
+                                <li data-en="Bachelor's degree in business or related field" data-fr="Licence en commerce ou domaine connexe" data-zh="商业或相关领域学士学位" data-es="Licenciatura en negocios o campo relacionado">Bachelor's degree in business or related field</li>
+                                <li data-en="Minimum 7 years of professional experience with 3+ years in managerial role" data-fr="Minimum 7 ans d'expérience professionnelle avec 3+ ans en rôle de gestion" data-zh="至少7年专业经验，其中3年以上管理职务" data-es="Mínimo 7 años de experiencia profesional con 3+ años en rol gerencial">Minimum 7 years of professional experience with 3+ years in managerial role</li>
+                                <li data-en="International work experience (preferred)" data-fr="Expérience de travail internationale (préférée)" data-zh="国际工作经验（优先）" data-es="Experiencia laboral internacional (preferida)">International work experience (preferred)</li>
+                                <li data-en="Research proposal on international business topic" data-fr="Proposition de recherche sur un sujet d'affaires internationales" data-zh="国际商业主题的研究计划" data-es="Propuesta de investigación sobre tema de negocios internacionales">Research proposal on international business topic</li>
+                                <li data-en="Academic writing sample" data-fr="Échantillon d'écriture académique" data-zh="学术写作样本" data-es="Muestra de escritura académica">Academic writing sample</li>
+                                <li data-en="Three professional references" data-fr="Trois références professionnelles" data-zh="三封专业推荐信" data-es="Tres referencias profesionales">Three professional references</li>
+                                <li data-en="Proficiency in English plus one other language (preferred)" data-fr="Maîtrise de l'anglais plus une autre langue (préférée)" data-zh="英语熟练加另一门语言（优先）" data-es="Dominio del inglés más otro idioma (preferido)">Proficiency in English plus one other language (preferred)</li>
+                                <li data-en="Interview with admissions committee" data-fr="Entretien avec le comité d'admission" data-zh="与招生委员会面试" data-es="Entrevista con comité de admisiones">Interview with admissions committee</li>
+                            </ul>
+                            
+                            <h5 data-en="Tuition Fees" data-fr="Frais de Scolarité" data-zh="学费" data-es="Matrícula">Tuition Fees</h5>
+                            <p data-en="Full programme: $8,900 CAD (Canadian Dollars). Includes research supervision and materials. International study opportunities available."
+                               data-fr="Programme complet : 8 900 $ CAD (dollars canadiens). Inclut la supervision de recherche et les matériels. Opportunités d'étude internationales disponibles."
+                               data-zh="完整课程：8,900加元。包括研究指导和材料。提供国际学习机会。"
+                               data-es="Programa completo: $8,900 CAD (dólares canadienses). Incluye supervisión de investigación y materiales. Oportunidades de estudio internacional disponibles.">
+                               Full programme: $8,900 CAD (Canadian Dollars). Includes research supervision and materials.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-actions">
+                            <a href="contact.html#apply-form" class="btn-secondary" data-en="Apply Now" data-fr="Postuler" data-zh="立即申请" data-es="Aplicar Ahora">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="programs-cta">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2 data-en="Ready to Start Your Journey?" data-fr="Prêt à Commencer Votre Parcours ?" data-zh="准备开始您的旅程了吗？" data-es="¿Listo para Comenzar su Viaje?">Ready to Start Your Journey?</h2>
+                <div class="cta-description mb-30">
+                    <p data-en="Contact our admissions team to learn more about our programmes and find the perfect fit for your academic and career goals."
+                       data-fr="Contactez notre équipe des admissions pour en savoir plus sur nos programmes et trouver celui qui correspond parfaitement à vos objectifs académiques et professionnels."
+                       data-zh="联系我们的招生团队，了解更多关于我们的课程信息，找到最适合您学术和职业目标的课程。"
+                       data-es="Contacte a nuestro equipo de admisiones para obtener más información sobre nuestros programas y encontrar el adecuado para sus objetivos académicos y profesionales.">
+                       Contact our admissions team to learn more about our programmes and find the perfect fit for your academic and career goals.
+                    </p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary" data-en="Contact Admissions" data-fr="Contacter les Admissions" data-zh="联系招生处" data-es="Contactar Admisiones">Contact Admissions</a>
+                    <a href="contact.html" class="btn-secondary" data-en="Request Information" data-fr="Demander des Renseignements" data-zh="请求信息" data-es="Solicitar Información">Request Information</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-en="City Institute of Higher Learning" data-fr="Institut Supérieur de la Ville" data-zh="城市高等学习学院" data-es="Instituto Superior de la Ciudad">City Institute of Higher Learning</h3>
+                    <p class="footer-description" data-en="Advanced research-focused education institute in New Brunswick, Canada."
+                       data-fr="Institut d'éducation axé sur la recherche avancée au Nouveau-Brunswick, Canada."
+                       data-zh="加拿大新不伦瑞克省的高级研究型教育机构。"
+                       data-es="Instituto de educación avanzado centrado en la investigación en New Brunswick, Canadá.">
+                       Advanced research-focused education institute in New Brunswick, Canada.
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Programmes" data-fr="Programmes" data-zh="课程" data-es="Programas">Programmes</h3>
+                    <ul class="footer-links">
+                        <li><a href="programmes.html#social-sciences" data-en="Social Sciences" data-fr="Sciences Sociales" data-zh="社会科学" data-es="Ciencias Sociales">Social Sciences</a></li>
+                        <li><a href="programmes.html#education" data-en="Education" data-fr="Éducation" data-zh="教育" data-es="Educación">Education</a></li>
+                        <li><a href="programmes.html#business" data-en="Business School" data-fr="École de Commerce" data-zh="商学院" data-es="Escuela de Negocios">Business School</a></li>
+                        <li><a href="programmes.html" data-en="All Programmes" data-fr="Tous les Programmes" data-zh="所有课程" data-es="Todos los Programas">All Programmes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Quick Links" data-fr="Liens Rapides" data-zh="快速链接" data-es="Enlaces Rápidos">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-en="Home" data-fr="Accueil" data-zh="首页" data-es="Inicio">Home</a></li>
+                        <li><a href="about.html" data-en="About" data-fr="À propos" data-zh="关于我们" data-es="Acerca de">About</a></li>
+                        <li><a href="research.html" data-en="Research" data-fr="Recherche" data-zh="研究" data-es="Investigación">Research</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-fr="Contact" data-zh="联系我们" data-es="Contacto">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Contact" data-fr="Contact" data-zh="联系我们" data-es="Contacto">Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+15063882833"><i class="fas fa-phone"></i> +1 506 388 2833</a></li>
+                        <li><a href="mailto:admin@city-ihl.ca"><i class="fas fa-envelope"></i> admin@city-ihl.ca</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-en="Moncton, New Brunswick" data-fr="Moncton, Nouveau-Brunswick" data-zh="蒙克顿，新不伦瑞克省" data-es="Moncton, New Brunswick">Moncton, New Brunswick</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 City Institute of Higher Learning. <span data-en="All rights reserved." data-fr="Tous droits réservés." data-zh="版权所有。" data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/programs.js"></script>
+</body>
+</html>
