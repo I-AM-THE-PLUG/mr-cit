@@ -369,8 +369,10 @@
 }
 
 .partner-logo {
-    max-height: 100%;
+    width: auto;
+    height: auto;
     max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -672,39 +674,69 @@
     flex-wrap: wrap;
 }
 
-/* Gallery Section */
-.gallery-grid-continuous {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+/* ===== GALLERY SECTION - CATEGORIZED WITH FULL IMAGES ===== */
+.gallery-categorized {
     margin-top: 40px;
 }
 
-.gallery-item {
-    position: relative;
+.gallery-category {
+    margin-bottom: 80px;
+}
+
+.gallery-category:last-child {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 2rem;
+    color: var(--green-dark);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--accent);
+    text-align: center;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.category-item {
     border-radius: var(--card-radius);
     overflow: hidden;
-    height: 250px;
     transition: var(--transition);
+    background: var(--white);
+    padding: 15px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
 }
 
-.gallery-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+.category-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
 }
 
-.gallery-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* IMPORTANT: This preserves original aspect ratio without cropping */
+.category-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     transition: transform 0.5s ease;
+    display: block;
 }
 
-.gallery-item:hover .gallery-img {
-    transform: scale(1.1);
+.category-item:hover .category-img {
+    transform: scale(1.05);
 }
 
-.gallery-overlay {
+/* Image Info (optional) */
+.category-info {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -716,18 +748,51 @@
     transition: opacity 0.3s ease;
 }
 
-.gallery-item:hover .gallery-overlay {
+.category-item:hover .category-info {
     opacity: 1;
 }
 
-.gallery-overlay h3 {
+.category-info h4 {
     color: var(--white);
-    margin: 0;
-    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+    font-size: 1rem;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
+.category-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ===== RESPONSIVE DESIGN FOR GALLERY ===== */
+@media (max-width: 1200px) {
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+    }
+    
+    .category-item {
+        height: 260px;
+    }
+}
+
+@media (max-width: 992px) {
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .category-item {
+        height: 240px;
+        padding: 12px;
+    }
+    
+    .category-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
     .story-content {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -743,8 +808,23 @@
         gap: 40px;
     }
     
-    .gallery-grid-continuous {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .category-item {
+        height: 220px;
+        padding: 10px;
+    }
+    
+    .category-title {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+    
+    .gallery-category {
+        margin-bottom: 60px;
     }
     
     .team-grid {
@@ -752,7 +832,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .about-hero h1 {
         font-size: 2.5rem;
     }
@@ -788,13 +868,18 @@
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
     
-    .gallery-grid-continuous {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 15px;
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
     
-    .gallery-item {
-        height: 200px;
+    .category-item {
+        height: 250px;
+        padding: 8px;
+    }
+    
+    .category-title {
+        font-size: 1.5rem;
     }
     
     .contact-buttons {
@@ -806,23 +891,9 @@
         width: 100%;
         max-width: 300px;
     }
-}
-
-@media (max-width: 480px) {
-    .about-hero {
-        padding: 80px 0 60px;
-    }
     
-    .about-hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero-description {
-        font-size: 1.1rem;
-    }
-    
-    .section-header h2 {
-        font-size: 1.8rem;
+    .team-grid {
+        grid-template-columns: 1fr;
     }
     
     .mission-card,
@@ -831,22 +902,6 @@
     .team-card,
     .job-listing {
         padding: 20px;
-    }
-    
-    .partners-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery-grid-continuous {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery-item {
-        height: 250px;
     }
     
     .volunteer-section,
